@@ -1,24 +1,29 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
 
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
+
 gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
-gem 'compass-rails'
 gem 'bootstrap-sass'
 gem 'simple_form', '>= 3.1.0.rc1'
 gem 'slim-rails'
+
+# Automatically adds browser prefixes for css3
+gem 'autoprefixer-rails'
+
+# For flash messages with bootstrap
+gem "bootstrap_flash_messages", "~> 1.0.0"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.1'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+
 gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
@@ -44,11 +49,8 @@ group :development do
   # Automatically adds annotations to models
   gem "annotate"
 
-  # Находит косяки в запросах к базе
+  # Finds wrong db requests
   gem "bullet"
-
-  # Для хрома панель
-  gem 'meta_request'
 end
 
 group :test do
