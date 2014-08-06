@@ -1,2 +1,11 @@
-.row
-  h1 Hello Internets
+#mainPage
+  .row
+    header#pageTitle.col-xs-12
+      h1
+        = t("pages.index.site_title")
+      h2
+        = t("pages.index.site_subtitle")
+  .row
+    section#pageContent.col-xs-12
+      section#latestArticles.articles-list
+        = render @last_articles

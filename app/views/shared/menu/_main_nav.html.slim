@@ -9,8 +9,8 @@ nav#mainNavbar.navbar.navbar-default.navbar-fixed-top role="navigation"
     #collapsedNav.collapse.navbar-collapse
       ul.nav.navbar-nav
         li
-          = link_to "Articles", articles_path
+          = link_to t("model.article.multiple"), articles_path
         li
-          = link_to "Who?", who_path
+          = link_to t("concerns.shared.menu.who"), who_path
       ul.nav.navbar-nav.navbar-right
         = render partial: "concerns/shared/menu/user_links"

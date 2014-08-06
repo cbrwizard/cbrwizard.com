@@ -1,0 +1,9 @@
+article.article-block
+  header
+    h3
+      = article.title
+    .tag-list
+      = show_tags(article, 3)
+
+  = truncate article.text, length: 400
+  = link_to t("model.concerns.read_more"), article
