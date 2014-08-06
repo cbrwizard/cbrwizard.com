@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree ./concerns
-//= require_tree ./visitor
+//= require_tree ./admin

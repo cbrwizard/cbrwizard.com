@@ -1,0 +1,19 @@
+h1 Listing owners
+
+table.table
+  thead
+    tr
+      th working_on
+      th researching
+      th current_goal
+      th
+      th
+
+  tbody
+    - @owners.each do |owner|
+      tr
+        td = owner.working_on
+        td = owner.researching
+        td = owner.current_goal
+        td = link_to 'Show', [:admin, owner]
+        td = link_to 'Edit', edit_admin_owner_path(owner)

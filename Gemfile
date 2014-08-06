@@ -60,4 +60,8 @@ group :test do
   gem 'rvm-capistrano'
 end
 
+# Authorization
 gem 'devise'
+
+# Easy tags
+gem 'acts-as-taggable-on'

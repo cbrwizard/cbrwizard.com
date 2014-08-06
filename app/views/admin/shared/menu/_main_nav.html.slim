@@ -1,0 +1,20 @@
+nav#mainNavbar.navbar.navbar-default.navbar-fixed-top role="navigation"
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle data-target="#collapsedNav" data-toggle="collapse" type="button"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to "cbrw", admin_root_path, class: "navbar-brand"
+    #collapsedNav.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          = link_to "Articles", admin_articles_path
+        li
+          = link_to "Users", admin_users_path
+        li
+          = link_to "Owner", admin_owner_path
+        li
+          = link_to "Index", root_path
+      ul.nav.navbar-nav.navbar-right
+        = render partial: "concerns/shared/menu/user_links"
