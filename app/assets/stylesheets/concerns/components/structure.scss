@@ -1,3 +1,7 @@
 body {
   padding-top: 70px;
 }
+
+body, .navbar-header{
+  min-width: 200px;
+}

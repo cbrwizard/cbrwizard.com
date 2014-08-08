@@ -5,7 +5,7 @@ html
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  body
+  body.bg-black
     = render "shared/menu/main_nav"
     section.main-section.container-fluid
       = yield

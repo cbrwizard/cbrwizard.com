@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require local_time
 //= require bootstrap-sprockets
 //= require_tree ./concerns
 //= require_tree ./visitor
