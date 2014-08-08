@@ -16,5 +16,10 @@ en:
 
   pages:
     index:
-      site_title: cbrwizard.com
-      site_subtitle: Honest blog about programming, people and worlds.
+      header:
+        site_title: cbrwizard.com
+        site_subtitle: Honest blog about programming, people and worlds.
+      articles:
+        header: Latest articles
+      showcase:
+        header: Showcase project

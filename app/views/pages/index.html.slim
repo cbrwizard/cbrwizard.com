@@ -1,10 +1,6 @@
 #mainPage
   header#pageTitle.row
-    .col-xs-12
-      h1.color-purple
-        = t("pages.index.site_title")
-      h2
-        = t("pages.index.site_subtitle")
-  section#pageContent.row
-    section#latestArticles.articles-list
-      = render @last_articles
+    = render "pages/index/header"
+  section#pageContent
+    = render "pages/index/articles"
+    = render "pages/index/showcase"
