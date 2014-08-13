@@ -22,6 +22,9 @@ en:
         all_rights: 2014 All seats reserved
         location: Saint-Petersburg, Russia
         write_me: Write me
+      sidebar:
+        categories:
+          title: Top categories
 
   pages:
     index:
