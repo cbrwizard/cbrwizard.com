@@ -1,17 +1,18 @@
-footer.main-footer.container-fluid
-  .row
-    .col-xs-6
-      h5
-        | cbrwizard.com
-      h5
-        = t("concerns.shared.footer.by_who")
-    .text-right.col-xs-6
-      h5
-        = t("concerns.shared.footer.all_rights")
-      h5
-        = t("concerns.shared.footer.location")
-  .row
-    .text-center
-      h5
-        =' t("concerns.shared.footer.write_me")
-        = mail_to "cbrwizard@gmail.com"
+footer.main-footer
+  .container-fluid
+    .row
+      .col-xs-6
+        h5
+          | cbrwizard.com
+        h5
+          = t("concerns.shared.footer.by_who")
+      .text-right.col-xs-6
+        h5
+          = t("concerns.shared.footer.all_rights")
+        h5
+          = t("concerns.shared.footer.location")
+    .row
+      .text-center
+        h5
+          =' t("concerns.shared.footer.write_me")
+          = mail_to "cbrwizard@gmail.com"
