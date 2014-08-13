@@ -2,7 +2,7 @@ article.article-block.col-xs-12.col-md-6.col-lg-4
   header
     = link_to article.title, article, class: "h4 color-blue"
     .tag-list.color-grey
-      = show_tags(article, 3)
+      = show_article_tags(article, 3)
   p.article-text
     = truncate article.text, length: 400
   footer

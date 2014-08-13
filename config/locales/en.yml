@@ -6,6 +6,10 @@ en:
     user:
       singular: User
       multiple: Users
+    owner:
+      working_on: Working on
+      researching: Researching
+      current_goal: Current goal
     concerns:
       read_more: Read more
 
@@ -13,6 +17,11 @@ en:
     shared:
       menu:
         who: Who?
+      footer:
+        by_who: By Fyodor Ivanishchev
+        all_rights: 2014 All seats reserved
+        location: Saint-Petersburg, Russia
+        write_me: Write me
 
   pages:
     index:
@@ -21,5 +30,9 @@ en:
         site_subtitle: Honest blog about programming, people and worlds.
       articles:
         header: Latest articles
+        read_more: Read everything I wrote...
       showcase:
         header: Showcase project
+        read_more: Take a look at other things I worked on...
+      owner:
+        current_status: Current status

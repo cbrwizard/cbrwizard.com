@@ -1,0 +1,18 @@
+section#onwerStatus.row
+  h1.color-blue.col-xs-12
+    = t("pages.index.owner.current_status")
+  .status_block.col-xs-12
+    h2.color-purple
+      = t("model.owner.working_on")
+    p.color-green
+      = @onwer.current_goal
+  .status_block.col-xs-12
+    h2.color-purple
+      = t("model.owner.researching")
+    p.color-green
+      = @onwer.researching
+  .status_block.col-xs-12
+    h2.color-purple
+      = t("model.owner.current_goal")
+    p.color-green
+      = @onwer.current_goal

@@ -11,7 +11,5 @@
 #
 
 class Owner < ActiveRecord::Base
-  include Singleton
-
 
 end

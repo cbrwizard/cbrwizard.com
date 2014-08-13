@@ -14,4 +14,6 @@
 
 class Project < ActiveRecord::Base
   acts_as_taggable
+
+  scope :random_one, -> {offset(rand(self.count)).first}
 end

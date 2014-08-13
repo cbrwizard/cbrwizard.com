@@ -16,3 +16,8 @@ projects = {name: "Brainlook", subtitle: "Opinions website", description: "Lorem
 if Project.count < projects.size
   Project.create([projects])
 end
+
+Owner.find_or_create_by(
+    working_on: "Ruby on Rails web application for Dam control in Cyclone Labs",
+    researching: "Swift language, IELTS exam",
+    current_goal: "Become a high-level RoR programmer")
