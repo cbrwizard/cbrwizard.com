@@ -1,0 +1,5 @@
+h4
+  = link_to category.name, projects_path(category: category.name)
+.progress
+  .progress-bar aria-valuemax="#{most_popular_category_amount}" aria-valuemin="0" aria-valuenow="#{category.taggings_count}" role="progressbar" style="width: #{category.taggings_count}%"
+    = category.taggings_count

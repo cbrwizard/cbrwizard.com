@@ -1,13 +1,5 @@
-aside#mainSidebar.col-xs-12.col-sm-4.bg-darken-grey.rounded-xs
+aside#mainSidebar.col-xs-12.col-md-4.bg-darken-grey
   h2
     = t("concerns.shared.sidebar.categories.title")
-  section.tags-container
-    - popular_categories(3).each do |category|
-      h4
-        = link_to category.name, projects_path(category: category.name)
-      .progress
-        .progress-bar aria-valuemax="#{most_popular_category_amount}" aria-valuemin="0" aria-valuenow="#{category.taggings_count}" role="progressbar"
-          = category.taggings_count
-
-      p
-        = category.taggings_count
+  = render "shared/sidebar/top_categories"
+  = render "shared/sidebar/ads"

@@ -1,10 +1,10 @@
 article.project-block.col-xs-12
   header.clearfix
-    h4
+    h3
       = link_to project.name, project, class: "color-blue"
-    .color-white.pull-left
+    h4.color-white.pull-left
       = project.subtitle
-    .color-grey.pull-right
+    time.color-grey.pull-right
       = l project.created_at, format: :short
   p.project-text
     = truncate project.description, length: 400

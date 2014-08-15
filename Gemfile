@@ -13,7 +13,7 @@ gem 'bootstrap-sass'
 gem 'simple_form', '>= 3.1.0.rc1'
 gem 'slim-rails'
 
-# Automatically adds browser prefixes for css3
+# Automatically adds browser prefixes for css
 gem 'autoprefixer-rails'
 
 # For flash messages with bootstrap

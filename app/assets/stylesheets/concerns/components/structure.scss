@@ -19,5 +19,20 @@ body, .navbar-header{
 }
 
 #wholeContainer{
-  padding: 0;
+  padding: 0 0 50px;
+}
+
+#pageContent{
+  > section{
+    margin-bottom: 20px;
+  }
+}
+
+#pageTitle{
+  h1{
+    margin: 0 0 5px;
+  }
+  h3{
+    margin: 0;
+  }
 }

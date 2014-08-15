@@ -1,4 +1,11 @@
 // User styles
+// Plugins first
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "concerns/mixins/*",
+        "concerns/components/*",
+        "visitor/**/*";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -14,10 +21,3 @@
  *
  *= require_self
  */
-
-// Plugins first
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-@import "concerns/mixins/*",
-        "concerns/components/*";
