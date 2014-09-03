@@ -1,13 +1,6 @@
-h1 Listing articles
-
-table.table
-  thead
-    tr
-      th Text
-      th
-
-  tbody
-    - @articles.each do |article|
-      tr
-        td = article.text
-        td = link_to 'Show', article
+#articlesPage
+  header#pageTitle.row
+    = render "articles/header"
+  section#pageContent
+    = render "articles/articles"
+  h1 Listing articles

@@ -39,3 +39,8 @@ en:
         read_more: Take a look at other things I worked on...
       owner:
         current_status: Current status
+
+  articles:
+    index:
+      header:
+        latest: Latest articles

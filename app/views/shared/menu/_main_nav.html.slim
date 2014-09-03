@@ -12,5 +12,5 @@ nav#mainNavbar.navbar.navbar-default.navbar-fixed-top.bg-grey role="navigation"
           = link_to t("model.article.multiple"), articles_path
         li
           = link_to t("concerns.shared.menu.who"), who_path
-      ul.nav.navbar-nav.navbar-right
+      ul.nav.navbar-nav.navbar-right.hidden
         = render partial: "shared/menu/user_links"
