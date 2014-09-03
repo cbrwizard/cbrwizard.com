@@ -51,13 +51,31 @@ group :development do
 
   # Finds wrong db requests
   gem "bullet"
+
+  # Automagically launches tests for changed files
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  # And updates gems when needed
+  gem 'guard-bundler', require: false
 end
 
 group :test do
-  gem 'factory_girl_rails'
+  # gem 'factory_girl_rails'
+
+  # Rspec console formatting
+  gem 'fuubar'
+
+  # Features tests for Rspec
+  gem 'capybara'
+
+  # Webkit driver for js feature tests
+  # $ brew install qt
+  gem "capybara-webkit"
+end
+
+group :development, :test do
+  # Test framework
   gem 'rspec-rails', '~> 3.0'
-  gem 'capistrano'
-  gem 'rvm-capistrano'
 end
 
 # Authorization
@@ -71,3 +89,6 @@ gem 'local_time'
 
 # Faster server
 gem 'thin'
+
+# Run this (it loads faster without gemfile):
+# $ gem install zeus
