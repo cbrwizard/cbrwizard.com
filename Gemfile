@@ -71,6 +71,9 @@ group :test do
   # Webkit driver for js feature tests
   # $ brew install qt
   gem "capybara-webkit"
+
+  # For active record imitation in tests
+  gem 'factory_girl_rails'
 end
 
 group :development, :test do

@@ -12,4 +12,22 @@
 
 class Owner < ActiveRecord::Base
 
+  validates :working_on,
+    presence: true,
+    length: {
+      minimum: 5
+    }
+
+  validates :researching,
+    presence: true,
+    length: {
+      minimum: 5
+    }
+
+  validates :current_goal,
+    presence: true,
+    length: {
+      minimum: 5
+    }
+
 end

@@ -9,7 +9,7 @@
 #                          installed the spring binstubs per the docs)
 #  * zeus: 'zeus rspec' (requires the server to be started separetly)
 #  * 'just' rspec: 'rspec'
-guard :rspec, cmd: 'zeus rspec spec' do
+guard :rspec, cmd: 'zeus rspec' do
   # run every updated spec file
   watch(%r{^spec/.+_spec\.rb$})
   # run the lib specs when a file in lib/ changes
