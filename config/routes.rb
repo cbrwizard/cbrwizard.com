@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   end
 
   resources :users
-  resources :articles
-  resources :projects
+  resources :articles, only: [:show, :index]
+  resources :projects, only: [:show, :index]
   resource :owner, only: [:show]
 
   get "who" => "owners#show"
