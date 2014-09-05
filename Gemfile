@@ -74,6 +74,9 @@ group :test do
 
   # For active record imitation in tests
   gem 'factory_girl_rails'
+
+  # To open test pages automatically when open_and_save method is called
+  gem 'launchy'
 end
 
 group :development, :test do
