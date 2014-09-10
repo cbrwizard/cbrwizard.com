@@ -11,9 +11,9 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #
-
 class Project < ActiveRecord::Base
   acts_as_taggable
+
   acts_as_taggable_on :categories
 
   validates :name,
@@ -36,12 +36,12 @@ class Project < ActiveRecord::Base
 
   validates :website,
     presence: true,
-    :format => URI::regexp(%w(http https)),
+    format: URI.regexp(%w(http https)),
     length: {
       minimum: 5
     }
 
   # Gets a random project
   # @note is used on index
-  scope :random_one, -> {offset(rand(self.count)).first}
+  scope :random_one, -> {offset(rand(count)).first}
 end

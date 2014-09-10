@@ -35,3 +35,7 @@ guard :bundler do
   # On gemfile update run bundle
   watch('Gemfile')
 end
+
+guard :rubocop, all_on_start: false, cli: ['--format', 'fuubar', '--rails', '--out', 'log/rubocop.log'] do
+  watch(%r{^(.+)\.rb$}) { |m| "#{m[1]}.rb" }
+end
