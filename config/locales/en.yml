@@ -44,3 +44,5 @@ en:
     index:
       header:
         latest: Latest articles
+      articles:
+        more: Show me more
