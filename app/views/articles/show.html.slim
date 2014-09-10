@@ -1,3 +1,17 @@
-p
-  strong Text:
-  = @article.text
+#articlePage
+  header#articleHeader.row
+    .col-xs-12
+      h2.h2.color-purple
+        = @article.title
+  section#pageContent
+    article
+      p
+        = @article.text
+    footer#articleFooter
+      .feeling-block
+        p
+          =' t("articles.index.footer.feeling")
+          span.color-purple
+            = articles_h_feeling(@article)
+      .tag-list.color-grey
+        = show_article_tags(@article, 15)

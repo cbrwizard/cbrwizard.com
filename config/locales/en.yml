@@ -3,6 +3,7 @@ en:
     article:
       singular: Article
       multiple: Articles
+      no_feelings: nothing
     user:
       singular: User
       multiple: Users
@@ -44,5 +45,7 @@ en:
     index:
       header:
         latest: Latest articles
-      articles:
+      footer:
+        feeling: Published feeling...
+      other:
         more: Show me more

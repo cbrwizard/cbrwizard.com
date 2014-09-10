@@ -1,3 +1,9 @@
 #mainSidebar{
   color: #fff;
 }
+
+@media (max-width: 991px) {
+  #mainSidebar{
+    margin-top: 50px;
+  }
+}
