@@ -1,14 +1,14 @@
-article.project-block.col-xs-12
-  header.clearfix
-    h3
+article.project.col-xs-12
+  header.project__header.clearfix
+    h3.project__title
       = link_to project.name, project, class: "color-blue"
-    h4.color-white.pull-left
+    h4.project__subtitle.color-white.pull-left
       = project.subtitle
-    time.color-grey.pull-right
+    time.project__time.color-grey.pull-right
       = l project.created_at, format: :short
-  p.project-text
+  p.project__text
     = truncate project.description, length: 400
-  footer
-    .tag-list.color-grey.pull-left
+  footer.project__footer
+    .tag-list.tag-list--project.color-grey.pull-left
       = show_project_tags(project, 3)
     = link_to t("model.concerns.read_more"), project, class: "pull-right"

@@ -1,5 +1,6 @@
-section#showcaseProject.row
-  h2.col-xs-12.color-blue
+section.main-block.main-block--showcase.row
+  h2.main-block__title.col-xs-12.color-blue
     = t("pages.index.showcase.header")
-  = render @random_project
-  = link_to t("pages.index.showcase.read_more"), projects_path, class: "h3 col-xs-12 color-blue"
+  section.main-block__content.projects.projects--showcase
+    = render @random_project
+    = link_to t("pages.index.showcase.read_more"), projects_path, class: "h3 col-xs-12 color-blue"

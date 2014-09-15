@@ -1,6 +1,4 @@
-aside#mainSidebar.col-xs-12.col-md-4.bg-darken-grey
-  h2
-    = t("concerns.shared.sidebar.categories.title")
-  = render "shared/sidebar/top_categories"
-  = render "shared/sidebar/sticky_articles"
-  = render "shared/sidebar/ads"
+aside.sidebar--main.col-xs-12.col-md-4.bg-darken-grey
+  = render "shared/sidebar/main_sidebar/top_categories"
+  = render "shared/sidebar/main_sidebar/sticky_articles"
+  = render "shared/sidebar/main_sidebar/ads"

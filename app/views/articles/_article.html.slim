@@ -1,10 +1,10 @@
-article.article-block.col-xs-12
-  header
-    = link_to article.title, article, class: "h4 color-blue"
-    .tag-list.color-grey
+article.article
+  header.article__header
+    = link_to article.title, article, class: "h4 color-blue article__title"
+    .tag-list.tag-list--article.color-grey
       = show_article_tags(article, 3)
-  p.article-text
+  p.article__text
     = truncate article.text, length: 400
-  footer
-    = local_time_ago(article.updated_at, {class: "color-grey"})
+  footer.article__footer
+    = local_time_ago(article.updated_at, {class: "color-grey article__time"})
     = link_to t("model.concerns.read_more"), article, class: "pull-right"

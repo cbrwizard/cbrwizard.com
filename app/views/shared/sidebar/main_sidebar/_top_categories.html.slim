@@ -1,0 +1,6 @@
+section.sidebar--main__section.sidebar--main__section--categories.row
+  h2.sidebar--main__section__title.col-xs-12
+    = t("concerns.shared.sidebar.categories.title")
+  section.sidebar--main__section__content.col-xs-12
+    - popular_categories(3).each do |category|
+      = render partial: "shared/sidebar/main_sidebar/top_category", locals: {category: category}

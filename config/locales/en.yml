@@ -26,6 +26,10 @@ en:
       sidebar:
         categories:
           title: Top categories
+        articles:
+          title: Sticky articles
+        ads:
+          title: Ads from friends
 
   pages:
     index:

@@ -1,9 +1,9 @@
-#mainSidebar{
+.sidebar-container{
   color: #fff;
 }
 
 @media (max-width: 991px) {
-  #mainSidebar{
+  .sidebar-container{
     margin-top: 50px;
   }
 }

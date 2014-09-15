@@ -1,0 +1,6 @@
+- if h_articles_any_stickies?
+  section.sidebar--main__section.sidebar--main__section--articles.articles-container.row
+    h2.sidebar--main__section__title.col-xs-12
+      = t("concerns.shared.sidebar.articles.title")
+    section.sidebar--main__section__content.col-xs-12
+      = render h_articles_stickies(5)
