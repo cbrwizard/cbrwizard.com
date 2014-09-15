@@ -57,6 +57,8 @@ group :development do
   gem 'guard-rspec', require: false
   # And updates gems when needed
   gem 'guard-bundler', require: false
+  # And auto starts zeus
+  gem 'guard-zeus'
 
   # Checks ruby code grammar
   gem 'rubocop', require: false
