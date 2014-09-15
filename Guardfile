@@ -1,3 +1,5 @@
+interactor :simple
+
 guard :bundler do
   # On gemfile update run bundle
   watch('Gemfile')
@@ -15,7 +17,7 @@ guard 'zeus' do
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
 
   # Controller changes
-  watch(%r{^app/controllers/(.+)_(controller)\.rb$})  { |m| ["spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb", "spec/acceptance/#{m[1]}_spec.rb"] }
+  watch(%r{^app/controllers/(.+)_controller\.rb$})  { |m| "spec/controllers/#{m[1]}_controller_spec.rb" }
 
   watch('config/routes.rb')                           { "spec/controllers" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
@@ -27,4 +29,10 @@ guard 'zeus' do
   # Capybara features specs
   watch(%r{^app/views/(.+)/(.*)\.(.*)\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1]}/#{m[2]}_feature_spec.rb" }
   watch(%r{^app/views/(.+)/_.*\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1].partition('/').first}/#{m[1].partition('/').last}_feature_spec.rb" }
+end
+
+# Restarts server on config changes
+guard 'rails', daemon: true do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
 end

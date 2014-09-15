@@ -59,6 +59,8 @@ group :development do
   gem 'guard-bundler', require: false
   # And auto starts zeus
   gem 'guard-zeus'
+  # And auto starts rails server
+  gem 'guard-rails'
 
   # Checks ruby code grammar
   gem 'rubocop', require: false
