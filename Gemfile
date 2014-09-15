@@ -57,8 +57,6 @@ group :development do
   gem 'guard-rspec', require: false
   # And updates gems when needed
   gem 'guard-bundler', require: false
-  # And auto starts zeus
-  gem 'guard-zeus'
   # And auto starts rails server
   gem 'guard-rails'
 

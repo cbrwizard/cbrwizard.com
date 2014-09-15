@@ -9,7 +9,7 @@ guard :rubocop, all_on_start: false, cli: ['--format', 'fuubar', '--rails', '--o
   watch(%r{^(.+)\.rb$}) { |m| "#{m[1]}.rb" }
 end
 
-guard 'zeus' do
+guard :rspec, cmd: 'zeus rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
 
@@ -32,7 +32,7 @@ guard 'zeus' do
 end
 
 # Restarts server on config changes
-guard 'rails', daemon: true do
+guard 'rails', zeus: true, daemon: true do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end
