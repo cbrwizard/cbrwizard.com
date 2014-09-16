@@ -1,9 +1,19 @@
-.sidebar-container{
-  color: #fff;
-}
+// All sidebars
 
-@media (max-width: 991px) {
-  .sidebar-container{
-    margin-top: 50px;
+// Main sidebar
+  .sidebar--main{
+    .tag-list__tag{
+      @extend .color-blue
+    }
   }
-}
+
+      .sidebar--main__section__title{
+        @extend .color-green
+      }
+
+
+  @media (max-width: 991px) {
+    .sidebar--main{
+      margin-top: 50px;
+    }
+  }

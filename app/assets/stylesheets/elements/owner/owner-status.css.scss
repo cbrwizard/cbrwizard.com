@@ -1,0 +1,17 @@
+// For owner block on main page
+
+.owner-status__title{
+  margin: 0;
+  @extend .color-purple;
+}
+
+  .owner-status__content{
+    margin: 5px 0 15px;
+  }
+
+
+@media (max-width: 768px) {
+  .owner-status__title{
+    font-size: 21px;
+  }
+}

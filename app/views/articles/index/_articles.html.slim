@@ -1,4 +1,5 @@
-section#latestArticles.articles-list.row
-  = render @articles
-  .show-more
+section.main-block.main-block--latest-articles.row
+  section.main-block__content.articles.articles--latest.col-xs-12
+    = render @articles
+  .button.button--show-more
     = button_to t("articles.index.other.more"), articles_path, class: "btn btn-lg btn-purple"

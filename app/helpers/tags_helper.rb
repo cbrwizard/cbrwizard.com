@@ -6,7 +6,7 @@ module TagsHelper
   # @param number [Integer] amount of tags to display
   def show_article_tags(record, number)
     record.tag_list.take(number).map do |tag|
-      link_to("#" + tag, articles_path(tag: tag))
+      link_to("#" + tag, articles_path(tag: tag), class: "tag-list__tag")
     end.join(", ").html_safe
   end
 
@@ -15,7 +15,7 @@ module TagsHelper
   # @param number [Integer] amount of tags to display
   def show_project_tags(record, number)
     record.tag_list.take(number).map do |tag|
-      link_to("#" + tag, projects_path(tag: tag))
+      link_to("#" + tag, projects_path(tag: tag), class: "tag-list__tag")
     end.join(", ").html_safe
   end
 

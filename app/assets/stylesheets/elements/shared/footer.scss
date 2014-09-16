@@ -1,10 +1,10 @@
-// Footer
+// All footers
 
-.main-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: $footer-height;
-  background-color: #f5f5f5;
-}
+  .footer--main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $footer-height;
+    background-color: $soft-white-color;
+  }

@@ -1,5 +1,5 @@
 section.main-block.main-block--owner.row
-  h2.main-block__title.col-xs-12.color-blue
+  h2.main-block__title.col-xs-12
     = t("pages.index.owner.current_status")
   section.owner-status
     = render partial: "pages/index/owner/owner_status_block", locals: {title: t("model.owner.working_on"), content: @onwer.working_on}
