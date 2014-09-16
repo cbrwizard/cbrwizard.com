@@ -7,6 +7,6 @@ describe "Article page displays its main features to user", :type => :feature do
   end
 
   it "show an article text" do
-    expect(page).to have_content(article.name)
+    expect(page).to have_content(article.text)
   end
 end

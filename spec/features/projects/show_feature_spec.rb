@@ -7,6 +7,6 @@ describe "Project page displays its main features to user", :type => :feature do
   end
 
   it "show an project text" do
-    expect(page).to have_content(project.text)
+    expect(page).to have_content(project.name)
   end
 end

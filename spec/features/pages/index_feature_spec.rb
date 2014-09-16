@@ -13,10 +13,10 @@ describe "Index page displays its main features to user", :type => :feature do
   end
 
   it "shows articles" do
-    expect(page).to have_css(".article-text", count: 5)
+    expect(page).to have_css(".article")
   end
 
   it "shows a project" do
-    expect(page).to have_css(".status_block", count: 3)
+    expect(page).to have_css(".project", count: 1)
   end
 end
