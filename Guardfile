@@ -9,7 +9,7 @@ guard :rubocop, all_on_start: false, cli: ['--format', 'fuubar', '--rails', '--o
   watch(%r{^(.+)\.rb$}) { |m| "#{m[1]}.rb" }
 end
 
-guard :rspec, cmd: 'zeus rspec' do
+guard :rspec, cmd: 'spring rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
 
@@ -29,10 +29,4 @@ guard :rspec, cmd: 'zeus rspec' do
   # Capybara features specs
   watch(%r{^app/views/(.+)/(.*)\.(.*)\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1]}/#{m[2]}_feature_spec.rb" }
   watch(%r{^app/views/(.+)/_.*\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1].partition('/').first}/#{m[1].partition('/').last}_feature_spec.rb" }
-end
-
-# Restarts server on config changes
-guard 'rails', zeus: true, daemon: true do
-  watch('Gemfile.lock')
-  watch(%r{^(config|lib)/.*})
 end

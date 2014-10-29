@@ -1,23 +1,21 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.6'
 
 gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
-gem 'simple_form', '>= 3.1.0.rc1'
+
+gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
 
 # Automatically adds browser prefixes for css
 gem 'autoprefixer-rails'
-
-# For flash messages with bootstrap
-gem "bootstrap_flash_messages", "~> 1.0.0"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -57,8 +55,6 @@ group :development do
   gem 'guard-rspec', require: false
   # And updates gems when needed
   gem 'guard-bundler', require: false
-  # And auto starts rails server
-  gem 'guard-rails'
 
   # Checks ruby code grammar
   gem 'rubocop', require: false
@@ -69,8 +65,6 @@ group :development do
 end
 
 group :test do
-  # gem 'factory_girl_rails'
-
   # Rspec console formatting
   gem 'fuubar'
 
@@ -104,6 +98,3 @@ gem 'local_time'
 
 # Faster server
 gem 'thin'
-
-# Run this (it loads faster without gemfile):
-# $ gem install zeus
