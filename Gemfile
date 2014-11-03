@@ -81,7 +81,6 @@ group :test do
   # To open test pages automatically when open_and_save method is called
   gem 'launchy'
 
-
   # To test API
   gem "json-schema"
 end

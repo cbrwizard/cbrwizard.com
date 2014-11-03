@@ -9,7 +9,7 @@ guard :rubocop, all_on_start: false, cli: ['--format', 'fuubar', '--rails', '--o
   watch(%r{^(.+)\.rb$}) { |m| "#{m[1]}.rb" }
 end
 
-guard :rspec, cmd: 'spring rspec' do
+guard :rspec, cmd: 'rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
 
@@ -29,4 +29,7 @@ guard :rspec, cmd: 'spring rspec' do
   # Capybara features specs
   watch(%r{^app/views/(.+)/(.*)\.(.*)\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1]}/#{m[2]}_feature_spec.rb" }
   watch(%r{^app/views/(.+)/_.*\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1].partition('/').first}/#{m[1].partition('/').last}_feature_spec.rb" }
+
+  # On JSON schema runs all controllers for this version
+  watch(%r{^spec/support/api/schemas/(.+)$})     { |m| "spec/controllers/api/#{m[1].partition('/').first}" }
 end
