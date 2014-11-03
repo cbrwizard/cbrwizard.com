@@ -28,5 +28,8 @@ module Cbrwizard
     # config.i18n.default_locale = :de
 
     config.assets.precompile += %w( admin.css admin.js )
+
+    # Auto loads lib files
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
