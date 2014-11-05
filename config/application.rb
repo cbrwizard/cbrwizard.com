@@ -31,5 +31,9 @@ module Cbrwizard
 
     # Auto loads lib files
     config.autoload_paths << Rails.root.join('lib')
+
+
+    # So that Angular {{}} syntax works properly in slim views
+    Slim::Engine.set_default_options attr_delims: { '(' => ')', '[' => ']' }
   end
 end

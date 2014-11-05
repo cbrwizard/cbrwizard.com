@@ -16,5 +16,7 @@
 //= require angular-resource
 //= require local_time
 //= require bootstrap-sprockets
-//= require_tree ./concerns
-//= require_tree ./visitor
+
+
+//= require application/init
+//= require_tree ./application
