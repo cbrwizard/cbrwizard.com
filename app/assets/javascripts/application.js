@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
+//= require angular-resource
 //= require local_time
 //= require bootstrap-sprockets
 //= require_tree ./concerns

@@ -14,6 +14,9 @@ gem 'bootstrap-sass'
 gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
 
+# Adds angularjs to assets
+gem 'angularjs-rails'
+
 # Automatically adds browser prefixes for css
 gem 'autoprefixer-rails'
 
