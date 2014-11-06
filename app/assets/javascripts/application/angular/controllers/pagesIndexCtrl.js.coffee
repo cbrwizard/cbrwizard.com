@@ -1,5 +1,6 @@
 # Handles data interaction on home page
+@app.cbrwizard.controller 'PagesIndexCtrl', ['$scope', '$http', 'articlesModel', ($scope, $http, articlesModel) ->
+  $scope.data = articlesModel.data
 
-@app.cbrwizard.controller 'PagesIndexCtrl', ['$scope', ($scope) ->
-  $scope.site_title = "cbrwizard.com"
+  articlesModel.loadArticles()
 ]

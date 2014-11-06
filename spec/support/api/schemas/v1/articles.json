@@ -16,6 +16,15 @@
           "text": {
             "type": "string"
           },
+          "title": {
+            "type": "string"
+          },
+          "feeling": {
+            "type": "string"
+          },
+          "sticky": {
+            "type": "boolean"
+          },
           "updated_at": {
             "type": "string",
             "format": "date-time"

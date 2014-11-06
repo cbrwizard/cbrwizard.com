@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
+//= require angular-rails-templates
 //= require local_time
 //= require bootstrap-sprockets
 

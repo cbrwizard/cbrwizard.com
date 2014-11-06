@@ -5,6 +5,9 @@ ruby '2.1.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
+
+# For Mac this might be needed:
+# gem install pg -v '0.17.1' ----with-pg-config=/Applications/ Postgres.app/Contents/Versions/9.3/bin/pg_config
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -16,6 +19,9 @@ gem 'slim-rails'
 
 # Adds angularjs to assets
 gem 'angularjs-rails'
+
+# Adds an ability to easily add any template to angular
+gem 'angular-rails-templates'
 
 # Automatically adds browser prefixes for css
 gem 'autoprefixer-rails'

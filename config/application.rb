@@ -34,6 +34,9 @@ module Cbrwizard
 
 
     # So that Angular {{}} syntax works properly in slim views
-    Slim::Engine.set_default_options attr_delims: { '(' => ')', '[' => ']' }
+    # Slim::Engine.set_default_options attr_delims: { '(' => ')', '[' => ']' }
+
+    # Sets a correct path to angular templates for angular-rails-templates gem
+    config.angular_templates.ignore_prefix = %w(application/angular/templates/)
   end
 end

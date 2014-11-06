@@ -1,0 +1,8 @@
+article.article
+  header.article__header
+    a.h4.color-blue.article__title href= "articles/{{article.id}}"
+      | {{article.title}}
+    .tag-list.tag-list--article.color-grey
+  p.article__text
+    | {{article.text | limitTo: 400}}
+  footer.article__footer
