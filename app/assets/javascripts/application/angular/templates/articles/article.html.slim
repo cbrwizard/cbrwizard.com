@@ -6,3 +6,7 @@ article.article
   p.article__text
     | {{article.text | limitTo: 400}}
   footer.article__footer
+    time.color-grey.article__time
+      | {{article.updated_at | localTimeAgo}}
+    a.pull-right href= "articles/{{article.id}}"
+      | Прочитать

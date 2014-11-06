@@ -4,4 +4,7 @@
 @.app || (@.app = {})
 
 # Creates angular app
-@app.cbrwizard = angular.module('cbrwizard', ['templates'])
+@app.cbrwizard = angular.module('cbrwizard', ['templates', 'cbrwizardFilters'])
+
+# Creates custom filters module
+@app.angularFilters = angular.module('cbrwizardFilters', [])
