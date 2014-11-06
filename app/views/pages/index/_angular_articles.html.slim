@@ -2,6 +2,6 @@ section.main-block.main-block--latest-articles.row
   h2.main-block__title.col-xs-12
     = t("pages.index.articles.header")
   section.main-block__content.articles.articles--latest.col-xs-12
-    .js-angular-container ng-repeat="article in data.articles"
+    .js-angular-container
       articles-directive
     = link_to t("pages.index.articles.read_more"), articles_path, class: "h3 color-blue"

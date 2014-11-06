@@ -8,4 +8,4 @@
 #   returns "on Oct 30"
 @app.angularFilters.filter "localTimeAgo", ->
   (time) ->
-    LocalTime.relativeTimeAgo(new Date(time))
+    LocalTime.relativeTimeAgo(new Date(time)) if time

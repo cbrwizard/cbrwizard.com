@@ -26,6 +26,12 @@
         "updated_at": {
           "type": "string",
           "format": "date-time"
+        },
+        "tag_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }

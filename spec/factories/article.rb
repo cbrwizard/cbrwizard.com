@@ -8,6 +8,7 @@ FactoryGirl.define do
     sequence(:title) { |n| "Some boring Factory Girl #{n} info" }
     feeling "Low"
     sticky false
+    tag_list %w(lol heha fun)
   end
 
   factory :wrong_article, class: Article do

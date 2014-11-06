@@ -1,12 +1,12 @@
-article.article
+article.article ng-repeat="article in data.articles"
   header.article__header
-    a.h4.color-blue.article__title href= "articles/{{article.id}}"
+    a.h4.color-blue.article__title href= "/articles/{{article.id}}"
       | {{article.title}}
-    .tag-list.tag-list--article.color-grey
+    tags-directive
   p.article__text
     | {{article.text | limitTo: 400}}
   footer.article__footer
     time.color-grey.article__time
       | {{article.updated_at | localTimeAgo}}
-    a.pull-right href= "articles/{{article.id}}"
+    a.pull-right href= "/articles/{{article.id}}" ng-show="article.id"
       | Прочитать
