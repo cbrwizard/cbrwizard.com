@@ -84,11 +84,11 @@ group :test do
   # $ brew install qt
   gem "capybara-webkit"
 
-  # For active record imitation in tests
-  gem 'factory_girl_rails'
-
-  # To open test pages automatically when open_and_save method is called
+  # To open test pages when save_and_open_page method is called
   gem 'launchy'
+
+  # Enables screenshots creation during tests
+  gem 'capybara-screenshot'
 
   # To test API
   gem "json-schema"
@@ -97,6 +97,9 @@ end
 group :development, :test do
   # Test framework
   gem 'rspec-rails', '~> 3.0'
+
+  # For active record imitation in tests
+  gem 'factory_girl_rails'
 end
 
 # Authorization
