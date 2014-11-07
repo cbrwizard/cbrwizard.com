@@ -129,6 +129,9 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    js-routes (0.9.9)
+      railties (>= 3.2)
+      sprockets-rails
     json (1.8.1)
     json-schema (2.4.1)
     launchy (2.4.2)
@@ -294,6 +297,7 @@ DEPENDENCIES
   guard-rubocop
   jbuilder (~> 2.0)
   jquery-rails
+  js-routes
   json-schema
   launchy
   local_time

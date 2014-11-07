@@ -3,4 +3,8 @@
   $scope.data = articlesModel.data
 
   articlesModel.loadArticles()
+
+  $scope.articlePath = (id)->
+    Routes.article_path(id)
+
 ]

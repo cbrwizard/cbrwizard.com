@@ -1,6 +1,6 @@
 article.article ng-repeat="article in data.articles"
   header.article__header
-    a.h4.color-blue.article__title href= "/articles/{{article.id}}"
+    a.h4.color-blue.article__title rails-route=123
       | {{article.title}}
     tags-directive
   p.article__text

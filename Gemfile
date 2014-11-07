@@ -116,3 +116,6 @@ gem 'local_time'
 
 # Faster server
 gem 'thin'
+
+# Adds rails routes to assets
+gem "js-routes"
