@@ -6,6 +6,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara-screenshot/rspec'
 require 'factory_girl'
+require 'database_cleaner'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -21,28 +22,34 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-  # Must be set to false so that capybara tests work
-  config.use_transactional_fixtures = false
+  config.infer_spec_type_from_file_location!
   config.include FactoryGirl::Syntax::Methods
 
-  # RSpec Rails can automatically mix in different behaviours to your tests
-  # based on their file location, for example enabling you to call `get` and
-  # `post` in specs under `spec/controllers`.
-  #
-  # You can disable this behaviour by removing the line below, and instead
-  # explicitly tag your specs with their type, e.g.:
-  #
-  #     RSpec.describe UsersController, :type => :controller do
-  #       # ...
-  #     end
-  #
-  # The different available types are documented in the features, such as in
-  # https://relishapp.com/rspec/rspec-rails/docs
-  config.infer_spec_type_from_file_location!
-
   Capybara.javascript_driver = :webkit
-  Capybara::Screenshot.webkit_options = { width: 1280, height: 1000 }
 
+  Capybara::Screenshot.webkit_options = { width: 1280, height: 1000 }
   # Keep only the screenshots generated from the last failing test suite
   Capybara::Screenshot.prune_strategy = :keep_last_run
+
+
+  # @source http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
+  end
+
+  config.before(:each, js: true) do
+    DatabaseCleaner.strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 end

@@ -92,6 +92,9 @@ group :test do
 
   # To test API
   gem "json-schema"
+
+  # Auto cleans test db after each test run
+  gem 'database_cleaner'
 end
 
 group :development, :test do

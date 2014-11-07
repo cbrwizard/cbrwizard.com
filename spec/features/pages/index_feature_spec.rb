@@ -8,6 +8,7 @@ describe "Index page displays its main features to user", type: :feature, js: tr
     visit root_path
   end
 
+
   describe "Main elements display" do
     it "shows website title" do
       expect(page).to have_content I18n.t("pages.index.header.site_title")
