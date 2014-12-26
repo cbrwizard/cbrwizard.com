@@ -1,0 +1,29 @@
+en:
+  model:
+    article:
+      singular: Статья
+      multiple: Статьи
+      no_feelings: ничего
+      read_more: Узнать больше
+    user:
+      singular: Пользователь
+      multiple: Пользователи
+
+  shared:
+    sidebar:
+      header:
+        site_title: cbrwizard.com
+        site_subtitle_html: Честный блог <br> о программировании,<br> людях и мирах
+      menu:
+        about: Что это?
+        blog: Блог
+      created_by:
+        text_html: Сотворил <span class='created-by__author'>Иванищев Фёдор</span>.
+      code:
+        text: Скачай код на
+
+  pages:
+    index:
+      articles:
+        header: Последние статьи
+        read_more: Остальные статьи

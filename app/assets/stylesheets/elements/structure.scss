@@ -5,15 +5,6 @@ html{
   min-height: 100%;
 }
 
-body {
-  padding-top: 60px;
-  margin-bottom: $footer-height;
-}
-
-body, .navbar-header{
+body{
   min-width: 200px;
-}
-
-.container-fluid {
-  max-width: 1200px;
 }

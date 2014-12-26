@@ -1,20 +1,15 @@
 // Main container and its contents
 
 .main-container{
+  margin: 0 0 0 $sidebar-width;
   padding: 0 0 50px;
-  a{
+  a {
     color: $blue-color;
-    &:hover, &:focus{
+    &:hover, &:focus {
       color: lighten($blue-color, 15%)
     }
   }
-  p, h1, h2, h3, h4, h5, h6{
+  p, h1, h2, h3, h4, h5, h6 {
     color: $white-color;
   }
 }
-
-  .main-container__yield{
-    > section{
-      margin-bottom: 20px;
-    }
-  }

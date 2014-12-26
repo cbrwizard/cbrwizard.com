@@ -1,0 +1,19 @@
+aside.sidebar.col-xs-12.col-md-4.bg-grey
+  section.sidebar__container
+    .main-pic.row
+      .main-pic__image
+    .headgroup
+      = render 'shared/sidebar/headgroup'
+    ul.menu
+      = render 'shared/sidebar/menu'
+    .created-by
+      h5.created-by__text
+        = t('shared.sidebar.created_by.text_html')
+      .social
+        = render 'shared/sidebar/social'
+    .code
+      h5.code__text
+        span
+          = t('shared.sidebar.code.text')
+        = link_to 'https://github.com/cbrwizard/cbrwizard.com', class: 'code__link' do
+          = image_tag 'logos/github.png', class: 'code__image'

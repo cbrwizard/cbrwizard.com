@@ -3,12 +3,10 @@ html ng-app='cbrwizard'
   head
     title Cbrwizard
     = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
     = csrf_meta_tags
   body.bg-black
-    = render 'shared/menu/main_nav'
-    section.main-container.container-fluid
-      section.main-container__yield.col-xs-12.col-md-8
+    section.website-container.pull-left
+      = render 'shared/sidebar/sidebar'
+      main.main-container.col-xs-12.col-md-8
         = yield
-      = render 'shared/sidebar/main_sidebar'
-    = render 'shared/footer/main_footer'
+    = javascript_include_tag 'application'

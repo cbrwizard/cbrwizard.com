@@ -1,6 +1,3 @@
-.page-container.page-container--index ng-controller='PagesIndexCtrl'
-  header.page-container__header.row
-    = render 'pages/index/header'
-  section.page-container__content
-    /= render "pages/index/articles"
-    = render 'pages/index/angular_articles'
+section.main-container__content.main-container__content--index.col-xs-12 ng-controller='PagesIndexCtrl'
+  /= render "pages/index/articles"
+  = render 'pages/index/angular_articles'

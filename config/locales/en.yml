@@ -4,52 +4,26 @@ en:
       singular: Article
       multiple: Articles
       no_feelings: nothing
+      read_more: Read more
     user:
       singular: User
       multiple: Users
-    owner:
-      working_on: Working on
-      researching: Researching
-      current_goal: Current goal
-    concerns:
-      read_more: Read more
 
-  concerns:
-    shared:
+  shared:
+    sidebar:
+      header:
+        site_title: cbrwizard.com
+        site_subtitle_html: Honest blog <br> about programming, people and worlds.
       menu:
-        who: Who?
-      footer:
-        by_who: By Fyodor Ivanishchev
-        all_rights: 2014 All seats reserved
-        location: Saint-Petersburg, Russia
-        write_me: Write me
-      sidebar:
-        categories:
-          title: Top categories
-        articles:
-          title: Sticky articles
-        ads:
-          title: Ads from friends
+        about: What is this?
+        blog: Blog
+      created_by:
+        text_html: Created by <span class='created-by__author'>Fyodor Ivanischev</span>.
+      code:
+        text: Get the code at
 
   pages:
     index:
-      header:
-        site_title: cbrwizard.com
-        site_subtitle: Honest blog about programming, people and worlds.
       articles:
         header: Latest articles
         read_more: Read everything I wrote...
-      showcase:
-        header: Showcase project
-        read_more: Take a look at other things I worked on...
-      owner:
-        current_status: Current status
-
-  articles:
-    index:
-      header:
-        latest: Latest articles
-      footer:
-        feeling: Published feeling...
-      other:
-        more: Show me more
