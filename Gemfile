@@ -5,7 +5,6 @@ ruby '2.1.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
-
 # For Mac this might be needed:
 # gem install pg -v '0.17.1' ----with-pg-config=/Applications/ Postgres.app/Contents/Versions/9.3/bin/pg_config
 gem 'pg'
@@ -14,12 +13,11 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 
-gem 'simple_form', '~> 3.1.0rc2'
+# gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
 
 # Adds angularjs to assets
 gem 'angularjs-rails'
-
 # Adds an ability to easily add any template to angular
 gem 'angular-rails-templates'
 
@@ -30,17 +28,13 @@ gem 'autoprefixer-rails'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.1'
-
 gem 'therubyracer',  platforms: :ruby
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -49,15 +43,15 @@ end
 
 group :development do
   # Better displays 500 errors
-  gem "better_errors"
+  gem 'better_errors'
   # And shows console on their pages
-  gem "binding_of_caller"
+  gem 'binding_of_caller'
 
   # Automatically adds annotations to models
-  gem "annotate"
+  gem 'annotate'
 
   # Finds wrong db requests
-  gem "bullet"
+  gem 'bullet'
 
   # Automagically launches tests for changed files
   gem 'guard'
@@ -71,6 +65,10 @@ group :development do
   gem 'rubocop-rspec'
   # With guard
   gem 'guard-rubocop'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
@@ -82,7 +80,7 @@ group :test do
 
   # Webkit driver for js feature tests
   # $ brew install qt
-  gem "capybara-webkit"
+  gem 'capybara-webkit'
 
   # To open test pages when save_and_open_page method is called
   gem 'launchy'
@@ -91,7 +89,7 @@ group :test do
   gem 'capybara-screenshot'
 
   # To test API
-  gem "json-schema"
+  gem 'json-schema'
 
   # Auto cleans test db after each test run
   gem 'database_cleaner'
@@ -105,8 +103,8 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-# Authorization
-gem 'devise'
+# # Authorization
+# gem 'devise'
 
 # Easy tags
 gem 'acts-as-taggable-on'
@@ -118,4 +116,4 @@ gem 'local_time'
 gem 'thin'
 
 # Adds rails routes to assets
-gem "js-routes"
+gem 'js-routes'

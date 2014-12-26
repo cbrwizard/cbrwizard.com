@@ -1,7 +1,0 @@
-section.main-block.main-block--owner.row
-  h2.main-block__title.col-xs-12
-    = t("pages.index.owner.current_status")
-  section.owner-status
-    = render partial: "pages/index/owner/owner_status_block", locals: {title: t("model.owner.working_on"), content: @owner.working_on}
-    = render partial: "pages/index/owner/owner_status_block", locals: {title: t("model.owner.researching"), content: @owner.researching}
-    = render partial: "pages/index/owner/owner_status_block", locals: {title: t("model.owner.current_goal"), content: @owner.current_goal}

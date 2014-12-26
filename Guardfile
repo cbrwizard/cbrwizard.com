@@ -5,7 +5,7 @@ guard :bundler do
   watch('Gemfile')
 end
 
-guard :rubocop, all_on_start: false, cli: ['--format', 'fuubar', '--rails', '--out', 'log/rubocop.log'] do
+guard :rubocop, all_on_start: false, keep_failed: false do
   watch(%r{^(.+)\.rb$}) { |m| "#{m[1]}.rb" }
 end
 
