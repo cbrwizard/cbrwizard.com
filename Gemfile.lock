@@ -99,6 +99,9 @@ GEM
     fuubar (2.0.0)
       rspec (~> 3.0)
       ruby-progressbar (~> 1.4)
+    globalize (4.0.3)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     guard (2.7.0)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -279,6 +282,7 @@ DEPENDENCIES
   factory_girl_rails
   font-awesome-rails
   fuubar
+  globalize
   guard
   guard-bundler
   guard-rspec

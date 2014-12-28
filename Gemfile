@@ -120,3 +120,6 @@ gem 'thin'
 
 # Adds rails routes to assets
 gem 'js-routes'
+
+# Locales for db fields
+gem 'globalize'

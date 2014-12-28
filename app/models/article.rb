@@ -3,17 +3,15 @@
 # Table name: articles
 #
 #  id         :integer          not null, primary key
-#  text       :text             default(""), not null
-#  title      :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  feeling    :string(255)
 #
-##
-# Article aka blog post
+
 class Article < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :categories
+
+  translates :title, :text, :feeling
 
   validates :text,
             presence: true,
