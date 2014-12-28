@@ -1,3 +1,5 @@
+##
+# Controller for displaying articles on pages
 class ArticlesController < ApplicationController
   # GET /articles
   def index

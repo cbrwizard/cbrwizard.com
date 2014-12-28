@@ -1,3 +1,5 @@
+##
+# Controller for returning articles as JSON
 class Api::V1::ArticlesController < ApplicationController
   # GET /articles
   def index

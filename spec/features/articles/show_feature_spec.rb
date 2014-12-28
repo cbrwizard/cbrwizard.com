@@ -1,5 +1,4 @@
 describe 'Article page displays its main features to user', type: :feature do
-
   let!(:article) {create(:article)}
 
   before do

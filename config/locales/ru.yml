@@ -13,7 +13,7 @@ en:
     sidebar:
       header:
         site_title: cbrwizard.com
-        site_subtitle_html: Честный блог <br> о программировании,<br> людях и мирах
+        site_subtitle_html: Честный блог<br> о программировании,<br> людях и мирах
       menu:
         about: Что это?
         blog: Блог

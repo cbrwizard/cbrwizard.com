@@ -11,6 +11,5 @@ describe Article do
         expect(FactoryGirl.build(:wrong_article)).to_not be_valid
       end
     end
-
   end
 end

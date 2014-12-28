@@ -1,3 +1,19 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'Guardfile'
+    - 'Gemfile'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
+
 # http://www.rubydoc.info/github/bbatsov/rubocop/Rubocop/Cop/Lint/AmbiguousOperator
 Lint/AmbiguousOperator:
   Enabled: true
@@ -630,3 +646,6 @@ Style/WhileUntilModifier:
 # http://www.rubydoc.info/github/bbatsov/rubocop/Rubocop/Cop/Style/WordArray
 Style/WordArray:
   MinSize: 3
+
+Lint/Eval:
+  Enabled: false

@@ -1,5 +1,4 @@
 describe 'Articles page displays its main features to user', type: :feature do
-
   let!(:articles) {create_list(:article, 10)}
 
   before do

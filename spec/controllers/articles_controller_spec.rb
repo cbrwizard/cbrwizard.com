@@ -11,7 +11,7 @@ describe ArticlesController do
   describe '.show' do
     let(:article) {create(:article)}
 
-    it' "loads page successfully"' do
+    it 'loads page successfully' do
       get :show, id: article
 
       expect(response).to be_success

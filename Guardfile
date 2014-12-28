@@ -19,16 +19,18 @@ guard :rspec, cmd: 'rspec' do
   # Controller changes
   watch(%r{^app/controllers/(.+)_controller\.rb$})  { |m| "spec/controllers/#{m[1]}_controller_spec.rb" }
 
-  watch('config/routes.rb')                           { "spec/controllers" }
-  watch('app/controllers/application_controller.rb')  { "spec/controllers" }
+  watch('config/routes.rb')                           { 'spec/controllers' }
+  watch('app/controllers/application_controller.rb')  { 'spec/controllers' }
 
-  watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
-  watch('spec/rails_helper.rb')                       { "spec" }
-  watch('spec/spec_helper.rb')                        { "spec" }
+  watch(%r{^spec/support/(.+)\.rb$})                  { 'spec' }
+  watch('spec/rails_helper.rb')                       { 'spec' }
+  watch('spec/spec_helper.rb')                        { 'spec' }
 
   # Capybara features specs
-  watch(%r{^app/views/(.+)/(.*)\.(.*)\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1]}/#{m[2]}_feature_spec.rb" }
-  watch(%r{^app/views/(.+)/_.*\.(erb|haml|slim)$})     { |m| "spec/features/#{m[1].partition('/').first}/#{m[1].partition('/').last}_feature_spec.rb" }
+  watch(%r{^app/views/(.+)/(.*)\.(.*)\.(erb|haml|slim)$}) { |m| "spec/features/#{m[1]}/#{m[2]}_feature_spec.rb" }
+  watch(%r{^app/views/(.+)/_.*\.(erb|haml|slim)$}) do |m|
+    "spec/features/#{m[1].partition('/').first}/#{m[1].partition('/').last}_feature_spec.rb"
+  end
 
   # On JSON schema runs all controllers for this version
   watch(%r{^spec/support/api/schemas/(.+)$})     { |m| "spec/controllers/api/#{m[1].partition('/').first}" }
