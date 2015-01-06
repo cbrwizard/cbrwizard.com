@@ -26,4 +26,5 @@ ru:
     index:
       articles:
         header: Последние статьи
+        loading: Загружаю статьи...
         read_more: Остальные статьи

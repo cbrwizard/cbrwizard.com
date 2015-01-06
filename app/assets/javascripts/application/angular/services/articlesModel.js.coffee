@@ -1,15 +1,10 @@
+##
 # Contains data from articles model
-# @note is used in PagesIndexCtrl
+# @usage in PagesIndexCtrl
 angular.module('cbrwizard').factory('articlesModel', ['$http', ($http) ->
   # Articles storage
   articlesModel =
-    data :
-      articles : [
-        {title : 'Загружаем статьи...', body : ""}
-      ]
-
-  console.log("Initialized articlesModel.")
-
+    data : {}
 
   # Loads articles via API
   articlesModel.loadArticles = ->

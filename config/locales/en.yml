@@ -26,4 +26,5 @@ en:
     index:
       articles:
         header: Latest articles
-        read_more: Read everything I wrote...
+        loading: Loading articles...
+        read_more: Read everything I wrote

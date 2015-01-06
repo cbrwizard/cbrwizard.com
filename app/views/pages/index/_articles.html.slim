@@ -1,6 +1,9 @@
 section.main-block.main-block--latest-articles.row
   h2.main-block__title.col-xs-12
-    = t("pages.index.articles.header")
+    = t('pages.index.articles.header')
   section.main-block__content.articles.articles--latest.col-xs-12
-    = render @last_articles
-    = link_to t("pages.index.articles.read_more"), articles_path, class: "h3 color-blue"
+    div ng-show='articles.length == 0'
+      h4.color-grey
+        = t('pages.index.articles.loading')
+    articles-directive ng-hide='articles.length == 0'
+    = link_to t('pages.index.articles.read_more'), articles_path, class: 'h3 color-blue'

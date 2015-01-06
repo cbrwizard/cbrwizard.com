@@ -1,6 +1,6 @@
 article.article ng-repeat="article in data.articles"
   header.article__header
-    a.h4.color-blue.article__title rails-route=123
+    a.h4.color-blue.article__title href= "{{ 'article_path('+ article.id + ')' | route}}"
       | {{article.title}}
     tags-directive
   p.article__text
@@ -8,5 +8,5 @@ article.article ng-repeat="article in data.articles"
   footer.article__footer
     time.color-grey.article__time
       | {{article.updated_at | localTimeAgo}}
-    a.pull-right href= "/articles/{{article.id}}" ng-show="article.id"
+    a.pull-right href= "{{ 'article_path('+ article.id + ')' | route}}"
       | {{ 'model.article.read_more' | i18n}}
