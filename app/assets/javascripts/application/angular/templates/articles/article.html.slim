@@ -4,9 +4,9 @@ article.article ng-repeat="article in data.articles"
       | {{article.title}}
     tags-directive
   p.article__text
-    | {{article.text | limitTo: 400}}
+    | {{article.text | characters: 400}}
   footer.article__footer
     time.color-grey.article__time
       | {{article.updated_at | localTimeAgo}}
     a.pull-right href= "/articles/{{article.id}}" ng-show="article.id"
-      | Прочитать
+      | {{ 'model.article.read_more' | i18n}}

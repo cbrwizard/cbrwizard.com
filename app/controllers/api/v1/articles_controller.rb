@@ -6,6 +6,7 @@ class Api::V1::ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+
   # GET /articles/:id
   def show
     @article = Article.find(params[:id])

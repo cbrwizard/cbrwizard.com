@@ -123,3 +123,6 @@ gem 'js-routes'
 
 # Locales for db fields
 gem 'globalize'
+
+# JS locales from Rails
+gem 'i18n-js', '>= 3.0.0.rc8 '

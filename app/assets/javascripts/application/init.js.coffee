@@ -1,10 +1,16 @@
-# Main init file which initializes EVERYTHING
-
+##
 # Prepares app namespace
-@.app || (@.app = {})
+@.app = {
+  # Creates angular app
+  cbrwizard:
+    angular.module(
+      'cbrwizard',
+      ['templates', 'truncate', 'cbrwizardFilters']
+    )
+  # Creates custom filters module
+  angularFilters:
+    angular.module('cbrwizardFilters', [])
 
-# Creates angular app
-@app.cbrwizard = angular.module('cbrwizard', ['templates', 'cbrwizardFilters'])
+  config: {}
+}
 
-# Creates custom filters module
-@app.angularFilters = angular.module('cbrwizardFilters', [])

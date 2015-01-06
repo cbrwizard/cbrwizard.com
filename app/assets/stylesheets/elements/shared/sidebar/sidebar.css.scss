@@ -11,8 +11,14 @@
   }
 }
 
-  .sidebar__section__title{
-    @extend .color-green
+  .sidebar__top{
+
+  }
+
+  .sidebar__bottom{
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
   }
 
 

@@ -1,13 +1,15 @@
 aside.sidebar.col-xs-12.col-md-4.bg-grey
   section.sidebar__container
-    .main-pic.row
-    .headgroup
-      = render 'shared/sidebar/headgroup'
-    ul.menu
-      = render 'shared/sidebar/menu'
-    .created-by
-      = render 'shared/sidebar/created_by'
-    .social
-      = render 'shared/sidebar/social'
-    .code
-      = render 'shared/sidebar/code'
+    .sidebar__top
+      .main-pic.row
+      .headgroup
+        = render 'shared/sidebar/headgroup'
+      ul.menu
+        = render 'shared/sidebar/menu'
+    .sidebar__bottom
+      .created-by
+        = render 'shared/sidebar/created_by'
+      .social
+        = render 'shared/sidebar/social'
+      .code
+        = render 'shared/sidebar/code'

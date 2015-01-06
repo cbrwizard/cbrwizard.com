@@ -4,9 +4,10 @@ html ng-app='cbrwizard'
     title Cbrwizard
     = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
-  body.bg-black
+  body.bg-black data-default-locale= default_locale data-current-locale= current_locale
     section.website-container.pull-left
       = render 'shared/sidebar/sidebar'
       main.main-container.col-xs-12.col-md-8
         = yield
+
     = javascript_include_tag 'application'

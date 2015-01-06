@@ -1,6 +1,7 @@
+##
 # Filters passed time as local time ago
 # via local_time gem https://github.com/basecamp/local_time
-# @note is used in article template
+# @usage in article template
 # @param time [String] represents a date
 # @example
 #   time = "2014-10-29T21:43:02.793Z"

@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require i18n/translations
 //= require js-routes
 //= require jquery_ujs
 //= require angular
@@ -19,6 +20,9 @@
 //= require local_time
 //= require bootstrap-sprockets
 
+//= require angular/truncate
+
 
 //= require application/init
-//= require_tree ./application
+//= require_tree ./application/config
+//= require_tree ./application/angular
