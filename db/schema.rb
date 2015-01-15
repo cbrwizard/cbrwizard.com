@@ -16,25 +16,25 @@ ActiveRecord::Schema.define(version: 20140806081962) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "article_translations", force: true do |t|
-    t.integer  "article_id",              null: false
-    t.string   "locale",                  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "text",       default: "", null: false
-    t.string   "title",      default: "", null: false
-    t.string   "feeling",    default: ""
-  end
+  # create_table "article_translations", force: :cascade do |t|
+  #   t.integer  "article_id",              null: false
+  #   t.string   "locale",                  null: false
+  #   t.datetime "created_at"
+  #   t.datetime "updated_at"
+  #   t.text     "text",       default: "", null: false
+  #   t.string   "title",      default: "", null: false
+  #   t.string   "feeling",    default: ""
+  # end
 
   add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id", using: :btree
   add_index "article_translations", ["locale"], name: "index_article_translations_on_locale", using: :btree
 
-  create_table "articles", force: true do |t|
+  create_table "articles", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "taggings", force: true do |t|
+  create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
     t.string   "taggable_type"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140806081962) do
   add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
   add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
 
-  create_table "tags", force: true do |t|
+  create_table "tags", force: :cascade do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
   end

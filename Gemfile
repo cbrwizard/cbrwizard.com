@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2'
 
 # For Mac this might be needed:
 # gem install pg -v '0.17.1' ----with-pg-config=/Applications/ Postgres.app/Contents/Versions/9.3/bin/pg_config
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 gem 'bootstrap-sass'
 
 # Font icons
@@ -28,15 +28,17 @@ gem 'angular-rails-templates'
 gem 'autoprefixer-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.1'
+gem 'coffee-rails'
+
+# Needed for mac assets and stuff
 gem 'therubyracer',  platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 
 
 group :doc do
@@ -46,9 +48,7 @@ end
 
 group :development do
   # Better displays 500 errors
-  gem 'better_errors'
-  # And shows console on their pages
-  gem 'binding_of_caller'
+  gem 'web-console'
 
   # Automatically adds annotations to models
   gem 'annotate'
@@ -100,14 +100,12 @@ end
 
 group :development, :test do
   # Test framework
-  gem 'rspec-rails', '~> 3.0'
+  # gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
 
   # For active record imitation in tests
   gem 'factory_girl_rails'
 end
-
-# # Authorization
-# gem 'devise'
 
 # Easy tags
 gem 'acts-as-taggable-on'
@@ -122,7 +120,7 @@ gem 'thin'
 gem 'js-routes'
 
 # Locales for db fields
-gem 'globalize'
+gem 'globalize', git: 'https://github.com/globalize/globalize.git', branch: 'rails-4-2-upgrade'
 
 # JS locales from Rails
 gem 'i18n-js', '>= 3.0.0.rc8 '

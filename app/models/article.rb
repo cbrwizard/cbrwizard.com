@@ -6,8 +6,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
-##
-# Article AKA post
+
 class Article < ActiveRecord::Base
   acts_as_taggable
 
