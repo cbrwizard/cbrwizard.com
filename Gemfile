@@ -110,9 +110,6 @@ end
 # Easy tags
 gem 'acts-as-taggable-on'
 
-# Easy local time rendering
-gem 'local_time'
-
 # Faster server
 gem 'thin'
 

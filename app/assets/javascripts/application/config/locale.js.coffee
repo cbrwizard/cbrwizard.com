@@ -17,4 +17,6 @@ app.config.LocaleConfig =
     I18n.defaultLocale = defaultLocale
     I18n.locale = currentLocale
 
+    moment.locale(currentLocale)
+
 app.config.LocaleConfig.configureApp()

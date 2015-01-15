@@ -6,7 +6,6 @@ article.article ng-repeat="article in data.articles"
   p.article__text
     | {{article.text | characters: 400}}
   footer.article__footer
-    time.color-grey.article__time
-      | {{article.updated_at | localTimeAgo}}
+    time.color-grey.article__time am-time-ago="article.updated_at"
     a.pull-right href= "{{ 'article_path('+ article.id + ')' | route}}"
       | {{ 'model.article.read_more' | i18n}}

@@ -5,7 +5,7 @@
   cbrwizard:
     angular.module(
       'cbrwizard',
-      ['templates', 'truncate', 'cbrwizardFilters']
+      ['templates', 'truncate', 'angularMoment', 'cbrwizardFilters']
     )
   # Creates custom filters module
   angularFilters:

@@ -14,12 +14,13 @@
 //= require i18n/translations
 //= require js-routes
 //= require jquery_ujs
+//= require moment-with-locales
 //= require angular
 //= require angular-resource
 //= require angular-rails-templates
-//= require local_time
 //= require bootstrap-sprockets
 
+//= require angular/angular-moment
 //= require angular/truncate
 
 
