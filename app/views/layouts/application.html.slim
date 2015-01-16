@@ -5,11 +5,12 @@ html ng-app='cbrwizard'
     = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
   body.bg-black data-default-locale= default_locale data-current-locale= current_locale
-    section.website-container.pull-left
+    section.website-container.pull-left.container
       = render 'shared/sidebar'
-      main.main-container.col-xs-12.col-md-8
-        = yield
-      footer.main-footer.bg-darken-grey.col-xs-12
+      main.page-container.col-xs-12.col-md-8
+        section.main-container.row
+          = yield
         = render 'shared/footer'
+
 
     = javascript_include_tag 'application'

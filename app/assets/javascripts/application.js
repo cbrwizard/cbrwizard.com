@@ -19,6 +19,7 @@
 //= require angular-resource
 //= require angular-rails-templates
 //= require bootstrap-sprockets
+//= require three.min
 
 //= require angular/angular-moment
 //= require angular/truncate
@@ -27,3 +28,4 @@
 //= require application/init
 //= require_tree ./application/config
 //= require_tree ./application/angular
+//= require_tree ./application/effects

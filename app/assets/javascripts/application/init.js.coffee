@@ -12,5 +12,11 @@
     angular.module('cbrwizardFilters', [])
 
   config: {}
+
+  effects: {}
 }
 
+$ ->
+  new app.effects.Triangles(
+    $('.main-footer')[0]
+  )
