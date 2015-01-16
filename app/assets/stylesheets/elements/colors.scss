@@ -26,8 +26,14 @@
   color: $white-color;
 }
 
+.bg-soft-blue{
+  background-color: $soft-blue-color !important;
+  color: $white-color;
+}
+
 .bg-darken-grey{
   background-color: darken($grey-color, 15%) !important;
+  color: $white-color;
 }
 
 .bg-blue{
