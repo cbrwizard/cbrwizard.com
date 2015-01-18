@@ -13,10 +13,12 @@
 
   config: {}
 
-  effects: {}
+  effects: {
+    ThreeJs: {}
+  }
 }
 
 $ ->
-  new app.effects.Triangles(
+  new app.effects.ThreeJs.Triangles(
     $('.main-footer')[0]
   )

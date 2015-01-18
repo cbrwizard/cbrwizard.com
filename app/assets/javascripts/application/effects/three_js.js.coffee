@@ -1,8 +1,6 @@
 ##
-# Turns on animated triangles
-#
-# @usage footer view
-class app.effects.Triangles
+# Basic class for threejs based effects
+class app.effects.ThreeJs
   @scene: null
   @camera: null
   @container: null
@@ -15,7 +13,6 @@ class app.effects.Triangles
   #
   # @usage @constructor
   paint: ->
-    console.log 'painting...'
     @_setupThreeJs()
     @_paintElements()
     @render()
@@ -48,7 +45,9 @@ class app.effects.Triangles
   #
   # @usage @_setupThreeJs
   _createRenderer: ->
-    @renderer = new THREE.WebGLRenderer()
+    @renderer = new THREE.WebGLRenderer(
+      antialias: true
+    )
     @container.appendChild(@renderer.domElement)
 
   ##
@@ -56,18 +55,11 @@ class app.effects.Triangles
   #
   # @usage @paint
   _paintElements: ->
-    geometry = new THREE.BoxGeometry(1, 1, 1)
-    material = new THREE.MeshBasicMaterial(color: 0x00ff00)
-    @cube = new THREE.Mesh(geometry, material)
-    @scene.add @cube
-    @camera.position.z = 5
+    throw new Error('_paintElements is not implemented')
 
   ##
   # Runs every frame and renders a result
   #
   # @usage @paint
   render: =>
-    requestAnimationFrame(@render)
-    @cube.rotation.x += 0.1
-    @cube.rotation.y += 0.1
-    @renderer.render(@scene, @camera)
+    throw new Error('render is not implemented')
