@@ -1,9 +1,9 @@
 ##
 # Basic class for threejs based effects
 class app.effects.ThreeJs
-  @scene: null
-  @camera: null
-  @container: null
+  scene: null
+  camera: null
+  container: null
 
   constructor: (@container) ->
     @paint()
@@ -15,7 +15,7 @@ class app.effects.ThreeJs
   paint: ->
     @_setupThreeJs()
     @_paintElements()
-    @render()
+#    @render()
 
   ##
   # Sets up everything needed for three js to work
@@ -38,7 +38,7 @@ class app.effects.ThreeJs
   #
   # @usage @_setupThreeJs
   _createCamera: ->
-    @camera = new THREE.PerspectiveCamera(75, @container.offsetWidth / @container.offsetHeight, 0.1, 1000)
+    @camera = new THREE.PerspectiveCamera(70, @container.offsetWidth / @container.offsetHeight, 1, 10000)
 
   ##
   # Creates a three js renderer

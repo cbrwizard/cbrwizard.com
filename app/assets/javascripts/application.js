@@ -14,16 +14,12 @@
 //= require i18n/translations
 //= require js-routes
 //= require jquery_ujs
-//= require moment-with-locales
 //= require angular
 //= require angular-resource
 //= require angular-rails-templates
 //= require bootstrap-sprockets
-//= require three.min
 
-//= require angular/angular-moment
-//= require angular/truncate
-
+//= require vendor_manifest
 
 //= require application/init
 //= require_tree ./application/config
