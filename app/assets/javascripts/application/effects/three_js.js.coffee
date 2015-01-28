@@ -10,17 +10,12 @@ class app.effects.ThreeJs
 
   ##
   # Does the painting of everything
-  #
-  # @usage @constructor
   paint: ->
     @_setupThreeJs()
-    @_paintElements()
-#    @render()
+    @_paintEverything()
 
   ##
   # Sets up everything needed for three js to work
-  #
-  # @usage @paint
   _setupThreeJs: ->
     @_createScene()
     @_createCamera()
@@ -28,22 +23,16 @@ class app.effects.ThreeJs
 
   ##
   # Creates a three js scene
-  #
-  # @usage @_setupThreeJs
   _createScene: ->
     @scene = new THREE.Scene()
 
   ##
   # Creates a three js camera
-  #
-  # @usage @_setupThreeJs
   _createCamera: ->
     @camera = new THREE.PerspectiveCamera(70, @container.offsetWidth / @container.offsetHeight, 1, 10000)
 
   ##
   # Creates a three js renderer
-  #
-  # @usage @_setupThreeJs
   _createRenderer: ->
     @renderer = new THREE.WebGLRenderer(
       antialias: true
@@ -52,14 +41,69 @@ class app.effects.ThreeJs
 
   ##
   # Paints all scene elements
-  #
-  # @usage @paint
-  _paintElements: ->
-    throw new Error('_paintElements is not implemented')
+  _paintEverything: ->
+    @_prepareScene()
+    @_prepareObjects()
+    @_animateObjects()
+
+  ##
+  # Prepares a scene by configuring controls, lights and a camera
+  _prepareScene: ->
+    @_addLights()
+    @_updateRenderer()
+
+  ##
+  # Prepares objects by drawing them
+  _prepareObjects: ->
+    @_createGeometries()
+    @_createMaterials()
+
+  ##
+  # Turns drawn objects to life on first rendering
+  _animateObjects: ->
+    @_addDrawnObject()
+    @animate()
+
+  ##
+  # Adds all lights to a scene
+  _addLights: ->
+    @scene.add new THREE.AmbientLight(0x404040)
+
+  ##
+  # Creates a shared geometry
+  _createGeometries: ->
+    @geometry = new THREE.Geometry()
+
+  ##
+  # Creates a shared material
+  _createMaterials: ->
+    @defaultMaterial = new THREE.MeshLambertMaterial(
+      color: 0xffffff
+      shading: THREE.FlatShading
+      vertexColors: THREE.VertexColors
+    )
+
+  ##
+  # Adds a drawn object to a scene
+  _addDrawnObject: ->
+    drawnObject = new THREE.Mesh(@geometry, @defaultMaterial)
+    @scene.add drawnObject
+
+  ##
+  # Configures renderer
+  _updateRenderer: ->
+    @renderer.setClearColor 0xffffff
+    @renderer.setPixelRatio window.devicePixelRatio
+    @renderer.setSize @container.offsetWidth, @container.offsetHeight
+    @renderer.sortObjects = false
+
+  ##
+  # Turns on animation
+  animate: =>
+    requestAnimationFrame @animate
+    @render()
 
   ##
   # Runs every frame and renders a result
-  #
-  # @usage @paint
-  render: =>
-    throw new Error('render is not implemented')
+  render: ->
+    @renderer.render(@scene, @camera)
