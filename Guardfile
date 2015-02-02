@@ -35,3 +35,10 @@ guard :rspec, cmd: 'rspec' do
   # On JSON schema runs all controllers for this version
   watch(%r{^spec/support/api/schemas/(.+)$})     { |m| "spec/controllers/api/#{m[1].partition('/').first}" }
 end
+
+guard 'brakeman', quiet: true do
+  watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
+  watch(%r{^config/.+\.rb$})
+  watch(%r{^lib/.+\.rb$})
+  watch('Gemfile')
+end

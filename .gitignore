@@ -16,3 +16,5 @@
 
 /config/secrets.yml
 /test_images
+
+/coverage

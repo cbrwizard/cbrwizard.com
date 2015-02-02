@@ -68,6 +68,8 @@ group :development do
   gem 'rubocop-rspec'
   # With guard
   gem 'guard-rubocop'
+  # With brakeman (security scans)
+  gem 'guard-brakeman'
 
   # For guard and other notifications in native mac
   gem 'terminal-notifier-guard'
@@ -99,11 +101,13 @@ group :test do
 
   # Auto cleans test db after each test run
   gem 'database_cleaner'
+
+  # Shows code test coverage
+  gem 'simplecov', require: false
 end
 
 group :development, :test do
   # Test framework
-  # gem 'rspec-rails', '~> 3.0'
   gem 'rspec-rails'
 
   # For active record imitation in tests
@@ -127,3 +131,6 @@ gem 'i18n-js', '>= 3.0.0.rc8 '
 
 # Handles multiple processes
 gem 'foreman'
+
+# Displays performance
+gem 'rack-mini-profiler'
