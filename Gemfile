@@ -69,6 +69,9 @@ group :development do
   # With guard
   gem 'guard-rubocop'
 
+  # For guard and other notifications in native mac
+  gem 'terminal-notifier-guard'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-commands-rspec'
@@ -121,3 +124,6 @@ gem 'globalize', git: 'https://github.com/globalize/globalize.git', branch: 'rai
 
 # JS locales from Rails
 gem 'i18n-js', '>= 3.0.0.rc8 '
+
+# Handles multiple processes
+gem 'foreman'
