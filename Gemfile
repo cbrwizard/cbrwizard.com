@@ -134,3 +134,6 @@ gem 'foreman'
 
 # Displays performance
 gem 'rack-mini-profiler'
+
+# ES 6 support
+gem 'sprockets-traceur'
