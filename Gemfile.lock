@@ -76,6 +76,8 @@ GEM
       ruby_parser (~> 3.5.0)
       sass (~> 3.0)
       terminal-table (~> 1.4)
+    browserify-rails (0.7.2)
+      sprockets (~> 2.0)
     builder (3.2.2)
     bullet (4.14.0)
       activesupport (>= 3.0.0)
@@ -311,9 +313,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sprockets-traceur (0.0.2)
-      sprockets (~> 2)
-      traceur-rb (>= 0.0.2)
     temple (0.7.5)
     terminal-notifier-guard (1.6.4)
     terminal-table (1.4.5)
@@ -329,7 +328,6 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
-    traceur-rb (0.0.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.0)
@@ -355,6 +353,7 @@ DEPENDENCIES
   annotate
   autoprefixer-rails
   bootstrap-sass
+  browserify-rails (~> 0.7.2)
   bullet
   capybara
   capybara-screenshot
@@ -388,7 +387,6 @@ DEPENDENCIES
   slim-rails
   spring
   spring-commands-rspec
-  sprockets-traceur
   terminal-notifier-guard
   therubyracer
   thin

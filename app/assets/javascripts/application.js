@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require traceur-runtime
 //= require jquery
 //= require i18n/translations
 //= require js-routes
@@ -22,7 +21,10 @@
 
 //= require vendor_manifest
 
-//= require application/init
-//= require_tree ./application/config
-//= require_tree ./application/angular
-//= require_tree ./application/effects
+// todo: require app(=init) here, call init from there (if needed).
+// there in init require other stuff and call it
+// in other files remove references to global objects and require files where needed
+// start with angular, then move to config and effects
+// after that, remove dependencies from sprockets to browserify one by one
+var foo = require('./application/exported_lol');
+console.log(foo(2));

@@ -37,5 +37,8 @@ module Cbrwizard
 
     # Sets a correct path to angular templates for angular-rails-templates gem
     config.angular_templates.ignore_prefix = %w(application/angular/templates/)
+
+
+    config.browserify_rails.commandline_options = "-t es6ify --extension=\".js.es6\""
   end
 end

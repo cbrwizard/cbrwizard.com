@@ -136,4 +136,7 @@ gem 'foreman'
 gem 'rack-mini-profiler'
 
 # ES 6 support
-gem 'sprockets-traceur'
+# gem 'sprockets-traceur'
+
+# Modules in JS
+gem 'browserify-rails', '~> 0.7.2'
