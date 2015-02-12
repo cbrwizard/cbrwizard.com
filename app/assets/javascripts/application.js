@@ -19,6 +19,8 @@
 //= require angular-rails-templates
 //= require bootstrap-sprockets
 
+//= require bundle
+
 //= require vendor_manifest
 
 // todo: require app(=init) here, call init from there (if needed).
@@ -26,5 +28,12 @@
 // in other files remove references to global objects and require files where needed
 // start with angular, then move to config and effects
 // after that, remove dependencies from sprockets to browserify one by one
-var foo = require('./application/exported_lol');
-console.log(foo(2));
+//var foo = require('./application/exported_lol.js.es6');
+//console.log(foo(2));
+//
+//
+//var cbrwizard = require('./application/angular/modules/cbrwizard');
+//console.log(cbrwizard);
+//
+//var cbrwizardCtrl = require('./application/angular/controllers/pages_index_ctrl');
+//console.log(cbrwizardCtrl);

@@ -76,8 +76,6 @@ GEM
       ruby_parser (~> 3.5.0)
       sass (~> 3.0)
       terminal-table (~> 1.4)
-    browserify-rails (0.7.2)
-      sprockets (~> 2.0)
     builder (3.2.2)
     bullet (4.14.0)
       activesupport (>= 3.0.0)
@@ -353,7 +351,6 @@ DEPENDENCIES
   annotate
   autoprefixer-rails
   bootstrap-sass
-  browserify-rails (~> 0.7.2)
   bullet
   capybara
   capybara-screenshot

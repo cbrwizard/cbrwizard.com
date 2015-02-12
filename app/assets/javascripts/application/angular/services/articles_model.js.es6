@@ -1,5 +1,9 @@
 //
 // Contains data from articles model
+
+var cbrwizard = require('../modules/cbrwizard');
+console.log(cbrwizard);
+
 angular.module('cbrwizard').factory('articlesModel', ['$http', function($http){
   // Articles storage
   var articlesModel = {
@@ -16,7 +20,7 @@ angular.module('cbrwizard').factory('articlesModel', ['$http', function($http){
       .error(() => {
         console.error('Failed to load articles.');
       })
-  }
+  };
 
   return articlesModel;
 }]);

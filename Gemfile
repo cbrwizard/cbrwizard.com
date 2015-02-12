@@ -139,4 +139,4 @@ gem 'rack-mini-profiler'
 # gem 'sprockets-traceur'
 
 # Modules in JS
-gem 'browserify-rails', '~> 0.7.2'
+# gem 'browserify-rails', '~> 0.7.2'
