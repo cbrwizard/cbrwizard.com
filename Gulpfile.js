@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
   minifyCSS = require('gulp-minify-css'),
   concat = require('gulp-concat'),
-  purge = require('gulp-css-purge'),
   bower = require('gulp-bower'),
   autoprefix = require('gulp-autoprefixer'),
   sass = require('gulp-ruby-sass');
@@ -35,10 +34,9 @@ gulp.task('css', function () {
       ]
     }
   )
-  .pipe(autoprefix('last 2 version'))
   .pipe(concat('application.css'))
-  .pipe(purge())
   .pipe(minifyCSS())
+  .pipe(autoprefix('last 2 version'))
   .pipe(gulp.dest('./public'));
 });
 
