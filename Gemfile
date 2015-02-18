@@ -10,11 +10,11 @@ gem 'rails', '4.2'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
-gem 'bootstrap-sass'
+# gem 'sass-rails'
+# gem 'bootstrap-sass'
 
 # Font icons
-gem 'font-awesome-rails'
+# gem 'font-awesome-rails'
 
 # gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
@@ -25,7 +25,7 @@ gem 'angularjs-rails'
 gem 'angular-rails-templates'
 
 # Automatically adds browser prefixes for css
-gem 'autoprefixer-rails'
+# gem 'autoprefixer-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'

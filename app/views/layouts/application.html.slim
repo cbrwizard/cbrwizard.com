@@ -2,7 +2,7 @@ doctype html
 html ng-app='cbrwizard'
   head
     title Cbrwizard
-    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag '/application.css'
     = csrf_meta_tags
   body.bg-black data-default-locale= default_locale data-current-locale= current_locale
     section.website-container.pull-left.container
@@ -13,4 +13,4 @@ html ng-app='cbrwizard'
         = render 'shared/footer'
 
 
-    = javascript_include_tag 'application'
+    /= javascript_include_tag 'application'

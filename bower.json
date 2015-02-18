@@ -1,0 +1,20 @@
+{
+  "name": "cbrwizard.com",
+  "version": "0.1",
+  "homepage": "https://github.com/cbrwizard/cbrwizard.com",
+  "authors": [
+    "cbrwizard <cbrwizard@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.3",
+    "fontawesome": "~4.3.0"
+  }
+}
