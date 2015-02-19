@@ -10,17 +10,20 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/config/database.yml
-/.idea
-/.idea/*
 .sass-cache
 
-/config/secrets.yml
-/test_images
+/.idea
+/.idea/*
 
+/config/database.yml
+/config/secrets.yml
+
+/test_images
 /coverage
 
 /node_modules
 /bower_components
 
+/public/fonts
 /public/application.css
+/public/application.js

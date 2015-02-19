@@ -31,6 +31,6 @@
 //  );
 //});
 
-var foo = require('./exported_lol.js.es6');
+var foo = require('./exported_lol.js');
 var loaaaa = msg => console.log(msg);
 console.log(foo(2));
