@@ -30,3 +30,7 @@
 //    $('.main-footer')[0]
 //  );
 //});
+
+var foo = require('./exported_lol.js.es6');
+var loaaaa = msg => console.log(msg);
+console.log(foo(2));
