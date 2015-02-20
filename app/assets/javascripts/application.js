@@ -11,17 +11,18 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require i18n/translations
 //= require js-routes
-//= require jquery_ujs
 //= require angular
 //= require angular-resource
 //= require angular-rails-templates
-//= require bootstrap-sprockets
 
-//= require bundle
 
 //= require vendor_manifest
+
+// todo: remove other requires if needed
+//= require global.js
 
 // todo: require app(=init) here, call init from there (if needed).
 // there in init require other stuff and call it

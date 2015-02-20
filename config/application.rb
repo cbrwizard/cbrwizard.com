@@ -27,6 +27,10 @@ module Cbrwizard
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ru
 
+    # Make public assets requireable in manifest files
+    config.assets.paths << Rails.root.join('public', 'assets', 'stylesheets')
+    config.assets.paths << Rails.root.join('public', 'assets', 'javascripts')
+
     config.assets.precompile += %w( admin.css admin.js )
 
     # Auto loads lib files

@@ -12,3 +12,4 @@ A wizardry blog
 ##What to check:
 1. log/bullet.log for low queries
 1. coverage/index.html for test coverage
+

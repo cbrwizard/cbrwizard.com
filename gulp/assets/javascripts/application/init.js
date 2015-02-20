@@ -33,4 +33,4 @@
 
 var foo = require('./exported_lol.js');
 var loaaaa = msg => console.log(msg);
-console.log(foo(2));
+console.log(foo(200));
