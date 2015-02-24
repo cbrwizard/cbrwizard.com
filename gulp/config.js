@@ -9,7 +9,7 @@ module.exports = {
   },
   sass: {
     src: sourceFiles + '/stylesheets/**/*.scss',
-    dest: publicAssets + "/stylesheets",
+    dest: publicAssets + '/stylesheets',
     settings: {
       imagePath: '/assets/images' // Used by the image-url helper
     }
