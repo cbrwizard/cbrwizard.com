@@ -6,7 +6,9 @@ var config       = require('../config').browserify;
 var gulp         = require('gulp');
 var handleErrors = require('../util/handleErrors');
 var source       = require('vinyl-source-stream'),
-  es6ify = require('es6ify');
+  es6ify = require('es6ify'),
+  uglify = require('gulp-uglify'),
+  buffer = require('vinyl-buffer');
 var watchify     = require('watchify');
 
 var browserifyTask = function(callback, devMode) {
@@ -31,6 +33,8 @@ var browserifyTask = function(callback, devMode) {
         .bundle()
         .on('error', handleErrors)
         .pipe(source(bundleConfig.outputName))
+        .pipe(buffer())
+        .pipe(uglify({preserveComments: 'some'}))
         .pipe(gulp.dest(bundleConfig.dest))
         .on('end', reportFinished)
         .pipe(browserSync.reload({stream:true}));

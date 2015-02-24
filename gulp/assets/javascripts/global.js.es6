@@ -4,7 +4,7 @@ console.log(foo(22));
 var log = msg => console.log(msg + 55);
 log(15);
 
-var _ = require('./../../../bower_components/underscore/underscore');
+var _ = require('./../../../bower_components/lodash/lodash');
 _.each([1, 2, 3, 4], function () {
-  console.log('using asd!!!');
+  console.log('using asdsdsds!!!');
 });

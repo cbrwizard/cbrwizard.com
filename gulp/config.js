@@ -1,8 +1,10 @@
 var publicAssets = "./public/assets";
 var sourceFiles = "./gulp/assets";
+var bowerDir = './bower_components';
 
 module.exports = {
   publicAssets: publicAssets,
+  bowerDir: bowerDir,
   browserSync: {
     proxy: 'localhost:3000',
     files: ['./app/views/**/*'],
