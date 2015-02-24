@@ -5,7 +5,8 @@ module.exports = {
   publicAssets: publicAssets,
   browserSync: {
     proxy: 'localhost:3000',
-    files: ['./app/views/**/*']
+    files: ['./app/views/**/*'],
+    open: false
   },
   sass: {
     src: sourceFiles + '/stylesheets/**/*.scss',
@@ -18,27 +19,12 @@ module.exports = {
     src: sourceFiles + "/images/**/*",
     dest: publicAssets + "/images"
   },
-  iconFonts: {
-    name: 'Gulp Rails Icons',
-    src: sourceFiles + "/icons/*.svg",
-    dest: publicAssets + '/fonts',
-    sassDest: sourceFiles + '/stylesheets/base',
-    template: './gulp/tasks/iconFont/template.sass',
-    sassOutputName: '_iconFont.sass',
-    fontPath: '/assets/fonts',
-    className: 'icon',
-    options: {
-      fontName: 'gulp-rails-icons',
-      appendCodepoints: true,
-      normalize: false
-    }
-  },
   browserify: {
     bundleConfigs: [{
-      entries: sourceFiles + '/javascripts/global.js',
+      entries: sourceFiles + '/javascripts/global.js.es6',
       dest: publicAssets + '/javascripts',
       outputName: 'global.js',
-      extensions: ['.js']
+      extensions: ['.js', '.js.es6']
     }]
   }
 };

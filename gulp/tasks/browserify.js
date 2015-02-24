@@ -27,7 +27,7 @@ var browserifyTask = function(callback, devMode) {
 
       return b
         .add(es6ify.runtime)
-        .transform(es6ify)
+        .transform(es6ify.configure(/^(?!.*node_modules)+.+\.js.es6$/))
         .bundle()
         .on('error', handleErrors)
         .pipe(source(bundleConfig.outputName))

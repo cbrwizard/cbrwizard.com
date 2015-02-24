@@ -3,6 +3,5 @@ var b = function(n) {
   return n * 11
 };
 
-var log = msg => console.log(msg + 55);
 
 module.exports = b;
