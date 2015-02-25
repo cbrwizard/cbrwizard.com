@@ -1,6 +1,9 @@
-var publicAssets = "./public/assets";
-var sourceFiles = "./gulp/assets";
-var bowerDir = './bower_components';
+//
+// Configuration for gulp tasks
+
+var publicAssets = './public/assets',
+  sourceFiles = './gulp/assets',
+  bowerDir = './bower_components';
 
 module.exports = {
   publicAssets: publicAssets,
@@ -18,8 +21,8 @@ module.exports = {
     }
   },
   images: {
-    src: sourceFiles + "/images/**/*",
-    dest: publicAssets + "/images"
+    src: sourceFiles + '/images/**/*',
+    dest: publicAssets + '/images'
   },
   browserify: {
     bundleConfigs: [{

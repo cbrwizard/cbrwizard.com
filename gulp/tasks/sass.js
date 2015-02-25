@@ -1,21 +1,22 @@
-var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
-var sass         = require('gulp-sass');
-var handleErrors = require('../util/handleErrors');
-var config       = require('../config').sass,
+//
+// Parses SASS and minifies css
+
+var gulp = require('gulp'),
+  browserSync = require('browser-sync'),
+  sass = require('gulp-sass'),
+  handleErrors = require('../util/handleErrors'),
+  config = require('../config').sass,
   concat = require('gulp-concat'),
-  minifyCSS = require('gulp-minify-css');
-var autoprefixer = require('gulp-autoprefixer');
+  minifyCSS = require('gulp-minify-css'),
+  autoprefixer = require('gulp-autoprefixer');
 
-
-// todo: find a way to combine it with bower or use gulp-ruby-sass
 gulp.task('sass', function () {
   return gulp.src(config.src)
     .pipe(sass(config.settings))
     .on('error', handleErrors)
     .pipe(concat('global.css'))
     .pipe(minifyCSS())
-    .pipe(autoprefixer({ browsers: ['last 2 version'] }))
+    .pipe(autoprefixer({browsers: ['last 2 version']}))
     .pipe(gulp.dest(config.dest))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream: true}));
 });

@@ -1,3 +1,5 @@
+//
+// Displays gulp errors
 var notify = require("gulp-notify");
 
 module.exports = function() {

@@ -9,13 +9,6 @@ gem 'rails', '4.2'
 # gem install pg -v '0.17.1' ----with-pg-config=/Applications/ Postgres.app/Contents/Versions/9.3/bin/pg_config
 gem 'pg'
 
-# Use SCSS for stylesheets
-# gem 'sass-rails'
-# gem 'bootstrap-sass'
-
-# Font icons
-# gem 'font-awesome-rails'
-
 # gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
 
@@ -24,14 +17,6 @@ gem 'angularjs-rails'
 # Adds an ability to easily add any template to angular
 gem 'angular-rails-templates'
 
-# Automatically adds browser prefixes for css
-# gem 'autoprefixer-rails'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails'
-
 # Needed for mac assets and stuff
 gem 'therubyracer',  platforms: :ruby
 # Use jquery as the JavaScript library
@@ -39,7 +24,6 @@ gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
-
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -74,7 +58,7 @@ group :development do
   # For guard and other notifications in native mac
   gem 'terminal-notifier-guard'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background
   gem 'spring'
   gem 'spring-commands-rspec'
 end
@@ -134,9 +118,3 @@ gem 'foreman'
 
 # Displays performance
 gem 'rack-mini-profiler'
-
-# ES 6 support
-# gem 'sprockets-traceur'
-
-# Modules in JS
-# gem 'browserify-rails', '~> 0.7.2'

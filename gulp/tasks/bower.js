@@ -1,5 +1,8 @@
-var gulp = require('gulp');
-var bower = require('gulp-bower');
+//
+// Installs bower components
+
+var gulp = require('gulp'),
+  bower = require('gulp-bower');
 
 gulp.task('bower', function () {
   return bower()

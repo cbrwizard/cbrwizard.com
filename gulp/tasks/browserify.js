@@ -1,15 +1,18 @@
-var _            = require('lodash');
-var browserify   = require('browserify');
-var browserSync  = require('browser-sync');
-var bundleLogger = require('../util/bundleLogger');
-var config       = require('../config').browserify;
-var gulp         = require('gulp');
-var handleErrors = require('../util/handleErrors');
-var source       = require('vinyl-source-stream'),
+//
+// Compiles JS with browserify
+
+var _ = require('lodash'),
+  browserify = require('browserify'),
+  browserSync = require('browser-sync'),
+  bundleLogger = require('../util/bundleLogger'),
+  config = require('../config').browserify,
+  gulp = require('gulp'),
+  handleErrors = require('../util/handleErrors'),
+  source = require('vinyl-source-stream'),
   es6ify = require('es6ify'),
   uglify = require('gulp-uglify'),
-  buffer = require('vinyl-buffer');
-var watchify     = require('watchify');
+  buffer = require('vinyl-buffer'),
+  watchify = require('watchify');
 
 var browserifyTask = function(callback, devMode) {
 

@@ -1,9 +1,12 @@
-var gulp         = require('gulp');
-var gulpSequence = require('gulp-sequence');
+//
+// Tasks for first gulp run
 
-gulp.task('build', function(cb) {
+var gulp = require('gulp'),
+  gulpSequence = require('gulp-sequence');
+
+gulp.task('build', function (cb) {
   var tasks = ['clean', 'bower', ['images', 'icons'], ['sass', 'browserify']];
-  if(process.env.RAILS_ENV === 'production') tasks.push('rev');
+  if (process.env.RAILS_ENV === 'production') tasks.push('rev');
   tasks.push(cb);
   gulpSequence.apply(this, tasks);
 });
