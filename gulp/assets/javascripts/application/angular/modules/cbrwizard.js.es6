@@ -1,6 +1,8 @@
-var cbrwizard = angular.module(
+var angular = require('angular');
+
+var cbrwizardModule = angular.module(
   'cbrwizard',
-  ['templates', 'truncate', 'angularMoment']
+  []
 );
 
-module.exports = cbrwizard;
+module.exports = cbrwizardModule;

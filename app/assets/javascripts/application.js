@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require i18n/translations
 //= require js-routes
-//= require angular
-//= require angular-resource
-//= require angular-rails-templates
 
 
 //= require vendor_manifest

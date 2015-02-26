@@ -1,0 +1,15 @@
+article.article ng-repeat="article in data.articles"
+  header.article__header
+    /a.h4.color-blue.article__title href= "{{ 'article_path('+ article.id + ')' | route}}"
+    a.h4.color-blue.article__title href= "{{ 'article_path('+ article.id + ')'}}"
+      | {{article.title}}
+    tags-directive
+  p.article__text
+    /| {{article.text | characters: 400}}
+    | {{article.text}}
+  footer.article__footer
+    time.color-grey.article__time am-time-ago="article.updated_at"
+    /a.pull-right href= "{{ 'article_path('+ article.id + ')' | route}}"
+    a.pull-right href= "{{ 'article_path('+ article.id + ')'}}"
+      | {{ 'model.article.read_more'}}
+      /| {{ 'model.article.read_more' | i18n}}

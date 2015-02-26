@@ -2,7 +2,6 @@
 // Parses SASS and minifies css
 
 var gulp = require('gulp'),
-  browserSync = require('browser-sync'),
   sass = require('gulp-sass'),
   handleErrors = require('../util/handleErrors'),
   config = require('../config').sass,
@@ -17,6 +16,5 @@ gulp.task('sass', function () {
     .pipe(concat('global.css'))
     .pipe(minifyCSS())
     .pipe(autoprefixer({browsers: ['last 2 version']}))
-    .pipe(gulp.dest(config.dest))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest(config.dest));
 });

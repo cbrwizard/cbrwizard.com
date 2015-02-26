@@ -8,11 +8,6 @@ var publicAssets = './public/assets',
 module.exports = {
   publicAssets: publicAssets,
   bowerDir: bowerDir,
-  browserSync: {
-    proxy: 'localhost:3000',
-    files: ['./app/views/**/*'],
-    open: false
-  },
   sass: {
     src: sourceFiles + '/stylesheets/**/*.scss',
     dest: publicAssets + '/stylesheets',
@@ -31,5 +26,9 @@ module.exports = {
       outputName: 'global.js',
       extensions: ['.js', '.js.es6']
     }]
+  },
+  slim: {
+    src: sourceFiles + '/javascripts/application/angular/templates/**/*.slim',
+    dest: publicAssets + '/javascripts/templates'
   }
 };

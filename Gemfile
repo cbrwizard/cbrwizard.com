@@ -13,9 +13,9 @@ gem 'pg'
 gem 'slim-rails'
 
 # Adds angularjs to assets
-gem 'angularjs-rails'
+# gem 'angularjs-rails'
 # Adds an ability to easily add any template to angular
-gem 'angular-rails-templates'
+# gem 'angular-rails-templates'
 
 # Needed for mac assets and stuff
 gem 'therubyracer',  platforms: :ruby

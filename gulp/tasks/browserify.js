@@ -3,7 +3,6 @@
 
 var _ = require('lodash'),
   browserify = require('browserify'),
-  browserSync = require('browser-sync'),
   bundleLogger = require('../util/bundleLogger'),
   config = require('../config').browserify,
   gulp = require('gulp'),
@@ -37,10 +36,9 @@ var browserifyTask = function(callback, devMode) {
         .on('error', handleErrors)
         .pipe(source(bundleConfig.outputName))
         .pipe(buffer())
-        .pipe(uglify({preserveComments: 'some'}))
+        //.pipe(uglify({preserveComments: 'some'})) //todo: enable only for production
         .pipe(gulp.dest(bundleConfig.dest))
-        .on('end', reportFinished)
-        .pipe(browserSync.reload({stream:true}));
+        .on('end', reportFinished);
     };
 
     if(devMode) {
