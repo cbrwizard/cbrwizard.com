@@ -1,29 +1,13 @@
-//var foo = require('./application/exported_lol');
-//console.log(foo(22));
-
-var log = msg => console.log(msg + 55);
-log(15);
-
 var angular = require('angular');
 var cbrwizard = require('./application/angular/modules/cbrwizard');
+var PagesIndexController = require('./application/angular/controllers/pages_index_controller');
+var articlesDirective = require('./application/angular/directives/articles_directive');
 
 //todo: properly require all controllers and directives from their files
+//todo: convert all angular files to es6
 
-var articlesModel = require('./application/angular/services/articles_model');
-cbrwizard.controller('PagesIndexCtrl', [
-  '$scope', '$http', 'articlesModel',
-  function ($scope, $http, articlesModel) {
-    $scope.data = articlesModel.data;
-    articlesModel.loadArticles();
-  }
-]);
-
-cbrwizard.directive('articlesDirective', function () {
-  return {
-    restrict: 'E',
-    templateUrl: './assets/javascripts/templates/articles/article.html'
-  }
-});
+cbrwizard.controller('PagesIndexController', PagesIndexController);
+cbrwizard.directive('articlesDirective', articlesDirective);
 
 //angular.element(document).ready(function () {
 //  var template = document.getElementById("myTemplate");

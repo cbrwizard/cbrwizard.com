@@ -6,6 +6,7 @@ var _ = require('lodash'),
   bundleLogger = require('../util/bundleLogger'),
   config = require('../config').browserify,
   gulp = require('gulp'),
+  lodash = require('lodash'),
   handleErrors = require('../util/handleErrors'),
   source = require('vinyl-source-stream'),
   es6ify = require('es6ify'),
@@ -24,13 +25,13 @@ var browserifyTask = function(callback, devMode) {
       bundleConfig = _.omit(bundleConfig, ['external', 'require']);
     }
 
-    var b = browserify(bundleConfig);
+    var b = browserify(es6ify.runtime, _.omit(bundleConfig, 'entries'));
 
     var bundle = function() {
       bundleLogger.start(bundleConfig.outputName);
 
       return b
-        .add(es6ify.runtime)
+        .add(bundleConfig.entries)
         .transform(es6ify.configure(/^(?!.*node_modules)+.+\.js.es6$/))
         .bundle()
         .on('error', handleErrors)

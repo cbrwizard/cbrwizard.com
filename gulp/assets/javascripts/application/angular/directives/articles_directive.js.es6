@@ -1,11 +1,11 @@
 //
 // Renders an article
-var cbrwizard = require('../modules/cbrwizard');
-console.log(cbrwizard);
 
-cbrwizard.directive('articlesDirective', function(){
+var articlesDirective = function(){
   return {
     restrict: 'E',
-    templateUrl: 'articles/article.html'
+    templateUrl: './assets/javascripts/templates/articles/article.html'
   }
-});
+};
+
+module.exports = articlesDirective;
