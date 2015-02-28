@@ -1,26 +1,22 @@
 //
 // Contains data from articles model
 
-var cbrwizard = require('../modules/cbrwizard');
-console.log(cbrwizard);
+class ArticlesModel {
+  constructor($http) {
+    this.$http = $http;
+    this.data = {};
+  }
 
-angular.module('cbrwizard').factory('articlesModel', ['$http', function($http){
-  // Articles storage
-  var articlesModel = {
-    data: {}
-  };
-
-  // Loads articles via API
-  articlesModel.loadArticles = function(){
-    $http.get('./api/v1/articles')
+  loadArticles() {
+    this.$http.get('./api/v1/articles')
       .success((data) => {
         this.data.articles = data;
         console.log('Successfully loaded articles.');
       })
       .error(() => {
         console.error('Failed to load articles.');
-      })
-  };
+    })
+  }
+}
 
-  return articlesModel;
-}]);
+module.exports = ArticlesModel;

@@ -1,11 +1,11 @@
 //
 // Renders an article
 
-var articlesDirective = function(){
-  return {
-    restrict: 'E',
-    templateUrl: './assets/javascripts/templates/articles/article.html'
+class ArticlesDirective {
+  constructor() {
+    this.restrict = 'E';
+    this.templateUrl = './assets/javascripts/templates/articles/article.html';
   }
-};
+}
 
-module.exports = articlesDirective;
+module.exports = ArticlesDirective;
