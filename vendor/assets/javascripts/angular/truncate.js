@@ -1,4 +1,9 @@
-angular.module('truncate', [])
+/*
+ * @source https://github.com/sparkalow/angular-truncate
+ * @note turned into a browserify module
+ */
+
+var truncate = angular.module('truncate', [])
     .filter('characters', function () {
         return function (input, chars, breakOnWord) {
             if (isNaN(chars)) return input;
@@ -47,3 +52,5 @@ angular.module('truncate', [])
             return input;
         };
     });
+
+module.exports = truncate;

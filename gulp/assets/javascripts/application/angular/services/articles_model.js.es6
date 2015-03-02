@@ -1,6 +1,5 @@
 //
 // Contains data from articles model
-
 class ArticlesModel {
   constructor($http) {
     this.$http = $http;

@@ -1,5 +1,5 @@
 //
-// Contains apps main module
+// Apps main module
 
 var angular = require('angular');
 

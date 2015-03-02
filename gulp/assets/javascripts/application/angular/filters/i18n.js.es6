@@ -3,9 +3,11 @@
 //
 // @param path [String] path to a rails locale translation
 // @return [String] translation for a set locale
-// @note locale must be set manually inside an application
-app.angularFilters.filter('i18n', function(){
+// @note takes locales from Rails
+var I18nFilter = function(){
   return function(path){
-    I18n.t(path);
+    return I18n.t(path);
   }
-});
+};
+
+module.exports = I18nFilter;
