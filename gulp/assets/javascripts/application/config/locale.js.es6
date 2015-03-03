@@ -1,13 +1,15 @@
+var moment = require('./../../../../../vendor/assets/javascripts/configs/moment-with-locales');
+
 //
-// Locale configs
-app.config.LocaleConfig = {
+// Sets current locale
+class LocaleConfig {
   // Runs all configuration methods
-  configureApp: function(){
+  constructor() {
     this.updateLocales();
-  },
+  }
 
   // Updates locales for i18n-js
-  updateLocales: function(){
+  updateLocales() {
     var $body, defaultLocale, currentLocale;
     $body = $('body');
     defaultLocale = $body.data('default-locale');
@@ -16,8 +18,8 @@ app.config.LocaleConfig = {
     I18n.defaultLocale = defaultLocale;
     I18n.locale = currentLocale;
 
-    return moment.locale(currentLocale);
+    moment.locale(currentLocale);
   }
-};
+}
 
-app.config.LocaleConfig.configureApp();
+module.exports = LocaleConfig;
