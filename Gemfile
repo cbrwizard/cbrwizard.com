@@ -9,28 +9,8 @@ gem 'rails', '4.2'
 # gem install pg -v '0.17.1' ----with-pg-config=/Applications/ Postgres.app/Contents/Versions/9.3/bin/pg_config
 gem 'pg'
 
-# Use SCSS for stylesheets
-gem 'sass-rails'
-gem 'bootstrap-sass'
-
-# Font icons
-gem 'font-awesome-rails'
-
 # gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
-
-# Adds angularjs to assets
-gem 'angularjs-rails'
-# Adds an ability to easily add any template to angular
-gem 'angular-rails-templates'
-
-# Automatically adds browser prefixes for css
-gem 'autoprefixer-rails'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails'
 
 # Needed for mac assets and stuff
 gem 'therubyracer',  platforms: :ruby
@@ -40,6 +20,26 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 
+# Easy tags
+gem 'acts-as-taggable-on'
+
+# Faster server
+gem 'thin'
+
+# Adds rails routes to assets
+gem 'js-routes'
+
+# Locales for db fields
+gem 'globalize', git: 'https://github.com/globalize/globalize.git', branch: 'rails-4-2-upgrade'
+
+# JS locales from Rails
+gem 'i18n-js', '>= 3.0.0.rc8 '
+
+# Handles multiple processes
+gem 'foreman'
+
+# Displays performance
+gem 'rack-mini-profiler'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -74,7 +74,7 @@ group :development do
   # For guard and other notifications in native mac
   gem 'terminal-notifier-guard'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background
   gem 'spring'
   gem 'spring-commands-rspec'
 end
@@ -113,27 +113,3 @@ group :development, :test do
   # For active record imitation in tests
   gem 'factory_girl_rails'
 end
-
-# Easy tags
-gem 'acts-as-taggable-on'
-
-# Faster server
-gem 'thin'
-
-# Adds rails routes to assets
-gem 'js-routes'
-
-# Locales for db fields
-gem 'globalize', git: 'https://github.com/globalize/globalize.git', branch: 'rails-4-2-upgrade'
-
-# JS locales from Rails
-gem 'i18n-js', '>= 3.0.0.rc8 '
-
-# Handles multiple processes
-gem 'foreman'
-
-# Displays performance
-gem 'rack-mini-profiler'
-
-# ES 6 support
-gem 'sprockets-traceur'

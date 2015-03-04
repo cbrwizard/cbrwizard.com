@@ -27,6 +27,10 @@ module Cbrwizard
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ru
 
+    # Make public assets requireable in manifest files
+    config.assets.paths << Rails.root.join('public', 'assets', 'stylesheets')
+    config.assets.paths << Rails.root.join('public', 'assets', 'javascripts')
+
     config.assets.precompile += %w( admin.css admin.js )
 
     # Auto loads lib files
@@ -36,6 +40,10 @@ module Cbrwizard
     # Slim::Engine.set_default_options attr_delims: { '(' => ')', '[' => ']' }
 
     # Sets a correct path to angular templates for angular-rails-templates gem
-    config.angular_templates.ignore_prefix = %w(application/angular/templates/)
+    # config.angular_templates.ignore_prefix = %w(application/angular/templates/)
+
+    # Enables es6ify
+    # config.browserify_rails.commandline_options = "-t [ es6ify --extension=\".js.es6\" ]"
+    # config.browserify_rails.force = true
   end
 end

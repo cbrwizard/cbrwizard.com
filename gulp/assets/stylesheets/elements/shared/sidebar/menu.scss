@@ -1,0 +1,12 @@
+@import '../../colors';
+
+// Sidebar menu
+
+.menu {
+  margin: 20px 0;
+}
+
+.menu__link{
+  font-size: 30px;
+  @extend .color-blue;
+}

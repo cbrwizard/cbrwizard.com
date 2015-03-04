@@ -1,8 +1,8 @@
 doctype html
-html ng-app='cbrwizard'
+html
   head
     title Cbrwizard
-    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag 'application'
     = csrf_meta_tags
   body.bg-black data-default-locale= default_locale data-current-locale= current_locale
     section.website-container.pull-left.container
