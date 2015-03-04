@@ -1,5 +1,6 @@
-//
-// Configuration for gulp tasks
+/**
+ * Configuration for gulp tasks
+*/
 
 var publicAssets = './public/assets',
   sourceFiles = './gulp/assets',

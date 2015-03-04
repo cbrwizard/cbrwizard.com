@@ -1,6 +1,3 @@
-//
-// Compiles JS with browserify
-
 var _ = require('lodash'),
   browserify = require('browserify'),
   bundleLogger = require('../util/bundleLogger'),
@@ -14,6 +11,9 @@ var _ = require('lodash'),
   buffer = require('vinyl-buffer'),
   watchify = require('watchify');
 
+/**
+ * Compiles JS with browserify
+ */
 var browserifyTask = function(callback, devMode) {
 
   var bundleQueue = config.bundleConfigs.length;

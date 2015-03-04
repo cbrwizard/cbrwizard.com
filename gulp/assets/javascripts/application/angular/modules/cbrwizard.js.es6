@@ -1,8 +1,8 @@
-//
-// Apps main module
+require('angular');
 
-var angular = require('angular');
-
+/**
+ * Apps main module
+ */
 var cbrwizardModule = angular.module(
   'cbrwizard',
   []

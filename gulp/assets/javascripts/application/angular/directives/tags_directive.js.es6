@@ -1,5 +1,6 @@
-//
-// Renders tags
+/**
+ * Renders tags
+ */
 class TagsDirective {
   constructor() {
     this.restrict = 'E';

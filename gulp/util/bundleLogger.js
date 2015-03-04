@@ -1,10 +1,10 @@
-//
-// Provides gulp style logs to the bundle method in browserify.js
-
 var gutil = require('gulp-util'),
   prettyHrtime = require('pretty-hrtime'),
   startTime;
 
+/**
+ * Provides gulp style logs to the bundle method in browserify.js
+ */
 module.exports = {
   start: function(filepath) {
     startTime = process.hrtime();

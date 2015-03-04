@@ -1,29 +1,43 @@
+var THREE = require('./../../../../../../bower_components/three.js/three.min');
+require('./../../../../../../bower_components/TrackballControls/index.js');
 var ThreeJsEffect = require('./../three_js_effect');
 
-//
-// A base class for an input controllable three js effect
+/**
+ * A base class for an input controllable three js effect
+ */
 class ControllableEffect extends ThreeJsEffect {
+  /**
+   *
+   * @param container {jQuery.object}
+   */
   constructor(container) {
     super(container);
     this._paintEverything();
   }
 
-  //
-  // Runs every frame with updated controls and renders a result
+  /**
+   * Runs every frame with updated controls and renders a result
+   */
   render() {
     this.controls.update();
     super.render();
   }
 
-  //
-  // Prepares a scene by configuring controls, lights and a camera
+  /**
+   * Prepares a scene by configuring controls, lights and a camera
+   *
+   * @private
+   */
   _prepareScene() {
     this._createControls();
     super._prepareScene();
   }
-  
-  //
-  // Sets up controls which allow camera to be moved
+
+  /**
+   * Sets up controls which allow camera to be moved
+   *
+   * @private
+   */
   _createControls() {
     this.controls = new THREE.TrackballControls(this.camera, this.container);
     this.controls.rotateSpeed = 1.0;

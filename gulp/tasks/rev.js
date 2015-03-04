@@ -1,12 +1,11 @@
-//
-// Handles assets for production
-
 var config = require('../config'),
   gulp = require('gulp'),
   rev = require('gulp-rev'),
   revCollector = require('gulp-rev-collector');
 
-// Add md5 hashes to assets
+/**
+ *  Adds md5 hashes to assets
+ */
 gulp.task('rev-assets', function () {
   return gulp.src(config.publicAssets + '/**/!(*.{css,js})')
     .pipe(rev())
@@ -15,7 +14,9 @@ gulp.task('rev-assets', function () {
     .pipe(gulp.dest(config.publicAssets));
 });
 
-// Replace asset references in compiled css and js files
+/**
+ *  Replaces asset references in compiled css and js files
+ */
 gulp.task('rev', ['rev-assets'], function () {
   return gulp.src([config.publicAssets + '/rev-manifest.json', config.publicAssets + '/**/*.{css,js}'])
     .pipe(revCollector())

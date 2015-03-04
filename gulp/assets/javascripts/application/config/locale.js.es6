@@ -1,15 +1,13 @@
-var moment = require('./../../../../../vendor/assets/javascripts/configs/moment-with-locales');
+var moment = require('./../../../../../bower_components/moment/min/moment-with-locales');
 
-//
-// Sets current locale
+/**
+ * Sets current locale
+ */
 class LocaleConfig {
-  // Runs all configuration methods
-  constructor() {
-    this.updateLocales();
-  }
-
-  // Updates locales for i18n-js
-  updateLocales() {
+  /**
+   * Updates locales for i18n-js
+   */
+  static updateLocales() {
     var $body, defaultLocale, currentLocale;
     $body = $('body');
     defaultLocale = $body.data('default-locale');

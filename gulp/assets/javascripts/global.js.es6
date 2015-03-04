@@ -1,4 +1,9 @@
-var angular = require('angular');
+/**
+ * Main js starting point for regular users
+ */
+
+require('angular');
+require('./../../../bower_components/angular-truncate/src/truncate');
 var cbrwizard = require('./application/angular/modules/cbrwizard');
 var cbrwizardFilters = require('./application/angular/modules/cbrwizard_filters');
 var ArticlesModel = require('./application/angular/services/articles_model');
@@ -7,7 +12,6 @@ var ArticlesDirective = require('./application/angular/directives/articles_direc
 var TagsDirective = require('./application/angular/directives/tags_directive');
 var LocaleConfig = require('./application/config/locale');
 var register = require('./../../../vendor/assets/javascripts/angular/register');
-var truncate = require('./../../../vendor/assets/javascripts/angular/truncate');
 
 var TrianglesEffect = require('./application/effects/three_js/triangles_effect');
 
@@ -17,10 +21,12 @@ register('cbrwizard')
   .directive('articlesDirective', ArticlesDirective)
   .directive('tagsDirective', TagsDirective);
 
+/**
+ * Configures app and bootstraps angular
+ */
 $(function(){
-  new LocaleConfig();
+  LocaleConfig.updateLocales();
   angular.bootstrap(angular.element(document.body), ['cbrwizard', 'truncate', 'cbrwizardFilters']);
-
 
   // todo: launch with angular, not here
   new TrianglesEffect(
@@ -28,8 +34,4 @@ $(function(){
   );
 });
 
-// todo: require three from npm and bower
-// todo: require moment from npm and bower
-// todo: require angular-moment from npm and bower
-// todo: remove vendor_manifest
 // todo: convert all comments to good styling

@@ -1,6 +1,3 @@
-//
-// Parses SASS and minifies css
-
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   handleErrors = require('../util/handleErrors'),
@@ -9,6 +6,9 @@ var gulp = require('gulp'),
   minifyCSS = require('gulp-minify-css'),
   autoprefixer = require('gulp-autoprefixer');
 
+/**
+ * Parses SASS and minifies css
+ */
 gulp.task('sass', function () {
   return gulp.src(config.src)
     .pipe(sass(config.settings))

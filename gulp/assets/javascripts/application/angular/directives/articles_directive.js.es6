@@ -1,5 +1,6 @@
-//
-// Renders an article
+/**
+ * Renders an article
+ */
 class ArticlesDirective {
   constructor() {
     this.restrict = 'E';

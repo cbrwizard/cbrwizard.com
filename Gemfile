@@ -12,11 +12,6 @@ gem 'pg'
 # gem 'simple_form', '~> 3.1.0rc2'
 gem 'slim-rails'
 
-# Adds angularjs to assets
-# gem 'angularjs-rails'
-# Adds an ability to easily add any template to angular
-# gem 'angular-rails-templates'
-
 # Needed for mac assets and stuff
 gem 'therubyracer',  platforms: :ruby
 # Use jquery as the JavaScript library
@@ -24,6 +19,27 @@ gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
+
+# Easy tags
+gem 'acts-as-taggable-on'
+
+# Faster server
+gem 'thin'
+
+# Adds rails routes to assets
+gem 'js-routes'
+
+# Locales for db fields
+gem 'globalize', git: 'https://github.com/globalize/globalize.git', branch: 'rails-4-2-upgrade'
+
+# JS locales from Rails
+gem 'i18n-js', '>= 3.0.0.rc8 '
+
+# Handles multiple processes
+gem 'foreman'
+
+# Displays performance
+gem 'rack-mini-profiler'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -97,24 +113,3 @@ group :development, :test do
   # For active record imitation in tests
   gem 'factory_girl_rails'
 end
-
-# Easy tags
-gem 'acts-as-taggable-on'
-
-# Faster server
-gem 'thin'
-
-# Adds rails routes to assets
-gem 'js-routes'
-
-# Locales for db fields
-gem 'globalize', git: 'https://github.com/globalize/globalize.git', branch: 'rails-4-2-upgrade'
-
-# JS locales from Rails
-gem 'i18n-js', '>= 3.0.0.rc8 '
-
-# Handles multiple processes
-gem 'foreman'
-
-# Displays performance
-gem 'rack-mini-profiler'

@@ -1,7 +1,8 @@
-//
-// Displays gulp errors
 var notify = require("gulp-notify");
 
+/**
+ * Displays gulp errors
+ */
 module.exports = function() {
 
   var args = Array.prototype.slice.call(arguments);
