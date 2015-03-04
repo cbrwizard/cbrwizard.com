@@ -1,0 +1,15 @@
+@import '../../mixins/shared_values';
+
+// Effect in a footer
+
+.effect__three-js{
+  position: relative;
+  height: $footer-height;
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $footer-height;
+    width: 100%;
+  }
+}

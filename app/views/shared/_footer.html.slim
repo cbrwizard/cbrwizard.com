@@ -4,3 +4,8 @@ footer.main-footer.bg-darken-grey.row
       = render 'shared/footer/created_by'
     .code
       = render 'shared/footer/code'
+  .effect
+    - if content_for? :effect
+      = yield :effect
+    - else
+      = render 'shared/footer/effect'
