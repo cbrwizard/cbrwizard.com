@@ -1,0 +1,13 @@
+h1
+  | article!
+/article.article ng-repeat="article in data.articles"
+/  header.article__header
+/    a.h4.color-blue.article__title href= "{{ 'article_path('+ article.id + ')' | RouteFilter}}"
+/      | {{article.title}}
+/    tags-directive
+/  p.article__text
+/    | {{article.text | characters: 400}}
+/  footer.article__footer
+/    time.color-grey.article__time am-time-ago="article.updated_at"
+/    a.pull-right href= "{{ 'article_path('+ article.id + ')' | RouteFilter}}"
+/      | {{ 'model.article.read_more' | I18nFilter}}

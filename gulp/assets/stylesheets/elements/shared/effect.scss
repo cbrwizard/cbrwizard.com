@@ -2,10 +2,12 @@
 
 // Effect in a footer
 
-.effect__three-js{
-  position: relative;
-  height: $footer-height;
-  canvas {
+.effect {
+  &, .effect__three-js{
+    position: relative;
+    height: $footer-height;
+  }
+  canvas, img {
     position: absolute;
     top: 0;
     left: 0;

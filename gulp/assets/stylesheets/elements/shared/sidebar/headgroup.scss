@@ -3,8 +3,10 @@
 // Headgroup headings
 
 .headgroup__title{
-  @extend .color-blue;
   margin: 10px 0;
+  a{
+    @extend .color-blue;
+  }
 }
 
 .headgroup__sub-title{

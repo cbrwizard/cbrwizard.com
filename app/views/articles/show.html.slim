@@ -1,17 +1,2 @@
-#articlePage
-  header#articleHeader.row
-    .col-xs-12
-      h2.h2.color-purple
-        = @article.title
-  section#pageContent
-    article
-      p
-        = @article.text
-    footer#articleFooter
-      .feeling-block
-        p
-          => t("articles.index.footer.feeling")
-          span.color-purple
-            = h_articles_feeling(@article)
-      .tag-list.color-grey
-        = show_article_tags(@article, 15)
+section.main-container__content.main-container__content--article.col-xs-12 ng-controller='ArticlesShowController'
+  = render 'articles/show/article'

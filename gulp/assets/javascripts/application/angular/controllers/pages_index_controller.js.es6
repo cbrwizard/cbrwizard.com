@@ -1,5 +1,5 @@
 /**
- * Handles data interaction on home page
+ * Handles data interaction on root page
  */
 class PagesIndexController {
   constructor($scope, $http, ArticlesModel) {
