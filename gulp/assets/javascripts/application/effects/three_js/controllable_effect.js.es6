@@ -1,6 +1,6 @@
-var THREE = require('./../../../../../../bower_components/three.js/three.min');
-require('./../../../../../../bower_components/TrackballControls/index.js');
-var ThreeJsEffect = require('./../three_js_effect');
+const THREE = require('./../../../../../../bower_components/three.js/three.min');
+require('./../../../../../../bower_components/TrackballControls/index');
+const ThreeJsEffect = require('./../three_js_effect');
 
 /**
  * A base class for an input controllable three js effect

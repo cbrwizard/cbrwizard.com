@@ -1,4 +1,4 @@
-var THREE = require('./../../../../../bower_components/three.js/three.min');
+const THREE = require('./../../../../../bower_components/three.js/three.min');
 
 /**
  * Basic class for threejs based effects
@@ -151,8 +151,9 @@ class ThreeJsEffect {
    * @private
    */
   _addDrawnObject() {
-    var drawnObject = new THREE.Mesh(this.geometry, this.defaultMaterial);
-    this.scene.add(drawnObject);
+    this.scene.add(
+      new THREE.Mesh(this.geometry, this.defaultMaterial)
+    );
   }
 
   /**

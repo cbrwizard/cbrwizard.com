@@ -5,7 +5,7 @@
  * @returns {String} translation for a set locale
  * @note takes locales from Rails
  */
-var I18nFilter = function(){
+const I18nFilter = function(){
   return function(path){
     return I18n.t(path);
   }

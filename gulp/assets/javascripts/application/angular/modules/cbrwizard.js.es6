@@ -3,7 +3,7 @@ require('angular');
 /**
  * Apps main module
  */
-var cbrwizardModule = angular.module(
+const cbrwizardModule = angular.module(
   'cbrwizard',
   []
 );

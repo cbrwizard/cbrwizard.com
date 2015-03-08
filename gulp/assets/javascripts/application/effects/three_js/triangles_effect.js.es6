@@ -1,6 +1,6 @@
 // Assigned to a global object so that trackball controls work without fix
 window.THREE = require('./../../../../../../bower_components/three.js/three.min');
-var ControllableEffect = require('./controllable_effect');
+const ControllableEffect = require('./controllable_effect');
 
 /**
  * Turns on animated triangles
@@ -42,9 +42,9 @@ class TrianglesEffect extends ControllableEffect {
    */
   _addLights() {
     super._addLights();
-    var lightsPositions = [[0, 500, 2000], [5000, 0, 1000], [0, 1000, 500]];
-    for (var position of lightsPositions) {
-      var light = new THREE.SpotLight(0xffffff, 0.75);
+    const lightsPositions = [[0, 500, 2000], [5000, 0, 1000], [0, 1000, 500]];
+    for (let position of lightsPositions) {
+      let light = new THREE.SpotLight(0xffffff, 0.75);
       light.position.set(position[0], position[1], position[2]);
       this.scene.add(light);
     }
@@ -56,11 +56,11 @@ class TrianglesEffect extends ControllableEffect {
    * @private
    */
   _drawAll() {
-    var geom = new THREE.BoxGeometry(1, 1, 1);
-    var color = new THREE.Color();
-    var matrix = new THREE.Matrix4();
-    var quaternion = new THREE.Quaternion();
-    var i = 0;
+    const geom = new THREE.BoxGeometry(1, 1, 1);
+    const color = new THREE.Color();
+    const matrix = new THREE.Matrix4();
+    const quaternion = new THREE.Quaternion();
+    let i = 0;
     while(i < 5000) {
       this._draw(geom, color, matrix, quaternion);
       i++;
@@ -77,9 +77,9 @@ class TrianglesEffect extends ControllableEffect {
    * @private
    */
   _draw(geom, color, matrix, quaternion) {
-    var position = TrianglesEffect.__getPosition();
-    var rotation = TrianglesEffect.__getRotation();
-    var scale = TrianglesEffect.__getScale();
+    const position = TrianglesEffect.__getPosition();
+    const rotation = TrianglesEffect.__getRotation();
+    const scale = TrianglesEffect.__getScale();
 
     quaternion.setFromEuler(rotation, false);
     matrix.compose(position, quaternion, scale);
@@ -94,7 +94,7 @@ class TrianglesEffect extends ControllableEffect {
    * @private
    */
   static __getPosition() {
-    var position = new THREE.Vector3();
+    let position = new THREE.Vector3();
     position.x = Math.random() * 10000 - 5000;
     position.y = Math.random() * 6000 - 3000;
     position.z = Math.random() * 8000 - 4000;
@@ -108,8 +108,8 @@ class TrianglesEffect extends ControllableEffect {
    * @private
    */
   static __getRotation() {
-    var rotation = new THREE.Euler();
-    var randomRotation = Math.random() * 2 * Math.PI;
+    let rotation = new THREE.Euler();
+    const randomRotation = Math.random() * 2 * Math.PI;
     rotation.x = randomRotation;
     rotation.y = randomRotation;
     rotation.z = randomRotation;
@@ -123,8 +123,8 @@ class TrianglesEffect extends ControllableEffect {
    * @private
    */
   static __getScale() {
-    var scale = new THREE.Vector3();
-    var randomAngle = Math.random() * 200 + 100;
+    let scale = new THREE.Vector3();
+    const randomAngle = Math.random() * 200 + 100;
     scale.x = randomAngle;
     scale.y = randomAngle;
     scale.z = randomAngle;
@@ -152,9 +152,10 @@ class TrianglesEffect extends ControllableEffect {
    * @private
    */
   static _applyVertexColors(geometry, color) {
-    for (var face of geometry.faces) {
-      var numberOfFaces = face instanceof THREE.Face3 ? 3 : 4;
-      var i = 0;
+    //console.log(123);
+    for (let face of geometry.faces) {
+      const numberOfFaces = face instanceof THREE.Face3 ? 3 : 4;
+      let i = 0;
 
       while(i < numberOfFaces) {
         face.vertexColors[i] = color;
