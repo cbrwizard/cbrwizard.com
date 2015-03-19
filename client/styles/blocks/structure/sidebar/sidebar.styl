@@ -1,18 +1,14 @@
-@import './../../../support/variables/colors.import';
-@import './../../../shared/helpers/colors';
+@import './../../../support/variables/colors.import'
 
 // Sidebar
 
 .sidebar{
-  position: fixed;
-  width: 320px;
-  height: 100%;
-  text-align: right;
-  padding-left: 5px;
-  z-index: 1;
-  .tag-list__tag{
-    @extend .color-blue;
-  }
+  position: fixed
+  width: 320px
+  height: 100%
+  text-align: right
+  padding-left: 5px
+  z-index: 1
 }
 
   .sidebar__top{
@@ -20,14 +16,13 @@
   }
 
   .sidebar__bottom{
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
+    position: absolute
+    bottom: 5px
+    right: 15px
   }
 
-
-@media (max-width: 991px) {
++below(991px) {
   .sidebar{
-    margin-top: 50px;
+    margin-top: 50px
   }
 }

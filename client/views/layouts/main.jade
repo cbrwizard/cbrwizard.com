@@ -1,5 +1,7 @@
 template(name='mainLayout')
-  .website-container.pull-left.container
-    main.page-container.col-xs-12.col-md-8
-    .main-container.row
-      +yield
+  .website-container
+    +sidebar
+    main.page-container
+      .dynamic-container
+        +yield
+      //- footer here

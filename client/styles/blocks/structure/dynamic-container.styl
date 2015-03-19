@@ -1,0 +1,32 @@
+@import './../../support/variables/structure.import'
+@import './../../support/variables/colors.import'
+@import 'jeet'
+
+// Contains actual dynamic content
+
+.dynamic-container{
+  padding: 0 0 50px
+  margin-bottom: - $footer-height
+  min-height: 100%
+  column(2/3)
+
+  &:after {
+    content: ""
+    display: block
+    height: $footer-height
+  }
+  a {
+    color: $blue-color
+    &:hover, &:focus {
+      color: lighten($blue-color, 15%)
+    }
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    color: $white-color
+  }
+}
+
+.dynamic-container--footer{
+  height: $footer-height
+  padding: 0
+}
