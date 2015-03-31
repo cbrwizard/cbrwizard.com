@@ -9,3 +9,5 @@ mquandalle:stylus
 iron:router
 mquandalle:jade
 grigio:babel
+sanjo:jasmine
+velocity:html-reporter

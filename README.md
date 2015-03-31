@@ -16,8 +16,13 @@ A wizardry blog build with MeteorJS.
 1. $ meteor
 
 ##Tests (wip)
-Has got ?% test coverage.
-To run tests:
+Tests are located in /tests and are written in Jasmine.
+To run them, type
+
+```bash
+$ meteor --test
+```
+
 
 ##Structure
 
