@@ -11,3 +11,5 @@ mquandalle:jade
 grigio:babel
 sanjo:jasmine
 velocity:html-reporter
+tap:i18n
+fortawesome:fontawesome

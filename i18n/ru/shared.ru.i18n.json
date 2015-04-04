@@ -1,0 +1,20 @@
+{
+	"shared": {
+		"sidebar": {
+			"header": {
+				"site_title": "cbrwizard.com",
+				"site_subtitle": "Честный блог<br> о программировании,<br> людях и мирах"
+			},
+			"menu": {
+				"about": "Что это?",
+				"blog": "Блог"
+			},
+			"created_by": {
+				"text": "Сотворил <span class='created-by__author'>Иванищев Фёдор</span>."
+			},
+			"code": {
+				"text": "Скачай код на"
+			}
+		}
+	}
+}

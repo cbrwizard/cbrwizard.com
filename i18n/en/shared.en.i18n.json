@@ -1,0 +1,20 @@
+{
+  "shared": {
+    "sidebar": {
+      "header": {
+        "site_title": "cbrwizard.com",
+        "site_subtitle": "Honest blog <br> about programming, people and worlds."
+      },
+      "menu": {
+        "about": "What is this?",
+        "blog": "Blog"
+      },
+      "created_by": {
+        "text": "Created by <span class='created-by__author'>Fyodor Ivanischev</span>."
+      },
+      "code": {
+        "text": "Get the code at"
+      }
+    }
+  }
+}

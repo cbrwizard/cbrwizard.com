@@ -1,8 +1,9 @@
 // Contains not related to sidebar content (actual content, footer, etc)
 
-@import './../../support/variables/structure.import';
+@import './../../support/variables/structure.import'
+@import './../../support/mixins/container-padding.import.styl'
 
-.page-container{
-  margin-left: $sidebar-width;
-  height: 100%;
-}
+.page-container
+  margin-left: $sidebar-width
+  height: 100%
+  container-padding()

@@ -1,0 +1,7 @@
+template(name='sidebar__headgroup')
+  .headgroup
+    h1.headgroup__title 
+      a(href="#{pathFor route='pages.index'}")
+        | {{_"shared.sidebar.header.site_title"}}
+    h4.headgroup__sub-title
+      | {{{_"shared.sidebar.header.site_subtitle"}}}  

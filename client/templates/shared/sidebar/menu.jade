@@ -1,0 +1,8 @@
+template(name='sidebar__menu')
+  ul.menu
+    li
+      a(href="{{pathFor 'pages.about'}}" class='menu__link')
+        | {{_"shared.sidebar.menu.about"}}
+    li
+      a(href="#{pathFor 'articles.index'}" class='menu__link')
+        | {{_"shared.sidebar.menu.blog"}}
