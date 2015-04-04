@@ -4,5 +4,5 @@ template(name='sidebar__menu')
       a(href="{{pathFor 'pages.about'}}" class='menu__link')
         | {{_"shared.sidebar.menu.about"}}
     li
-      a(href="#{pathFor 'articles.index'}" class='menu__link')
+      a(href="{{pathFor 'articles.index'}}" class='menu__link')
         | {{_"shared.sidebar.menu.blog"}}
