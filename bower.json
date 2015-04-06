@@ -1,8 +1,9 @@
 {
-	"name": "cbrwizard",
-	"version": "0.0.1",
-	"private": true,
-	"dependencies": {
-		"typographic": "~2.9.1"
-	}
+  "name": "cbrwizard",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "typographic": "~2.9.1",
+    "three.js": "*"
+  }
 }
