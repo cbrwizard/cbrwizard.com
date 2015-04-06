@@ -1,7 +1,7 @@
 template(name='sidebar__headgroup')
   .headgroup
     h2.headgroup__title 
-      a(href="{{pathFor route='pages.index'}}")
+      a.headgroup__link(href="{{pathFor route='pages.index'}}")
         | {{_"shared.sidebar.header.site_title"}}
     p.headgroup__sub-title
       | {{_"shared.sidebar.header.site_subtitle"}}  
