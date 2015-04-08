@@ -1,12 +1,9 @@
 /**
  * Handles articles pages
  */
-cbrw.Controllers.Articles = class ArticlesController {
-	/**
-	 * Articles list page
-	 * @param  {IronRouter} router
-	 */
-	static index(router) {
-		router.render('articlesIndex');
-	}
-};
+cbrw.Controllers.Articles = cbrw.Controllers.Application.extend({
+  index: function() {
+    this.render('articlesIndex');
+    cbrw.Controllers.Helpers.DefaultEffect(this);
+  }
+});
