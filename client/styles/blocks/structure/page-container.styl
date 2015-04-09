@@ -1,11 +1,7 @@
 // Contains not related to sidebar content (actual content, footer, etc)
 
-@import 'jeet'
-@import './../../support/variables/structure.import'
 @import './../../support/mixins/container-padding.import.styl'
 
 .page-container
-  margin-left: $sidebar-width
-  height: 100%
+  max-width: 900px
   container-padding()
-  cf()

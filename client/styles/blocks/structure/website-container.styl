@@ -1,8 +1,8 @@
 // Whole website container (aka body)
 
-@import 'jeet'
-
 .website-container
-  padding: 0
-  height: 100%
-  cf()
+  display: flex
+  min-height: 100vh
+
+  +below(600px)
+    flex-flow: column wrap

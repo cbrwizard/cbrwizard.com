@@ -1,20 +1,18 @@
 @import './../../../support/variables/colors.import'
+$sidebarWidth = 320px
 
 // Sidebar
-
 .sidebar
-  position: fixed
-  width: 320px
-  height: 100%
+  position: relative
+  flex: 1 0 $sidebarWidth
   text-align: right
-  z-index: 1
-  top: 0
-
+  max-width: $sidebarWidth
   .sidebar__bottom
     position: absolute
     bottom: 5px
     right: 15px
 
-+below(991px)
+
++below(600px)
   .sidebar
-    margin-top: 50px
+    max-width: 100%
