@@ -85,5 +85,5 @@ Meteor methods, which call actions. Are called from events.
 ####/actions
 Classes which call models. Are called from Meteor methods.
 
-####/models
+####/stores
 Classes which contain data handlers, which have static methods for scopes and individual methods. Are called from actions.

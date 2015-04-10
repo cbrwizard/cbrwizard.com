@@ -77,10 +77,9 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
    * @private
    */
   _draw(geom, color, matrix, quaternion) {
-    // debugger
-    const position = cbrw.Effects.Triangles.__getPosition();
-    const rotation = cbrw.Effects.Triangles.__getRotation();
-    const scale = cbrw.Effects.Triangles.__getScale();
+    const position = this.constructor.__getPosition();
+    const rotation = this.constructor.__getRotation();
+    const scale = this.constructor.__getScale();
 
     quaternion.setFromEuler(rotation, false);
     matrix.compose(position, quaternion, scale);
@@ -141,7 +140,7 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
    * @private
    */
   __setRandomColor(geom, color, matrix) {
-    cbrw.Effects.Triangles._applyVertexColors(geom, color.setHex(Math.random() *
+    this.constructor._applyVertexColors(geom, color.setHex(Math.random() *
       0xffffff));
     this.geometry.merge(geom, matrix);
   }
