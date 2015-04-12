@@ -1,9 +1,4 @@
 /**
- * Global namespace for objects communication
+ * Server namespace for objects communication
  */
-cbrw = {
-  Stores: {},
-  Schemas: {},
-  Methods: {},
-  Actions: {}
-};
+cbrwServer = {};
