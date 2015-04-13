@@ -1,11 +1,11 @@
 {
-	"pages": {
-		"index": {
-			"articles": {
-				"header": "Latest articles",
-				"loading": "Loading articles...",
-				"read_more": "Read everything I wrote"
-			}
-		}
-	}
+  "pages": {
+    "index": {
+      "articles": {
+        "header": "Latest articles",
+        "loading": "Loading articles...",
+        "read_more": "Read everything I wrote"
+      }
+    }
+  }
 }
