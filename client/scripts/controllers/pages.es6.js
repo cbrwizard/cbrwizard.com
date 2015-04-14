@@ -17,8 +17,10 @@ cbrw.Controllers.Pages = cbrw.Controllers.Application.extend({
      * TODO: check for memory leaks and probably destroy itself on route change
      */
     Template.effectTriangles.rendered = function () {
-      let trianglesContainer = document.querySelector('.effect--triangles');
+      const trianglesContainer = document.querySelector('.effect--triangles');
       trianglesEffect = new cbrw.Effects.Triangles(trianglesContainer);
     };
+
+    Meteor.subscribe('articlesLast');
   }
 });

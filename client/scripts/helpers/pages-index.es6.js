@@ -1,6 +1,6 @@
 Template.pagesIndex.helpers({
   articles: function() {
-    console.log('called articles helper');
+    console.debug('called articles helper');
     return cbrw.Presenters.Articles.last();
   }
 });

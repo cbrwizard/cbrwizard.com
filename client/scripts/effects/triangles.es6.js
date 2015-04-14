@@ -44,7 +44,7 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
       [0, 1000, 500]
     ];
     for (let position of lightsPositions) {
-      let light = new THREE.SpotLight(0xffffff, 0.75);
+      const light = new THREE.SpotLight(0xffffff, 0.75);
       light.position.set(position[0], position[1], position[2]);
       this.scene.add(light);
     }
@@ -94,7 +94,7 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
    * @private
    */
   static __getPosition() {
-    let position = new THREE.Vector3();
+    const position = new THREE.Vector3();
     position.x = Math.random() * 10000 - 5000;
     position.y = Math.random() * 6000 - 3000;
     position.z = Math.random() * 8000 - 4000;
@@ -108,7 +108,7 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
    * @private
    */
   static __getRotation() {
-    let rotation = new THREE.Euler();
+    const rotation = new THREE.Euler();
     const randomRotation = Math.random() * 2 * Math.PI;
     rotation.x = randomRotation;
     rotation.y = randomRotation;
@@ -123,7 +123,7 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
    * @private
    */
   static __getScale() {
-    let scale = new THREE.Vector3();
+    const scale = new THREE.Vector3();
     const randomAngle = Math.random() * 200 + 100;
     scale.x = randomAngle;
     scale.y = randomAngle;
@@ -153,8 +153,7 @@ cbrw.Effects.Triangles = class Triangles extends cbrw.Effects.Controllable {
    * @private
    */
   static _applyVertexColors(geometry, color) {
-    //console.log(123);
-    for (let face of geometry.faces) {
+    for (const face of geometry.faces) {
       const numberOfFaces = face instanceof THREE.Face3 ? 3 : 4;
       let i = 0;
 

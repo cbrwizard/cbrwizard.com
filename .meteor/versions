@@ -1,6 +1,5 @@
-alanning:package-stubber@0.0.9
-aldeed:collection2@2.3.2
-aldeed:simple-schema@1.3.0
+aldeed:collection2@2.3.3
+aldeed:simple-schema@1.3.2
 amplify@1.0.0
 autoupdate@1.2.1
 base64@1.0.3
@@ -9,7 +8,7 @@ blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 callback-hook@1.0.3
-cfs:http-methods@0.0.27
+cfs:http-methods@0.0.28
 check@1.0.5
 coffeescript@1.0.6
 ddp@1.1.0
@@ -18,7 +17,7 @@ ejson@1.0.6
 fastclick@1.0.3
 fortawesome:fontawesome@4.3.0
 geojson-utils@1.0.3
-grigio:babel@0.0.13
+grigio:babel@0.1.1
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
@@ -59,8 +58,9 @@ reactive-var@1.0.5
 reload@1.1.3
 retry@1.0.3
 routepolicy@1.0.5
-sanjo:jasmine@0.12.6
-sanjo:karma@1.4.2
+sanjo:jasmine@0.12.7
+sanjo:karma@1.4.3
+sanjo:long-running-child-process@1.0.3
 sanjo:meteor-version@1.0.0
 session@1.1.0
 spacebars@1.0.6
@@ -72,8 +72,8 @@ ui@1.0.6
 underscore@1.0.3
 url@1.0.4
 velocity:core@0.4.5
-velocity:html-reporter@0.4.2
-velocity:meteor-stubs@1.0.0_2
+velocity:html-reporter@0.5.1
+velocity:meteor-stubs@1.0.3
 velocity:node-soft-mirror@0.3.1
 velocity:shim@0.1.0
 velocity:test-proxy@0.0.4
