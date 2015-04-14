@@ -1,4 +1,4 @@
 Meteor.publish('articlesLast', function () {
   "use strict";
-  return cbrw.Collections.Articles.find();
+  return cbrw.Stores.Article.all();
 });
