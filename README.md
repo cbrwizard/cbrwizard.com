@@ -23,7 +23,6 @@ To run them, type
 $ meteor --test
 ```
 
-
 ##Structure
 
 ###/client
@@ -32,29 +31,26 @@ Client related files and JS classes which get used only there.
 ####/scripts
 JS files.
 
-#####/routes.js
-A router file, links urls to controllers.
+#####/lib
+Libraries which must be loaded immediately for a client, where folders are named after their usage.
+
+#####/controllers/routes.js
+Iron Router links file, connects URLs to Controller classes.
 
 #####/controllers
-Classes which set up different pages. Are called from routes file.
+Iron Router classes which decide which templates and actions are called on different URLs. Are linked to a routes file.
+
+######/helpers
+Shared code between controllers
 
 #####/effects
 Static not-data related visual effect classes. Are called from controllers.
 
 #####/helpers
-Meteor related template helpers. They call presenters. Are called from controllers.
+Meteor related template helpers. They call presenters. Are called from controllers. Are named after templates.
 
 #####/presenters
-Classes which contain data for templates. Are called from Meteor helpers.
-
-#####/events
-Meteor related event handlers. They call actors.
-
-#####/actors
-Classes which call Meteor methods. Are called from events.
-
-#####/declarations/namespace/cbrw.js
-Declares a global namespace cbrw. Is located so deelpy so that Meteor loads it first. TODO: pray to FSM that modules support will be added to Meteor.
+Classes which contain data for templates. Are called from Meteor helpers. They are separated from helpers to ease code reuse.
 
 
 ####/styles
@@ -73,17 +69,41 @@ Folders with shared not BEM blocks styles, like text and structure.
 Folders with Stylus related data, like variables.
 
 
-###/templates
-Views and layouts in Jade, separated into partials.
+####/templates
+Views and layouts in Jade, separated into partials where needed. Folders are named after controllers and pages, with some exceptions.
 
+
+
+###/i18n
+Locale files, every string should be used from here.
+
+
+###/lib
+Shared between client and server scripts which are used in other parts.
+
+####/config
+Different scripts and config objects which help app to function.
+
+####/lib/stores
+Minimongoid Classes for object-oriented MongoDB usage. Are used in server/publications.
+
+####/schemas
+Validation SimpleSchema schemas for stores.
+
+####/lib/lib/lib/namespace/cbrw.js
+Declares a global namespace cbrw. Is located so deeply so that Meteor loads it first. TODO: pray to FSM that modules support will be added to Meteor.
+
+
+###/public
+Images and other files with easy public access.
 
 
 ###/server
-####/methods
-Meteor methods, which call actions. Are called from events.
+Server specific code.
 
-####/actions
-Classes which call models. Are called from Meteor methods.
+####/publications
+Meteor publications, which allow data to be used in client/presenters from lib/stores.
 
-####/stores
-Classes which contain data handlers, which have static methods for scopes and individual methods. Are called from actions.
+
+###/tests
+Jasmine client and server tests.

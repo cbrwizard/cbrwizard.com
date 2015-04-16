@@ -1,10 +1,6 @@
 /**
- * Routes from Iron Router
+ * Routes for Iron Router
  */
-cbrw.Controllers.Application = RouteController.extend({
-  layoutTemplate: 'mainLayout'
-});
-
 Router.route('/', {
   controller: 'cbrw.Controllers.Pages',
   action: 'index',
