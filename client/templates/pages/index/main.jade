@@ -1,5 +1,2 @@
 template(name='pagesIndex')
-  +pagesIndexArticles
-  +each articles
-    p
-      =title
+  +pagesIndexArticles(articles = articles)

@@ -31,26 +31,26 @@ Client related files and JS classes which get used only there.
 ####/scripts
 JS files.
 
-#####/lib
-Libraries which must be loaded immediately for a client, where folders are named after their usage.
-
-#####/controllers/routes.js
-Iron Router links file, connects URLs to Controller classes.
-
-#####/controllers
-Iron Router classes which decide which templates and actions are called on different URLs. Are linked to a routes file.
-
-######/helpers
-Shared code between controllers
+#####/helpers
+Meteor related template helpers. They call presenters. Are called from controllers. Are named after templates.
 
 #####/effects
 Static not-data related visual effect classes. Are called from controllers.
 
-#####/helpers
-Meteor related template helpers. They call presenters. Are called from controllers. Are named after templates.
+#####/controllers
+Iron Router classes which decide which templates and actions are called on different URLs. Are linked to a routes file.
 
-#####/presenters
+#####/lib
+Libraries which must be loaded immediately for a client, where folders are named after their usage.
+
+######/presenters
 Classes which contain data for templates. Are called from Meteor helpers. They are separated from helpers to ease code reuse.
+
+######/controllers/routes.js
+Iron Router links file, connects URLs to Controller classes.
+
+######/helpers
+Shared code between controllers
 
 
 ####/styles
