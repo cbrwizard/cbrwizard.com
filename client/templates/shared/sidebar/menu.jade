@@ -1,8 +1,9 @@
 template(name='sidebar__menu')
-  ul.menu
-    li
-      a.menu__link(href="{{pathFor 'pages.about'}}")
-        | {{_"shared.sidebar.menu.about"}}
-    li
-      a.menu__link(href="{{pathFor 'articles.index'}}")
-        | {{_"shared.sidebar.menu.blog"}}
+  menu.menu
+    nav
+      h4
+        a.menu__link(href="{{pathFor 'pages.about'}}")
+          | {{_"shared.sidebar.menu.about"}}
+      h4
+        a.menu__link(href="{{pathFor 'articles.index'}}")
+          | {{_"shared.sidebar.menu.blog"}}

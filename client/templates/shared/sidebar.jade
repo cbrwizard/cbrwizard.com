@@ -1,9 +1,7 @@
 template(name='sidebar')
   aside.sidebar.bg-soft-blue
-    section.sidebar__container
-      .sidebar__top
-        +sidebar__mainPic
-        +sidebar__headgroup
-        +sidebar__menu        
-      .sidebar__bottom
-        +sidebar__social
+    +sidebar__mainPic
+    .sidebar__text-container
+      +sidebar__headgroup
+      +sidebar__menu
+      +sidebar__social
