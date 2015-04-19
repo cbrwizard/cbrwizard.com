@@ -1,0 +1,14 @@
+{
+  "model": {
+    "article": {
+      "singular": "Статья",
+      "multiple": "Статьи",
+      "no_feelings": "ничего",
+      "read_more": "Узнать больше"
+    },
+    "user": {
+      "singular": "Пользователь",
+      "multiple": "Пользователи"
+    }
+  }
+}

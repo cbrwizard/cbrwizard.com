@@ -1,0 +1,13 @@
+template(name = 'articlesListItem')
+  article.article-item
+    header.article-item__header
+      a.h4.color-blue.article-item__title(href="{{pathFor route='articles.show'}}")
+        =title
+      tags-directive
+    p.article-item__text
+      =text
+    footer.article-item__footer
+      time.color-grey.article-item__time
+      | {{humanDate updatedAt }}
+      a.pull-right(href="{{pathFor route='articles.show'}}")
+        | {{_"model.article.read_more"}}

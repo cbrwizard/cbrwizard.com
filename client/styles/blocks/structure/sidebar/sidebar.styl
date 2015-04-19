@@ -1,0 +1,24 @@
+@import './../../../support/variables/colors.import'
+@import './../../../support/variables/screen-size.import'
+$sidebarWidth = 320px
+
+// Sidebar
+.sidebar
+  flex: 1 0 $sidebarWidth
+  text-align: right
+  max-width: $sidebarWidth
+
+.sidebar__text-container
+  padding: 5px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
++below($mobileBreakPoint)
+  .sidebar
+    max-width: 100%
+    flex: 1 0 auto
+    text-align: left
+
+  .sidebar__text-container
+    align-items: flex-start

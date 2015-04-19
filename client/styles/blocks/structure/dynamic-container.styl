@@ -1,0 +1,12 @@
+@import './../../support/variables/structure.import'
+@import './../../support/variables/colors.import'
+
+// Contains actual dynamic content
+
+.dynamic-container
+  padding: 0 5px 50px
+
+  a
+    color: $blue-color
+    &:hover, &:focus
+      color: lighten($blue-color, 15%)

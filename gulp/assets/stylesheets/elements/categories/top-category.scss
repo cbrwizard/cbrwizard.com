@@ -1,9 +1,0 @@
-@import '../colors';
-
-// Top category for example in sidebar
-
-.top-category__title{
-  &,a{
-    @extend .color-white;
-  }
-}

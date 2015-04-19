@@ -1,0 +1,15 @@
+{
+  "name": "cbrwizard",
+  "version": "0.0.1",
+  "dependencies": {
+    "typographic": "~2.9.1",
+    "three.js": "*",
+    "lodash": "*",
+    "threex.windowresize": "*"
+  },
+  "overrides": {
+    "threex.windowresize": {
+      "main": "threex.windowresize.js"
+    }
+  }
+}

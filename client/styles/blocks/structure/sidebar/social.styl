@@ -1,0 +1,24 @@
+@import './../../../support/variables/colors.import'
+
+// Social network links
+.social
+  display: flex
+  width: 150px
+  justify-content: space-between
+
+.social__link
+  width: 40px
+  height: 40px
+  border: 2px solid $white-color
+  opacity: .7
+  text-align: center
+  transition: all .15s
+  &:hover
+    opacity: 1
+    border: 2px solid $purple-color
+    background: $purple-color
+  
+.social__link__icon
+  font-size: 24px
+  color: $white-color
+  margin: 5px
