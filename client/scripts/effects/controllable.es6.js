@@ -4,7 +4,7 @@
 cbrw.Effects.Controllable = class Controllable extends cbrw.Effects.ThreeJs {
   /**
    *
-   * @param container {jQuery.object}
+   * @param container {DOM element}
    */
   constructor(container) {
     super(container);
@@ -44,5 +44,18 @@ cbrw.Effects.Controllable = class Controllable extends cbrw.Effects.ThreeJs {
     this.controls.staticMoving = true;
     this.controls.dynamicDampingFactor = 0.3;
     this.controls.maxDistance = 1500;
+    this._handleControlsOnResize();
+  }
+
+  /**
+   * Adds a window resize listener which updates controls so that they work
+   *
+   * @private
+   */
+  _handleControlsOnResize() {
+    "use strict";
+    window.addEventListener('resize', _.debounce(function () {
+      this.controls.handleResize();
+    }.bind(this), 300));
   }
 };

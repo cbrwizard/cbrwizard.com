@@ -10,7 +10,7 @@
         "blog": "Blog"
       },
       "created_by": {
-        "text": "Created by <span class='created-by__author'>Fyodor Ivanischev</span>."
+        "text": "Created by <span class='created-by__author'>Fyodor Ivanischev</span>"
       },
       "code": {
         "text": "Get the code at"

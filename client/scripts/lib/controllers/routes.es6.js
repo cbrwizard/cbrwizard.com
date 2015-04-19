@@ -18,3 +18,9 @@ Router.route('/articles', {
   action: 'index',
   name: 'articles.index'
 });
+
+Router.route('/article/:id', {
+  controller: 'cbrw.Controllers.Articles',
+  action: 'show',
+  name: 'articles.show'
+});

@@ -1,8 +1,5 @@
 /**
  * Basic class for threejs based effects
- *
- * TODO: add an automatic redraw on resize function and make it smart
- * so that it doesn't launch 1000 times in a sec (use iodash)
  */
 cbrw.Effects.ThreeJs = class ThreeJs {
   constructor(container) {
@@ -34,12 +31,15 @@ cbrw.Effects.ThreeJs = class ThreeJs {
   /**
    * Sets up everything needed for three js to work
    *
+   * TODO: disable winResize on page change
+   *
    * @private
    */
   _setupThreeJs() {
     this._createScene();
     this._createCamera();
     this._createRenderer();
+    this.winResize = new THREEx.WindowResize(this.renderer, this.camera);
   }
 
   /**

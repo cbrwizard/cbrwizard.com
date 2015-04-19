@@ -4,6 +4,12 @@
   "dependencies": {
     "typographic": "~2.9.1",
     "three.js": "*",
-    "lodash": "*"
+    "lodash": "*",
+    "threex.windowresize": "*"
+  },
+  "overrides": {
+    "threex.windowresize": {
+      "main": "threex.windowresize.js"
+    }
   }
 }

@@ -8,6 +8,8 @@ cbrw.Controllers.Pages = cbrw.Controllers.Application.extend({
   },
 
   index: function () {
+    Meteor.subscribe('articlesLast');
+
     this.render('pagesIndex');
     this.render('effectTriangles', {
       to: 'effect'
@@ -18,9 +20,8 @@ cbrw.Controllers.Pages = cbrw.Controllers.Application.extend({
      */
     Template.effectTriangles.rendered = function () {
       const trianglesContainer = document.querySelector('.effect--triangles');
-      trianglesEffect = new cbrw.Effects.Triangles(trianglesContainer);
+      new cbrw.Effects.Triangles(trianglesContainer);
+      window.dispatchEvent(new Event('resize'));
     };
-
-    Meteor.subscribe('articlesLast');
   }
 });
