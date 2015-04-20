@@ -1,26 +1,43 @@
 /**
  * Routes for Iron Router
  */
+Router.configure({
+  layoutTemplate: 'mainLayout',
+  yieldRegions: {
+    'effectStatic': {to: 'effect'}
+  }
+});
+
 Router.route('/', {
-  controller: 'cbrw.Controllers.Pages',
-  action: 'index',
-  name: 'pages.index'
+  name: 'pages.index',
+  template: 'pagesIndex',
+  waitOn: function () {
+    return Meteor.subscribe('articlesLast');
+  }
 });
 
 Router.route('/about', {
-  controller: 'cbrw.Controllers.Pages',
-  action: 'about',
-  name: 'pages.about'
+  template: 'pagesAbout',
+  name: 'pages.about',
+  yieldRegions: {
+    'effectTriangles': {to: 'effect'}
+  },
+  action: cbrw.Controllers.Actions.Pages.about
 });
 
 Router.route('/articles', {
-  controller: 'cbrw.Controllers.Articles',
-  action: 'index',
+  template: 'articlesIndex',
   name: 'articles.index'
 });
 
 Router.route('/article/:id', {
-  controller: 'cbrw.Controllers.Articles',
-  action: 'show',
-  name: 'articles.show'
+  name: 'articles.show',
+  template: 'articlesShow',
+  waitOn: function () {
+    return Meteor.subscribe('article');
+  },
+  data: function () {
+    return {id: this.params.id};
+  },
+  action: cbrw.Controllers.Actions.Articles.show
 });

@@ -37,20 +37,20 @@ Meteor related template helpers. They call presenters. Are called from controlle
 #####/effects
 Static not-data related visual effect classes. Are called from controllers.
 
-#####/controllers
-Iron Router classes which decide which templates and actions are called on different URLs. Are linked to a routes file.
-
 #####/lib
 Libraries which must be loaded immediately for a client, where folders are named after their usage.
 
 ######/presenters
 Classes which contain data for templates. Are called from Meteor helpers. They are separated from helpers to ease code reuse.
 
-######/controllers/routes.js
-Iron Router links file, connects URLs to Controller classes.
+######/controllers
+Folder for a main routes file and route actions.
 
-######/helpers
-Shared code between controllers
+#######/actions
+Classes which define actions which are called on different routes.
+
+#######/routes.js
+Iron Router links file, connects URLs to Controller classes.
 
 
 ####/styles
