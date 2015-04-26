@@ -1,4 +1,6 @@
+/**
+ * Returns last articles
+ */
 Meteor.publish('articlesLast', function () {
-  "use strict";
-  return cbrw.Stores.Article.all();
+  return cbrw.Collections.Articles.find();
 });

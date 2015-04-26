@@ -13,6 +13,9 @@ Router.route('/', {
   template: 'pagesIndex',
   waitOn: function () {
     return Meteor.subscribe('articlesLast');
+  },
+  data: function () {
+    return {articles: cbrw.Collections.Articles.find()};
   }
 });
 
@@ -30,14 +33,13 @@ Router.route('/articles', {
   name: 'articles.index'
 });
 
-Router.route('/article/:id', {
+Router.route('/article/:_id', {
   name: 'articles.show',
   template: 'articlesShow',
   waitOn: function () {
-    return Meteor.subscribe('article');
+    return Meteor.subscribe('article', this.params._id);
   },
   data: function () {
-    return {id: this.params.id};
-  },
-  action: cbrw.Controllers.Actions.Articles.show
+    return {article: cbrw.Collections.Articles.findOne({_id: this.params._id})};
+  }
 });

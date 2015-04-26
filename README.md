@@ -32,16 +32,13 @@ Client related files and JS classes which get used only there.
 JS files.
 
 #####/helpers
-Meteor related template helpers. They call presenters. Are called from controllers. Are named after templates.
+Meteor related template helpers. Are called from controllers. Are named after templates.
 
 #####/effects
 Static not-data related visual effect classes. Are called from controllers.
 
 #####/lib
 Libraries which must be loaded immediately for a client, where folders are named after their usage.
-
-######/presenters
-Classes which contain data for templates. Are called from Meteor helpers. They are separated from helpers to ease code reuse.
 
 ######/controllers
 Folder for a main routes file and route actions.
@@ -84,8 +81,8 @@ Shared between client and server scripts which are used in other parts.
 ####/config
 Different scripts and config objects which help app to function.
 
-####/lib/stores
-Minimongoid Classes for object-oriented MongoDB usage. Are used in server/publications.
+####/collections
+MongoDB collections.
 
 ####/schemas
 Validation SimpleSchema schemas for stores.
