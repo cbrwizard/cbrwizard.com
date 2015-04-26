@@ -1,11 +1,10 @@
 {
   "pages": {
     "index": {
-      "articles": {
-        "header": "Latest articles",
-        "loading": "Loading articles...",
-        "read_more": "Read everything I wrote"
-      }
+      "greeting": "Hello there"
+    },
+    "about": {
+      "greeting": "About me"
     }
   }
 }

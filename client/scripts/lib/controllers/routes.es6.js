@@ -10,36 +10,30 @@ Router.configure({
 
 Router.route('/', {
   name: 'pages.index',
-  template: 'pagesIndex',
-  waitOn: function () {
-    return Meteor.subscribe('articlesLast');
-  },
-  data: function () {
-    return {articles: cbrw.Collections.Articles.find()};
-  }
+  template: 'pagesIndex'
 });
 
 Router.route('/about', {
   template: 'pagesAbout',
-  name: 'pages.about',
+  name: 'pages.about'
+});
+
+Router.route('/links', {
+  template: 'linksIndex',
+  name: 'links.index',
+  waitOn: function () {
+    return Meteor.subscribe('linksAll');
+  },
+  data: function () {
+    return {links: cbrw.Collections.Links.find()};
+  }
+});
+
+Router.route('/experiments', {
+  template: 'experimentsIndex',
+  name: 'experiments.index',
   yieldRegions: {
     'effectTriangles': {to: 'effect'}
   },
-  action: cbrw.Controllers.Actions.Pages.about
-});
-
-Router.route('/articles', {
-  template: 'articlesIndex',
-  name: 'articles.index'
-});
-
-Router.route('/article/:_id', {
-  name: 'articles.show',
-  template: 'articlesShow',
-  waitOn: function () {
-    return Meteor.subscribe('article', this.params._id);
-  },
-  data: function () {
-    return {article: cbrw.Collections.Articles.findOne({_id: this.params._id})};
-  }
+  action: cbrw.Controllers.Actions.Experiments.index
 });

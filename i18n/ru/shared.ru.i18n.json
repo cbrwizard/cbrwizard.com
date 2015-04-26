@@ -3,11 +3,12 @@
     "sidebar": {
       "header": {
         "site_title": "cbrwizard.com",
-        "site_subtitle": "Честный блог о программировании, людях и мирах"
+        "site_subtitle": "Super mega derp"
       },
       "menu": {
         "about": "Что это?",
-        "blog": "Блог"
+        "links": "Ссылки",
+        "experiments": "Эксперименты"
       },
       "created_by": {
         "text": "Сотворил <span class='created-by__author'>Иванищев Фёдор</span>"

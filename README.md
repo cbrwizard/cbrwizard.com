@@ -1,15 +1,6 @@
 #cbrwizard.com
 
-A wizardry blog build with MeteorJS.
-
-##Features
-- Index page with list of latest articles. (wip)
-- Article page with full text and Discus comments. (wip)
-- Articles page with text and tags search. (wip)
-- Admin section with articles records editor. (wip)
-- Admin text editor with draft feature. (wip)
-- Subscribe to email and RSS. (wip)
-- EN/RU locales automatic and manual switch. (wip)
+A wizardry websitez build with MeteorJS.
 
 ##How to prepare to dev:
 1. $ npm install

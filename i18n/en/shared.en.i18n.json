@@ -3,11 +3,12 @@
     "sidebar": {
       "header": {
         "site_title": "cbrwizard.com",
-        "site_subtitle": "Honest blog about programming, people and worlds."
+        "site_subtitle": "Super mega derp"
       },
       "menu": {
         "about": "What is this?",
-        "blog": "Blog"
+        "links": "Links",
+        "experiments": "Experiments"
       },
       "created_by": {
         "text": "Created by <span class='created-by__author'>Fyodor Ivanischev</span>"

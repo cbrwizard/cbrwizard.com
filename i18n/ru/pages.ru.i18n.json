@@ -1,11 +1,10 @@
 {
   "pages": {
     "index": {
-      "articles": {
-        "header": "Последние статьи",
-        "loading": "Загружаю статьи...",
-        "read_more": "Остальные статьи"
-      }
+      "greeting": "Привет всем"
+    },
+    "about": {
+      "greeting": "Обо мне"
     }
   }
 }
