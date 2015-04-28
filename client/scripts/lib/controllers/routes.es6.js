@@ -32,8 +32,14 @@ Router.route('/links', {
 Router.route('/experiments', {
   template: 'experimentsIndex',
   name: 'experiments.index',
-  yieldRegions: {
-    'effectTriangles': {to: 'effect'}
+  //yieldRegions: {
+  //  'effectTriangles': {to: 'effect'}
+  //},
+  waitOn: function () {
+    return Meteor.subscribe('experimentsAll');
+  },
+  data: function () {
+    return {experiments: cbrw.Collections.Experiments.find()};
   },
   action: cbrw.Controllers.Actions.Experiments.index
 });

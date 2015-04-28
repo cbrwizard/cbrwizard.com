@@ -1,0 +1,14 @@
+template(name = 'experimentsListItem')
+  article.experiment-item
+    header.article-item__header
+      h3
+        a(href= '{{url}}', target='_blank')
+          =title
+    .experiment-item__image
+      a.link--image(href= '{{url}}', target='_blank')
+        img(src='/images/experiments/{{name}}.png')
+    p.experiment-item__text
+      =description
+    footer.experiment-item__footer
+      time.color-light-grey.article-item__time
+        | {{humanDate releaseDate }}
