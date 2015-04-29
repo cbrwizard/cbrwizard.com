@@ -1,7 +1,10 @@
 {
   "links": {
     "index": {
-      "greeting": "Me in all discovered internets"
+      "greeting": "Me in all discovered internets",
+      "twitter": "Read my deep tweets",
+      "instagram": "Look at my fabulous pics",
+      "linkedin": "Hire and give me money"
     }
   }
 }

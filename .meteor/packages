@@ -11,10 +11,10 @@ mquandalle:jade
 grigio:babel
 sanjo:jasmine
 velocity:html-reporter
-tap:i18n
 fortawesome:fontawesome
 mquandalle:bower
-aldeed:collection2
 msavin:mongol
 coffeescript
 mrt:moment
+tap:i18n-db
+tap:i18n

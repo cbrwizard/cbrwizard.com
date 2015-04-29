@@ -1,3 +1,11 @@
 template(name='linksList')
-  +each links
-    +linksListItem
+  ul.links
+    li.links__item
+      a.links__link(href='https://twitter.com/cbrwizard' target='_blank')
+        | {{_"links.index.twitter"}}
+    li.links__item
+      a.links__link(href='https://instagram.com/cbrwizard/' target='_blank')
+        | {{_"links.index.instagram"}}
+    li.links__item
+      a.links__link(href='https://www.linkedin.com/profile/view?id=188836970' target='_blank')
+        | {{_"links.index.linkedin"}}

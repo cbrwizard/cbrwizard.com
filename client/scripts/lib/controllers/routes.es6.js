@@ -20,26 +20,20 @@ Router.route('/about', {
 
 Router.route('/links', {
   template: 'linksIndex',
-  name: 'links.index',
-  waitOn: function () {
-    return Meteor.subscribe('linksAll');
-  },
-  data: function () {
-    return {links: cbrw.Collections.Links.find()};
-  }
+  name: 'links.index'
 });
 
 Router.route('/experiments', {
   template: 'experimentsIndex',
   name: 'experiments.index',
-  //yieldRegions: {
-  //  'effectTriangles': {to: 'effect'}
-  //},
+  yieldRegions: {
+    'effectTriangles': {to: 'effect'}
+  },
   waitOn: function () {
-    return Meteor.subscribe('experimentsAll');
+    return TAPi18n.subscribe('experimentsAll');
   },
   data: function () {
-    return {experiments: cbrw.Collections.Experiments.find()};
+    return {experiments: cbrw.Collections.Experiments.find({display: {$ne: false}})};
   },
   action: cbrw.Controllers.Actions.Experiments.index
 });
