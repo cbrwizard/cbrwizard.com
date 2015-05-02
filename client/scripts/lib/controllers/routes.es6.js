@@ -3,6 +3,7 @@
  */
 Router.configure({
   layoutTemplate: 'mainLayout',
+  loadingTemplate: 'loading',
   yieldRegions: {
     'effectStatic': {to: 'effect'}
   }
