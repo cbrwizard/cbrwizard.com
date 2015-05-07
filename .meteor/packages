@@ -18,3 +18,6 @@ coffeescript
 mrt:moment
 tap:i18n-db
 tap:i18n
+spiderable
+gadicohen:sitemaps
+manuelschoebel:ms-seo
