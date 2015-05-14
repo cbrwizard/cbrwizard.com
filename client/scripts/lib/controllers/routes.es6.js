@@ -6,7 +6,8 @@ Router.configure({
   loadingTemplate: 'loading',
   yieldRegions: {
     'effectStatic': {to: 'effect'}
-  }
+  },
+  notFoundTemplate: 'notFound'
 });
 
 Router.route('/', {
