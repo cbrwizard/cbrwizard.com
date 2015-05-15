@@ -5,7 +5,8 @@
       "what": "As somebody somewhere once said: 'if magic doesn't work, you're not applying it enough'. Behold, a super-functional website, which has only one purpose of boosting my enormous ego. Enjoy yourself!"
     },
     "about": {
-      "greeting": "About me"
+      "greeting": "About me",
+      "what": "Who am I?"
     }
   }
 }

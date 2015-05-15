@@ -1,4 +1,4 @@
 template(name='experimentsIndex')
-  h1.color-purple
+  h1.dynamic-container__heading.color-purple
     | {{_"experiments.index.greeting"}}
   +experimentsList(experiments = experiments)
