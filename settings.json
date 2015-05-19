@@ -1,5 +1,6 @@
-"kadira":
 {
-"appId": "28cRLvy4yd3CwXy49",
-"appSecret": "b4429bc7-17cf-4f34-9d1c-d1aa99d23727"
+  "kadira": {
+    "appId": "28cRLvy4yd3CwXy49",
+    "appSecret": "b4429bc7-17cf-4f34-9d1c-d1aa99d23727"
+  }
 }
