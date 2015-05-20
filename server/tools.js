@@ -1,0 +1,1 @@
+Kadira.connect('28cRLvy4yd3CwXy49', 'b4429bc7-17cf-4f34-9d1c-d1aa99d23727')
