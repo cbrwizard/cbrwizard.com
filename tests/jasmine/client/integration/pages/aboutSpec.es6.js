@@ -5,7 +5,7 @@ describe('pagesAbout', function () {
     Tracker.afterFlush(done);
   });
 
-  beforeEach(waitForRouter);
+  beforeEach(window.waitForRouter);
 
   describe('template', function () {
     it('shows a heading', function () {

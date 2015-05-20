@@ -3,7 +3,6 @@
 A wizardry websitez build with MeteorJS.
 
 ##How to prepare to dev:
-1. $ npm install
 1. $ meteor
 
 ##Tests (wip)

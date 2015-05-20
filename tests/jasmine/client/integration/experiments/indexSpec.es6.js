@@ -5,7 +5,7 @@ describe('experimentsIndex', function () {
     Tracker.afterFlush(done);
   });
 
-  beforeEach(waitForRouter);
+  beforeEach(window.waitForRouter);
 
   describe('template', function () {
     it('shows experiments', function () {
