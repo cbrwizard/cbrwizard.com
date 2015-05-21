@@ -1,4 +1,10 @@
-// Experiment blocks
+@import './../../support/variables/screen-size.import'
 
+// Experiment blocks
 .experiment-item__text
   margin: 0
+
++above($mobileBreakPoint)
+  .experiment-item__image
+    img
+      min-height: 200px
