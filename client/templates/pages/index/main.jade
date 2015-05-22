@@ -3,4 +3,7 @@ template(name='pagesIndex')
     .color-purple
     | {{_"pages.index.greeting"}}
   p.dynamic-container__text
-    | {{_"pages.index.what"}}
+    | {{{_"pages.index.what"}}}
+  p
+    a.dynamic-container__link(href="{{pathFor 'pages.about'}}")
+      | {{_"pages.index.next"}}

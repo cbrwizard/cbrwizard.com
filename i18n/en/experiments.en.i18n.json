@@ -1,7 +1,8 @@
 {
   "experiments": {
     "index": {
-      "greeting": "Here be dragons"
+      "greeting": "Here be dragons",
+      "next": "Check out links on where to find me"
     }
   }
 }

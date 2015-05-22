@@ -5,8 +5,8 @@ template(name='sidebar__menu')
         a.menu__link(href="{{pathFor 'pages.about'}}")
           | {{_"shared.sidebar.menu.about"}}
       h4
-        a.menu__link(href="{{pathFor 'links.index'}}")
-          | {{_"shared.sidebar.menu.links"}}
-      h4
         a.menu__link(href="{{pathFor 'experiments.index'}}")
           | {{_"shared.sidebar.menu.experiments"}}
+      h4
+        a.menu__link(href="{{pathFor 'links.index'}}")
+          | {{_"shared.sidebar.menu.links"}}
