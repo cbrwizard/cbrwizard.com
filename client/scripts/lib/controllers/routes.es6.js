@@ -20,6 +20,7 @@ Router.route('/', {
         'description': 'Main page of a magical website about the cyber wizard.'
       }
     });
+    cbrw.Seo.AnalyticsToggler.init();
   }
 });
 
@@ -33,6 +34,7 @@ Router.route('/about', {
         'description': 'Reveal a cbrwizard identity!'
       }
     });
+    cbrw.Seo.AnalyticsToggler.init();
   }
 });
 
@@ -46,6 +48,7 @@ Router.route('/links', {
         'description': 'Where to find cbrwizard'
       }
     });
+    cbrw.Seo.AnalyticsToggler.init();
   }
 });
 
@@ -69,5 +72,6 @@ Router.route('/experiments', {
         'description': 'Weird magical experiments'
       }
     });
+    cbrw.Seo.AnalyticsToggler.init();
   }
 });

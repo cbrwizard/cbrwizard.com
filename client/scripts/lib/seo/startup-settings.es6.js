@@ -1,3 +1,6 @@
+/**
+ * Default SEO settings for all pages
+ */
 Meteor.startup(function () {
   return SEO.config({
     title: 'cbrwizard.com - Fyodor Ivanishchev',
