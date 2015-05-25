@@ -9,7 +9,12 @@ Router.configure({
   },
   notFoundTemplate: 'notFound',
   onAfterAction: function () {
-    cbrw.Seo.MetaStorage.setSeoForPathName(Router.current().route.getName());
+    SEO.set({
+      title: TAPi18n.__(`${Router.current().route.getName()}.title`),
+      meta: {
+        'description': TAPi18n.__(`${Router.current().route.getName()}.description`)
+      }
+    });
     cbrw.Seo.AnalyticsToggler.init();
   }
 });

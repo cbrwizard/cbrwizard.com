@@ -3,21 +3,28 @@
 .locales
   display: flex
   justify-content: space-between
-  width: 40px
+  width: 72px
   margin: 10px 0
 
 .flag
-  width: 16px
-  height: 16px
+  width: 32px
+  height: 29px
   background: url(/images/icons/flags.png) no-repeat
   padding: 0
+  margin: 0
+  background-size: 64px
+  transition: box-shadow .1s
+  &:hover
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7)
 
 .flag--primary
   opacity: .5
   cursor: default
+  &:hover
+    box-shadow: none
 
 .flag.ru-RU
-  background-position: -16px 0
+  background-position: 0 0
 
 .flag.en
-  background-position: 0 -16px
+  background-position: -32px 0

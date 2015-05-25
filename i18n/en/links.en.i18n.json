@@ -2,9 +2,14 @@
   "links": {
     "index": {
       "greeting": "Me in all discovered internets",
+
       "twitter": "Read my deep tweets",
       "instagram": "Look at my fabulous pics",
-      "linkedin": "Hire and give me money"
+      "linkedin": "Hire and give me money",
+      "title": "Links - cbrwizard.com - Fyodor Ivanishchev",
+      "meta": {
+        "description": "Where to find cbrwizard."
+      }
     }
   }
 }
