@@ -7,54 +7,31 @@ Router.configure({
   yieldRegions: {
     'effectStatic': {to: 'effect'}
   },
-  notFoundTemplate: 'notFound'
+  notFoundTemplate: 'notFound',
+  onAfterAction: function () {
+    cbrw.Seo.MetaStorage.setSeoForPathName(Router.current().route.getName());
+    cbrw.Seo.AnalyticsToggler.init();
+  }
 });
 
 Router.route('/', {
   name: 'pages.index',
-  template: 'pagesIndex',
-  onAfterAction: function () {
-    SEO.set({
-      title: 'Index - cbrwizard.com - Fyodor Ivanishchev',
-      meta: {
-        'description': 'Main page of a magical website about the cyber wizard.'
-      }
-    });
-    cbrw.Seo.AnalyticsToggler.init();
-  }
+  template: 'pagesIndex'
 });
 
 Router.route('/about', {
-  template: 'pagesAbout',
   name: 'pages.about',
-  onAfterAction: function () {
-    SEO.set({
-      title: 'About - cbrwizard.com - Fyodor Ivanishchev',
-      meta: {
-        'description': 'Reveal a cbrwizard identity!'
-      }
-    });
-    cbrw.Seo.AnalyticsToggler.init();
-  }
+  template: 'pagesAbout'
 });
 
 Router.route('/links', {
-  template: 'linksIndex',
   name: 'links.index',
-  onAfterAction: function () {
-    SEO.set({
-      title: 'Links - cbrwizard.com - Fyodor Ivanishchev',
-      meta: {
-        'description': 'Where to find cbrwizard'
-      }
-    });
-    cbrw.Seo.AnalyticsToggler.init();
-  }
+  template: 'linksIndex'
 });
 
 Router.route('/experiments', {
-  template: 'experimentsIndex',
   name: 'experiments.index',
+  template: 'experimentsIndex',
   yieldRegions: {
     'effectTriangles': {to: 'effect'}
   },
@@ -64,14 +41,5 @@ Router.route('/experiments', {
   data: function () {
     return {experiments: cbrw.Collections.Experiments.find({display: {$ne: false}})};
   },
-  action: cbrw.Controllers.Actions.Experiments.index,
-  onAfterAction: function () {
-    SEO.set({
-      title: 'Experiments - cbrwizard.com - Fyodor Ivanishchev',
-      meta: {
-        'description': 'Weird magical experiments'
-      }
-    });
-    cbrw.Seo.AnalyticsToggler.init();
-  }
+  action: cbrw.Controllers.Actions.Experiments.index
 });
