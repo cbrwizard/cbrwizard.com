@@ -2,11 +2,11 @@ template(name='sidebar__menu')
   menu.menu
     nav
       h4
-        a.menu__link(href="{{pathFor 'pages.about'}}")
+        a.menu__link(href="{{pathFor 'pages.about'}}", class="{{currentLinkButton 'pages.about'}}")
           | {{_"shared.sidebar.menu.about"}}
       h4
-        a.menu__link(href="{{pathFor 'experiments.index'}}")
+        a.menu__link(href="{{pathFor 'experiments.index'}}", class="{{currentLinkButton 'experiments.index'}}")
           | {{_"shared.sidebar.menu.experiments"}}
       h4
-        a.menu__link(href="{{pathFor 'links.index'}}")
+        a.menu__link(href="{{pathFor 'links.index'}}", class="{{currentLinkButton 'links.index'}}")
           | {{_"shared.sidebar.menu.links"}}
