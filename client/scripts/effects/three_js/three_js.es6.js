@@ -39,6 +39,15 @@ cbrw.Effects.ThreeJs = class ThreeJs {
     this._createScene();
     this._createCamera();
     this._createRenderer();
+    this._setupResize();
+  }
+
+  /**
+   * Sets up resize callback for correct effect dimensions
+   *
+   * @private
+   */
+  _setupResize() {
     let dimension = () => {
       return {width: this.container.offsetWidth, height: this.container.offsetHeight};
     };
@@ -47,6 +56,10 @@ cbrw.Effects.ThreeJs = class ThreeJs {
       this.camera,
       dimension
     );
+
+    window.addEventListener('orientationchange', () => {
+      this.winResize.trigger();
+    }, false);
   }
 
   /**
