@@ -64,7 +64,7 @@ function seedRecords() {
   ];
 
   seedRecords.forEach(function (recordsObject) {
-    recordsObject.collection.remove({}); // uncomment if you want to reset seeds on server startup
+    // recordsObject.collection.remove({}); // uncomment if you want to reset seeds on server startup
     if (recordsObject.collection.find().count() < recordsObject.records.length) {
       recordsObject.records.forEach(function (record) {
         recordsObject.collection.insertTranslations(record.data, record.translations);

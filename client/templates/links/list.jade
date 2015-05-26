@@ -1,11 +1,17 @@
 template(name='linksList')
   ul.links
     li.links__item
-      a.links__link(href='https://twitter.com/cbrwizard' target='_blank')
-        | {{_"links.index.twitter"}}
+      h5
+        i.fa.fa-twitter.color-purple
+        a.links__link(href='https://twitter.com/cbrwizard' target='_blank')
+          | {{_"links.index.twitter"}}
     li.links__item
-      a.links__link(href='https://instagram.com/cbrwizard/' target='_blank')
-        | {{_"links.index.instagram"}}
+      h5
+        i.fa.fa-instagram.color-purple
+        a.links__link(href='https://instagram.com/cbrwizard/' target='_blank')
+          | {{_"links.index.instagram"}}
     li.links__item
-      a.links__link(href='https://www.linkedin.com/profile/view?id=188836970' target='_blank')
-        | {{_"links.index.linkedin"}}
+      h5
+        i.fa.fa-linkedin.color-purple
+        a.links__link(href='https://www.linkedin.com/profile/view?id=188836970' target='_blank')
+          | {{_"links.index.linkedin"}}

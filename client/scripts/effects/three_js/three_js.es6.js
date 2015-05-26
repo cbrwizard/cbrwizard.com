@@ -39,7 +39,14 @@ cbrw.Effects.ThreeJs = class ThreeJs {
     this._createScene();
     this._createCamera();
     this._createRenderer();
-    this.winResize = new THREEx.WindowResize(this.renderer, this.camera);
+    let dimension = () => {
+      return {width: this.container.offsetWidth, height: this.container.offsetHeight};
+    };
+    this.winResize = new THREEx.WindowResize(
+      this.renderer,
+      this.camera,
+      dimension
+    );
   }
 
   /**

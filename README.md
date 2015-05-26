@@ -1,12 +1,16 @@
 #cbrwizard.com
 
-A wizardry websitez build with MeteorJS.
+A wizardry website build with MeteorJS. This code might be useful if you want to have an example of MeteorJS file structure.
 
-##How to prepare to dev:
+It uses ES6, Stylus, Jade, ThreeJS, TAPi18n, MomentJS and IronRouter.
+
+Current tasks, bugs, etc. can be seen [on Trello](https://trello.com/b/D5IOdhwX/cbrwizard-com).
+
+##How to dev:
 1. $ meteor
 
-##Tests (wip)
-Tests are located in /tests and are written in Jasmine.
+##Tests
+Tests are located in /tests and are written in Jasmine. They are quite general at the moment.
 To run them, type
 
 ```bash
@@ -15,82 +19,31 @@ $ meteor --test
 
 ##Structure
 
-###/client
-Client related files and JS classes which get used only there.
+* /client - Client related files and JS classes which get used only there.
+  * /scripts - JS files.
+    * /helpers - Meteor related template helpers.
+    * /effects - Static not-data related visual effect classes.
+    * /events - Meteor events for interactivity.
+    * /lib - Libraries which must be loaded immediately for a client before other scripts.
+      * /controllers - Folder for a main routes file and route actions.
+        * /actions - Actions which are called on different routes.
+      * /seo - Contains helper classes for SEO.
+  * /styles - Stylus files for styling.
+    * /blocks - Folders for each type of BEM blocks, which contain a file for each BEM block.
+    * /lib - Vendor styles.
+    * /shared - Folders with shared not BEM blocks styles, like text and structure.
+    * /support - Folders with Stylus related data, like variables.
+  * /templates - Views and layouts in Jade, separated into partials where needed.
+* /i18n - Locale files, every string should be used from here.
+* /lib - Shared between client and server scripts which are used in other parts.
+  * /collections - MongoDB collections.
+  * /config - Meteor startup functions.
+  * /lib/.../lib/namespace/cbrw.js - Declares a global namespace. Is located so deeply so that Meteor loads it first.
+* /public - Place for images, robots.txt, etc.
+* /server - Server specific code.
+  * /db - Helper db-related functions.
+  * /publications - Meteor publications, which allow data to be used in client/presenters from lib/stores.
+  
+##Thank you
 
-####/scripts
-JS files.
-
-#####/helpers
-Meteor related template helpers. Are called from controllers. Are named after templates.
-
-#####/effects
-Static not-data related visual effect classes. Are called from controllers.
-
-#####/lib
-Libraries which must be loaded immediately for a client, where folders are named after their usage.
-
-######/controllers
-Folder for a main routes file and route actions.
-
-#######/actions
-Classes which define actions which are called on different routes.
-
-#######/routes.js
-Iron Router links file, connects URLs to Controller classes.
-
-
-####/styles
-Stylus files for styling.
-
-#####/blocks
-Folders for each type of BEM blocks, which contain Stylus files for each BEM block.
-
-#####/lib
-Vendor styles.
-
-#####/shared
-Folders with shared not BEM blocks styles, like text and structure.
-
-#####/support
-Folders with Stylus related data, like variables.
-
-
-####/templates
-Views and layouts in Jade, separated into partials where needed. Folders are named after controllers and pages, with some exceptions.
-
-
-
-###/i18n
-Locale files, every string should be used from here.
-
-
-###/lib
-Shared between client and server scripts which are used in other parts.
-
-####/config
-Different scripts and config objects which help app to function.
-
-####/collections
-MongoDB collections.
-
-####/schemas
-Validation SimpleSchema schemas for stores.
-
-####/lib/lib/lib/namespace/cbrw.js
-Declares a global namespace cbrw. Is located so deeply so that Meteor loads it first. TODO: pray to FSM that modules support will be added to Meteor.
-
-
-###/public
-Images and other files with easy public access.
-
-
-###/server
-Server specific code.
-
-####/publications
-Meteor publications, which allow data to be used in client/presenters from lib/stores.
-
-
-###/tests
-Jasmine client and server tests.
+Suggestions are welcome! I hope that somebody finds this code useful. 

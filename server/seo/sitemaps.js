@@ -1,6 +1,4 @@
 sitemaps.add('/sitemap.xml', function () {
-  console.log('added sitemap');
-
   const lastExperimentCreatedAt = cbrw.Collections.Experiments.find({}, {sort: {createdAt: -1}}).fetch()[0];
   return [
     {page: '/', priority: 1},
