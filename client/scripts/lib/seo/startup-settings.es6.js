@@ -10,17 +10,18 @@ Meteor.startup(function () {
     og: {
       type: 'website',
       site_name: 'cbrwizard.com',
-      image: 'http://www.cbrwizard.com/images/author/main-pic.jpg',
-      url: 'www.cbrwizard.com'
+      image: 'http://www.cbrwizard.com/apple-touch-icon.png',
+      url: window.location.href
     },
     twitter: {
       card: 'summary',
       creator: '@cbrwizard',
+      url: window.location.href
     },
     auto: {
       twitter: true,
       og: true,
-      set: ['description', 'url', 'title']
+      set: ['description', 'title']
     },
     rel_author: 'https://plus.google.com/u/0/+ФёдорИванищев'
   });
