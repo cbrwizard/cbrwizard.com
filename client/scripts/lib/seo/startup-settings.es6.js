@@ -7,10 +7,11 @@ Meteor.startup(function () {
     meta: {
       'description': 'Magical website about a cyber wizard.'
     },
-    url: 'www.cbrwizard.com',
     og: {
       type: 'website',
-      site_name: 'cbrwizard.com'
+      site_name: 'cbrwizard.com',
+      image: 'http://www.cbrwizard.com/images/author/main-pic.jpg',
+      url: 'www.cbrwizard.com'
     },
     twitter: {
       card: 'summary',
