@@ -9,10 +9,11 @@ Router.configure({
   },
   notFoundTemplate: 'notFound',
   onAfterAction: function () {
+    let currentRouteName = Router.current().route.getName();
     SEO.set({
-      title: TAPi18n.__(`${Router.current().route.getName()}.title`),
+      title: TAPi18n.__(`${currentRouteName}.title`),
       meta: {
-        'description': TAPi18n.__(`${Router.current().route.getName()}.description`)
+        'description': TAPi18n.__(`${currentRouteName}.meta.description`)
       }
     });
     cbrw.Seo.AnalyticsToggler.init();
