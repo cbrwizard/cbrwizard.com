@@ -2,6 +2,11 @@ template(name='linksList')
   ul.links
     li.links__item
       h5
+        i.fa.fa-medium.color-purple
+        a.links__link(href='https://medium.com/@cbrwizard' target='_blank')
+          | {{_"links.index.medium"}}
+    li.links__item
+      h5
         i.fa.fa-twitter.color-purple
         a.links__link(href='https://twitter.com/cbrwizard' target='_blank')
           | {{_"links.index.twitter"}}
