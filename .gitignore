@@ -1,16 +1,22 @@
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+log/*.log
+tmp
 
-/.idea
-/.idea/*
+.idea
+.idea/*
+
+tags
+tags.*
 
 /test_images
 /coverage
 
-/node_modules
-/bower_components
+node_modules
+bower_components
+public/bower
 
-/private
+.meteor/local
 
-/README.html
+
+private
+
+README.html

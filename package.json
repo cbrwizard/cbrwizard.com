@@ -1,0 +1,25 @@
+{
+  "name": "cbrwizard.com",
+  "version": "1.0.0",
+  "description": "A wizardry website build with MeteorJS. This code might be useful if you want to have an example of MeteorJS file structure.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbrwizard/cbrwizard.com.git"
+  },
+  "author": "Fyodor Ivanishchev <cbrwizard@gmail.com> (http://cbrwizard.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbrwizard/cbrwizard.com/issues"
+  },
+  "homepage": "https://github.com/cbrwizard/cbrwizard.com#readme",
+  "dependencies": {
+    "babel-runtime": "^6.20.0"
+  }
+}
