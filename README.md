@@ -53,6 +53,7 @@ Have you ever made a technology choice which you later regretted? Well, I did a 
 ## TODO
 * Rewrite in normal Node.js and maybe React
 * Improve fonts
+* Remove db and switch to static.
 
 ##Thank you
 
