@@ -43,7 +43,17 @@ $ meteor --test
 * /server - Server specific code.
   * /db - Helper db-related functions.
   * /publications - Meteor publications, which allow data to be used in client/presenters from lib/stores.
-  
+
+## Why
+
+Why Meteor? Why Angular?
+
+Have you ever made a technology choice which you later regretted? Well, I did a year ago. Now I understand that using Meteor and Angular for a static website was a really bad idea. I don't want to rewrite it now because rewriting is a waste of time. Well, you've got to learn something somehow!
+
+## TODO
+* Rewrite in normal Node.js and maybe React
+* Improve fonts
+
 ##Thank you
 
-Suggestions are welcome! I hope that somebody finds this code useful. 
+Suggestions are welcome! I hope that somebody finds this code useful.

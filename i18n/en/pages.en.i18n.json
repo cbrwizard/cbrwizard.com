@@ -2,7 +2,7 @@
   "pages": {
     "index": {
       "greeting": "Hello",
-      "what": "This is a website about me. It serves as a link hub and a place for me to experiment. Feel free to browse!",
+      "what": "Welcome to the wizardry website. Here you can find info about me - Ivanischev Fyodor - and the links to my experiments. Feel free to browse!",
       "next": "Read some stuff about me",
       "title": "Index - cbrwizard.com - Fyodor Ivanishchev",
       "meta": {
@@ -11,7 +11,7 @@
     },
     "about": {
       "greeting": "OMG, what is this?",
-      "what": "All right, currently I am a developer and I write code in Javascript and Ruby. I was born in Saint-Petersburg, Russia, and now I travel around the world, working remotely. Previously I have launched a couple of small startups and now I am working in a retail software company Springboard Retail. In the near future, however, I am planning to take action in creating projects that really matter. I dream of visiting space and finishing my interactive science-fiction book one day!",
+      "what": "Okie-dokie, from a professional point of view I am a software developer and I write code in Javascript and Ruby. I enjoy doing it and sometimes I even manage to write something I'm not ashamed of [: I was born in Saint-Petersburg, Russia, and now I travel around the world, working remotely. Previously I have launched a couple of small startups. All the time I learn and try something new: Unity and game development being are on my radar right now. But enough talking - here are the proofs!",
       "next": "Take a look at my experiments",
       "title": "What is this? - cbrwizard.com - Fyodor Ivanishchev",
       "meta": {

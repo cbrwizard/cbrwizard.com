@@ -13,12 +13,10 @@ function seedRecords() {
           },
           translations: {
             en: {
-              description: 'Website about opinion analysis, which helps people share their views on anything' +
-              ' and get rich statistics.'
+              description: 'A website about opinion analysis, which helps people to share their views on everything and get powerful statistics.'
             },
             'ru-RU': {
-              description: 'Сайт анализа мнений. Позволяет людям узнать, о чем думает общество' +
-              ' в виде простой и мощной статистики.'
+              description: 'Сайт анализа мнений. Позволяет людям узнать, о чем думает общество в виде доступной и мощной статистики.'
             }
           }
         },
@@ -32,30 +30,45 @@ function seedRecords() {
           translations: {
             en: {
               title: 'Vali iz rashki',
-              description: 'Satyric website about escaping from Russia as fast as possible.'
+              description: 'A satyric website about escaping from Russia as fast as possible.'
             },
             'ru-RU': {
               title: 'Вали из Рашки',
-              description: 'Сатиристический сайт о спасении из Рашки.'
+              description: 'Сатиристический сайт об эвакуации из Рашки.'
             }
           }
         },
         {
           data: {
-            title: 'Am I epileptic?',
-            name: 'epileptic',
-            url: 'http://amiepilleptic.com',
+            title: 'Elon goes to Mars!',
+            name: 'elon',
+            url: 'https://github.com/cbrwizard/game-off-2016',
             createdAt: new Date().valueOf(),
-            releaseDate: new Date('2014-09-01').valueOf()
+            releaseDate: new Date('2016-12-01').valueOf()
           },
           translations: {
             en: {
-              description: 'Medical startup which defines if you have this critical medical condition.' +
-              ' WARNING: not suitable for actual epileptics.'
+              description: "A game about Elon trying to colonize Mars! It's made with Unity and can be played in a browser. It was made in 1 month in free time as a part of Github Game-off 2016 competition."
             },
             'ru-RU': {
-              description: 'Медицинский стартап, определяющий ваше состояние' +
-              ' ВНИМАНИЕ: нельзя использовать на настоящих больных.'
+              description: 'Игра про то, как Илон колонизирует Марс! Она сделана с помощью Unity, в неё можно играть в браузере. Она была сделана за 1 месяц в свободное время как участник конкурса Github Game-off 2016.'
+            }
+          }
+        },
+        {
+          data: {
+            title: 'PerfectS Bot LEGO mindstorms',
+            name: 'perfects_bot',
+            url: 'https://www.youtube.com/watch?v=me5-JXdOl2I',
+            createdAt: new Date().valueOf(),
+            releaseDate: new Date('2015-07-28').valueOf()
+          },
+          translations: {
+            en: {
+              description: 'A robot made from LEGO which helps me to stay fit while coding. Every 30 minutes it finds me and tells me to do pushups! A Hipchat bot version is also available.'
+            },
+            'ru-RU': {
+              description: 'Робот, сделанный из Лего, помогающий мне не зажиреть во время работы. Каждые полчаса он находит меня и заставляет делать отжимания! Также есть версия в виде Hipchat бота.'
             }
           }
         }
