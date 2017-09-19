@@ -1,4 +1,4 @@
-#cbrwizard.com
+# cbrwizard.com
 
 A wizardry website build with MeteorJS. This code might be useful if you want to have an example of MeteorJS file structure.
 
@@ -6,10 +6,10 @@ It uses ES6, Stylus, Jade, ThreeJS, TAPi18n, MomentJS and IronRouter.
 
 Current tasks, bugs, etc. can be seen [on Trello](https://trello.com/b/D5IOdhwX/cbrwizard-com).
 
-##How to dev:
+## How to dev:
 1. $ meteor
 
-##Tests
+## Tests
 Tests are located in /tests and are written in Jasmine. They are quite general at the moment.
 To run them, type
 
@@ -26,6 +26,6 @@ Have you ever made a technology choice which you later regretted? Well, I did a 
 ## TODO
 * Switch to static.
 
-##Thank you
+## Thank you
 
 Suggestions are welcome! I hope that somebody finds this code useful.
