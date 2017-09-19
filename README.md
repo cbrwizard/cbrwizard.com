@@ -7,14 +7,16 @@ It uses ES6, Stylus, Jade, ThreeJS, TAPi18n, MomentJS and IronRouter.
 Current tasks, bugs, etc. can be seen [on Trello](https://trello.com/b/D5IOdhwX/cbrwizard-com).
 
 ## How to dev:
-1. $ meteor
+```bash
+meteor
+```
 
 ## Tests
 Tests are located in /tests and are written in Jasmine. They are quite general at the moment.
 To run them, type
 
 ```bash
-$ meteor --test
+meteor --test
 ```
 
 ## Why
