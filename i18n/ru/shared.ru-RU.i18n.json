@@ -3,7 +3,7 @@
     "sidebar": {
       "header": {
         "site_title": "cbrwizard.com",
-        "site_subtitle": "Супер мега чел"
+        "site_subtitle": "Инди разработчик игр, чародей(???)"
       },
       "menu": {
         "about": "Что это?",
@@ -11,7 +11,7 @@
         "experiments": "Эксперименты"
       },
       "created_by": {
-        "text": "Сотворил <span class='created-by__author'>Иванищев Фёдор</span>"
+        "text": "Сделано с иронией."
       },
       "code": {
         "text": "Скачай код на"

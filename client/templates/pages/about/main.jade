@@ -1,8 +1,0 @@
-template(name='pagesAbout')
-  h1.dynamic-container__heading.color-purple
-    | {{_"pages.about.greeting"}}
-  p.dynamic-container__text
-    | {{{_"pages.about.what"}}}
-  p
-    a.dynamic-container__link(href="{{pathFor 'experiments.index'}}")
-      | {{_"pages.about.next"}}

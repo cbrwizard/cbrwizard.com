@@ -3,15 +3,14 @@
     "sidebar": {
       "header": {
         "site_title": "cbrwizard.com",
-        "site_subtitle": "Pwner 2000"
+        "site_subtitle": "Indie game developer/wizard(wut?)."
       },
       "menu": {
-        "about": "What is this?",
-        "links": "Links",
-        "experiments": "Experiments"
+        "experiments": "Experiments",
+        "links": "Links"
       },
       "created_by": {
-        "text": "Created by <span class='created-by__author'>Fyodor Ivanishchev</span>"
+        "text": "Made with irony."
       },
       "code": {
         "text": "Get the code at"

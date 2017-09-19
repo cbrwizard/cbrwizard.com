@@ -8,7 +8,7 @@ template(name = 'experimentsListItem')
       a.link--image(href= '{{url}}', target='_blank')
         img(src='/images/experiments/{{name}}.jpg')
     p.experiment-item__text
-      =description
+      | {{description this}}
     footer.experiment-item__footer
       time.color-light-grey.article-item__time
         | {{humanDate releaseDate }}
