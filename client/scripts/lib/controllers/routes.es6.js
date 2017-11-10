@@ -40,6 +40,16 @@ Router.route('/experiments', {
       experiments: [
         {
           descriptionEn:
+            "A simple website where people can vote whether you should buy bitcoin today or not. The internet decides!",
+          descriptionRu:
+            'Простой сайт, отвечающий на один вопрос: стоит ли вам сегодня покупать биткоин или нет. Отвечает интернет!',
+          name: 'sibbt',
+          releaseDate: new Date('2017-11-03').valueOf(),
+          title: 'ShouldIBuyBitcoin.today',
+          url: 'http://shouldibuybitcoin.today/',
+        },
+        {
+          descriptionEn:
             "A global multiplayer game where you upload a picture and capture territories for it! Imagine a fight between your selfie, a meme, a McDonalds and Burger King logos? In this game, you'll fight for dominance in a huge shared field of squares. The more territories you capture, the more people will be able to see your picture! The game has limits of 10 turns per day. This means that everyone has got the same chances: busy people, gamers… This is the first indie game I've made, using Phaser and Node.js.",
           descriptionRu:
             'Глобальная мультиплеер игра, где нужно захватывать территории для вашего изображения. Чем больше территорий вы захватите, тем больше игроков увидят вашу картинку. Представьте себе битву между селфи и мемом, между лого Макдональдса и Бургер Кинга? Это - первая полноценная инди-игра, которую я сделал, используя Phaser и Node.js.',
