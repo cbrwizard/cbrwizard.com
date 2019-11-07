@@ -1,0 +1,17 @@
+name: Create a release based on a pr label
+
+on:
+  pull_request:
+    types: closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bump up version
+        uses: K-Phoen/semver-release-action@master
+        with:
+          release_branch: master
+          release_strategy: tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
