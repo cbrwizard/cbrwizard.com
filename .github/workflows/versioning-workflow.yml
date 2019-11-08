@@ -13,5 +13,6 @@ jobs:
         with:
           release_branch: master
           release_strategy: tag
+          default_version: patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
