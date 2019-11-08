@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Bump up version
-        uses: cbrwizard/semver-release-action@master
+        uses: cbrwizard/semver-release-action@feature/optional_default_version_local_docker_image
         with:
           release_branch: master
           release_strategy: tag
