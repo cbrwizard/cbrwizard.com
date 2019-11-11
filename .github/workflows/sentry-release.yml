@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create a Sentry release
-        uses: cbrwizard/sentry-release-github-action
+        uses: cbrwizard/sentry-release-github-action@master
         with:
           release: ${{ github.event.release.tag_name }}
         env:
