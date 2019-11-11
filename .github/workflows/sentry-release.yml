@@ -2,7 +2,7 @@ name: Create & deploy a Sentry release on a new github release
 
 on:
   release:
-    types: published
+    types: created
 
 jobs:
   build:
