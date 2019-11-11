@@ -11,8 +11,6 @@ jobs:
       - name: Bump up version
         uses: cbrwizard/semver-release-action@feature/optional_default_version_local_docker_image
         with:
-          release_branch: master
-          release_strategy: tag
           default_version: patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
