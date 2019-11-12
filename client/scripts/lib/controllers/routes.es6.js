@@ -1,3 +1,5 @@
+Sentry.init({ dsn: 'https://2e2d9b73143b467e8229ca638e43c73a@sentry.io/1816471' });
+
 /**
  * Routes for Iron Router
  */
