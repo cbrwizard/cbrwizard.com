@@ -14,6 +14,7 @@ jobs:
           default_version: patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: version_bump
       - name: sentry release
         uses: cbrwizard/sentry-release-github-action@master
         with:
