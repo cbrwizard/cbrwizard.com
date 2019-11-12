@@ -1,5 +1,2 @@
-User-Agent: *
-Disallow: /
-Allow: /
-Allow: /experiments
-Allow: /links
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *

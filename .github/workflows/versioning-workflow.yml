@@ -8,10 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-#      SENTRY_ORG: veryfyodor
-#      SENTRY_PROJECT: cbrwizard
-      SENTRY_ORG: mothership
-      SENTRY_PROJECT: apps-exchange
+      SENTRY_ORG: veryfyodor
+      SENTRY_PROJECT: cbrwizard
       SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
