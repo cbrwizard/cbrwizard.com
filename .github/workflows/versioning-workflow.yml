@@ -7,6 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SENTRY_ORG: veryfyodor
+      SENTRY_PROJECT: cbrwizard
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: version bump
         uses: cbrwizard/semver-release-action@feature/optional_default_version_local_docker_image
@@ -15,12 +20,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         id: version_bump
-      - name: sentry release
-        uses: cbrwizard/sentry-release-github-action@master
-        with:
-          release: ${{ steps.version_bump.outputs.tag }}
-        env:
-          SENTRY_ORG: veryfyodor
-          SENTRY_PROJECT: cbrwizard
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: curl -sL https://sentry.io/get-cli/ | bash
+      - run: sentry-cli releases new -p ${{ steps.version_bump.outputs.tag }}
+      - run: sentry-cli releases set-commits --auto ${{ steps.version_bump.outputs.tag }}
+      - run: sentry-cli releases deploys ${{ steps.version_bump.outputs.tag }} new -e development
+#      - name: sentry release
+#        uses: cbrwizard/sentry-release-github-action@master
+#        with:
+#          release: ${{ steps.version_bump.outputs.tag }}
+#        env:
+#          SENTRY_ORG: veryfyodor
+#          SENTRY_PROJECT: cbrwizard
+#          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
