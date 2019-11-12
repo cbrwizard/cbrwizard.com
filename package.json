@@ -1,7 +1,7 @@
 {
   "name": "cbrwizard.com",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@sentry/browser": "^5.8.0",
     "@types/jest": "24.0.22",
