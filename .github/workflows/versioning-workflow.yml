@@ -22,6 +22,6 @@ jobs:
         id: version_bump
 
       - run: curl -sL https://sentry.io/get-cli/ | bash
-      - run: sentry-cli releases new -p {{ env.SENTRY_PROJECT }} ${{ steps.version_bump.outputs.tag }}
+      - run: sentry-cli releases new -p ${{ env.SENTRY_PROJECT }} ${{ steps.version_bump.outputs.tag }}
 #      - run: sentry-cli releases set-commits --auto ${{ steps.version_bump.outputs.tag }}
       - run: sentry-cli releases deploys ${{ steps.version_bump.outputs.tag }} new -e development
