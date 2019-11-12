@@ -19,8 +19,8 @@ jobs:
         uses: cbrwizard/sentry-release-github-action@master
         with:
           release: ${{ steps.version_bump.outputs.tag }}
-          sentry_repo: cbrwizard
-          sentry_auth_token: 376819f625dc47289ba2bd5bc1ba7c5028346b4f3ee04cc69a65249f8c75f844
-          sentry_org: veryfyodor
         env:
+          SENTRY_ORG: veryfyodor
+          SENTRY_PROJECT: cbrwizard
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
