@@ -1,9 +1,0 @@
-template(name='sidebar__menu')
-  menu.menu
-    nav
-      h4
-        a.menu__link(href="{{pathFor 'experiments.index'}}", class="{{currentLinkButton 'experiments.index'}}")
-          | {{_"shared.sidebar.menu.experiments"}}
-      h4
-        a.menu__link(href="{{pathFor 'links.index'}}", class="{{currentLinkButton 'links.index'}}")
-          | {{_"shared.sidebar.menu.links"}}

@@ -1,22 +1,23 @@
 log/*.log
 tmp
-
 .idea
-.idea/*
-
-tags
-tags.*
-
-/test_images
-/coverage
-
 node_modules
-bower_components
-public/bower
-
-.meteor/local
-
-
-private
 
 README.html
+
+/.pnp
+.pnp.js
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,9 +1,0 @@
-template(name='pagesIndex')
-  h1.dynamic-container__heading.color-purple
-    .color-purple
-    | {{_"pages.index.greeting"}}
-  p.dynamic-container__text
-    | {{{_"pages.index.what"}}}
-  p
-    a.dynamic-container__link(href="{{pathFor 'experiments.index'}}")
-      | {{_"pages.index.next"}}
