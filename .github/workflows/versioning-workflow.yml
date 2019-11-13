@@ -1,4 +1,4 @@
-name: Create a github + sentry releases based on a pr label
+name: Create a github release based on a pr label
 
 on:
   pull_request:
@@ -8,20 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SENTRY_ORG: veryfyodor
-      SENTRY_PROJECT: cbrwizard
-      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: version bump
+      - name: Bump up version
         uses: cbrwizard/semver-release-action@feature/optional_default_version_local_docker_image
         with:
           default_version: patch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        id: version_bump
-
-      - run: curl -sL https://sentry.io/get-cli/ | bash
-      - run: sentry-cli releases new -p ${{ env.SENTRY_PROJECT }} ${{ steps.version_bump.outputs.tag }}
-#      - run: sentry-cli releases set-commits --auto ${{ steps.version_bump.outputs.tag }}
-      - run: sentry-cli releases deploys ${{ steps.version_bump.outputs.tag }} new -e development
