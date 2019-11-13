@@ -16,10 +16,10 @@ jobs:
       - uses: actions/checkout@v1
       - run: curl -sL https://sentry.io/get-cli/ | bash
       - run: sentry-cli releases new -p ${{ env.SENTRY_PROJECT }} ${{ github.event.release.tag_name }}
-#      - run: sentry-cli releases set-commits --auto ${{ github.event.release.tag_name }}
+      - run: sentry-cli releases set-commits --auto ${{ github.event.release.tag_name }}
       - run: npm install
       - run: npm run build
-      - run: sentry-cli releases files VERSION upload-sourcemaps build/static/js --url-prefix '~/static/js'
+      - run: sentry-cli releases files VERSION upload-sourcemaps build/static/js --url-prefix '~/static/js' --rewrite
       - run: sentry-cli releases deploys ${{ github.event.release.tag_name }} new -e staging
       - run: sentry-cli releases deploys ${{ github.event.release.tag_name }} new -e production
       - run: sentry-cli releases finalize ${{ github.event.release.tag_name }}
