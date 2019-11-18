@@ -11,6 +11,6 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Bump up version
-        uses: cbrwizard/semver-release-action@feature/optional_default_version_local_docker_image
+        uses: cbrwizard/semver-release-action@feature/release_with_pull_request_body
         with:
           default_version: patch
